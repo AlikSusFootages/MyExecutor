@@ -54,6 +54,14 @@ clear.Text = "Clear"
 clear.Active = true
 clear.Parent = menu
 
+local paste = Instance.new("TextButton")
+paste.Size = UDim2.new(0, 100, 0, 50)
+paste.Position = UDim2.new(0, 110, 0, 305)
+paste.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+paste.Text = "Clear"
+paste.Active = true
+paste.Parent = menu
+
 
 local corner1 = Instance.new("UICorner")
 corner1.CornerRadius = UDim.new(0, 5)
