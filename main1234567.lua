@@ -1,7 +1,6 @@
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.CoreGui
 
-setexecutorname("Footages")
 
 local menu = Instance.new("Frame")
 menu.Size = UDim2.new(0, 400, 0, 300)
@@ -114,5 +113,5 @@ end
 clearr.MouseButton1Click:Connect(clearText)
 
 paste.MouseButton1Click:Connect(function()
-    loadstring(fromclipboard())()
+    loadstring(getClipboard())()
 end)
