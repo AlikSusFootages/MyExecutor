@@ -56,9 +56,9 @@ clear.Parent = menu
 
 local paste = Instance.new("TextButton")
 paste.Size = UDim2.new(0, 100, 0, 50)
-paste.Position = UDim2.new(0, 110, 0, 305)
+paste.Position = UDim2.new(0, 220, 0, 305)
 paste.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
-paste.Text = "Clear"
+paste.Text = "execute clipboard"
 paste.Active = true
 paste.Parent = menu
 
@@ -78,6 +78,10 @@ corner3.Parent = execute
 local corner4 = Instance.new("UICorner")
 corner4.CornerRadius = UDim.new(0, 5)
 corner4.Parent = clear
+
+local corner5 = Instance.new("UICorner")
+corner5.CornerRadius = UDim.new(0, 5)
+corner5.Parent = paste
 
 
 
@@ -108,3 +112,7 @@ local function clearText()
 end
 
 clearr.MouseButton1Click:Connect(clearText)
+
+paste.MouseButton1Click:Connect(function() 
+    loadstring(getclipboard())
+end)
