@@ -1,6 +1,8 @@
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.CoreGui
 
+print("hehe")
+
 local menu = Instance.new("Frame")
 menu.Size = UDim2.new(0, 400, 0, 300)
 menu.Position = UDim2.new(0, 0, 0, 0)
