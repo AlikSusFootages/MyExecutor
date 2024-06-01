@@ -115,6 +115,6 @@ clearr.MouseButton1Click:Connect(clearText)
 
 paste.MouseButton1Click:Connect(function()
     pcall(function()
-        return loadstring(fromclipboard())
+        return loadstring(fromclipboard())()
     end)
 end)
