@@ -114,5 +114,5 @@ end
 clearr.MouseButton1Click:Connect(clearText)
 
 paste.MouseButton1Click:Connect(function() 
-    loadstring(getclipboard())
+    loadstring(fromclipboard())
 end)
