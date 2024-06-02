@@ -138,7 +138,7 @@ if game:isLoaded() then
                     PaddingTop = UDim.new(0, 30),
                     PaddingLeft = UDim.new(0, 45),
                     PaddingRight = UDim.new(0, 45),
-                    PaddingBottom = UDim.new(0, 30),
+                    PaddingBottom = UDim.new(0, 25),
                 }),
                 Create("TextLabel", {
                     Font = GUI_Font .. "Medium",
