@@ -40,8 +40,8 @@ getgenv().getexecutorname = function() return _fullName end
 
  
 
-if not isfolder("../../../files") then
-    delfolder("../../../files")
+if not isfolder("../../Delta") then
+    delfolder("../../Delta")
 end
 
 
