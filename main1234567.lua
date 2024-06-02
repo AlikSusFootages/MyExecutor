@@ -38,6 +38,9 @@ textbox.MultiLine = true
 
 local padding = Instance.new("UIPadding", textbox)
 padding.PaddingTop = UDim.new(0, 6)
+padding.PaddingLeft = UDim.new(0, 6)
+padding.PaddingRight = UDim.new(0, 6)
+padding.PaddingBottom = UDim.new(0, 6)
 
 local execute = Instance.new("TextButton")
 execute.Size = UDim2.new(0, 100, 0, 50)
