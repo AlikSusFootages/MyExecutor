@@ -102,8 +102,8 @@ if game:isLoaded() then
                     PaddingBottom = UDim.new(0, 30),
                 }),
                 Create("Frame", {
-                    Size = UDim2.new(1,60,0,1),
-                    Position = UDim2.fromOffset(-30, 16),
+                    Size = UDim2.new(1,90,0,1),
+                    Position = UDim2.fromOffset(-45, 16),
                     BackgroundColor3 = UsingTheme.Stroke,
                     BackgroundTransparency = 0.6,
                     BorderSizePixel = 0
