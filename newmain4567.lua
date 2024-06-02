@@ -102,10 +102,10 @@ if game:isLoaded() then
                     PaddingBottom = UDim.new(0, 30),
                 }),
                 Create("Frame", {
-                    Size = UDim2.new(1,0,0,1),
-                    Position = UDim2.fromOffset(0, 16),
+                    Size = UDim2.new(1,60,0,1),
+                    Position = UDim2.fromOffset(30, 16),
                     BackgroundColor3 = UsingTheme.Stroke,
-                    BackgroundTransparency = 0.4,
+                    BackgroundTransparency = 0.6,
                     BorderSizePixel = 0
                 }),
                 Create("TextLabel", {
@@ -131,7 +131,7 @@ if game:isLoaded() then
                     Size = UDim2.new(0,1,1,60),
                     Position = UDim2.new(1,45,0,-30),
                     BorderSizePixel = 0,
-                    BackgroundTransparency = 0.4,
+                    BackgroundTransparency = 0.6,
                     BackgroundColor3 = UsingTheme.Stroke,
                     AnchorPoint = Vector2.new(1,0),
                 })
