@@ -1,6 +1,7 @@
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.CoreGui
 
+_G.identifyexecutor = "Dozer"
 
 local menu = Instance.new("Frame")
 menu.Size = UDim2.new(0, 400, 0, 300)
