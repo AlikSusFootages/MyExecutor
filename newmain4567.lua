@@ -178,6 +178,9 @@ if game:isLoaded() then
                 }, {
                     Create("ImageLabel", {
                         Image = "https://www.roblox.com/headshot-thumbnail/image?userId=".. Player.UserId .."&width=420&height=420&format=png"
+                        Size = UDim2.fromOffset(45,45),
+                        Position = UDim2.new(0,0,0.5,0),
+                        AnchorPoint = Vector2.new(0,0.5)
                     })
                 }),
                 Create("Frame", {
