@@ -83,16 +83,17 @@ if game:isLoaded() then
         }),
         Create("Frame", {
             BackgroundColor3 = Color3.fromRGB(0,3,6),
-            BackgroundTransparency = GUI_Transparency,
+            BackgroundTransparency = 1,
             Size = UDim2.new(1, 0, 1, 0),
             BorderSizePixel = 0,
         }, {
             Create("Frame", {
                 BackgroundColor3 = UsingTheme.Main,
-                BackgroundTransparency = GUI_Transparency,
+                BackgroundTransparency = GUI_Transparency - 0.1,
                 Size = UDim2.new(0, 340, 1, 0),
                 BorderSizePixel = 0,
-                Name = "Sidebar"
+                Name = "Sidebar",
+                AnchorPoint = Vector2.new(1,0)
             }, {
                 Create("UIPadding", {
                     PaddingTop = UDim.new(0, 30),
@@ -121,6 +122,10 @@ if game:isLoaded() then
             })
         })
     })
+    ScreenGuiOpenButton.MouseButton1Click:Connect(function()
+        TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.3), {BackgroundTransparency = GUI_Transparency}):Play()
+        TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.3), {AnchorPoint = Vector2.new(0,0)}):Play()
+    end)
     ScreenGui.Frame.Sidebar.CloseButton.MouseButton1Click:Connect(function()
         TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play()
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.3), {AnchorPoint = Vector2.new(1,0)}):Play()
