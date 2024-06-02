@@ -38,6 +38,9 @@ local PlayerGui = game.CoreGui
 getgenv().identifyexecutor = function() return _fullName end
 getgenv().getexecutorname = function() return _fullName end
 
+if not isfolder("Hehe") then
+    makefolder("Hehe")
+end
 
 
 --/° Functions °/--
