@@ -25,6 +25,7 @@ local _fullName = Dozer.Name .. " v" .. _version
 
 local GUI_CurrentTheme = "Dark"
 local GUI_Transparency = 0.5
+local GUI_StrokeTransparency = 0.7
 local GUI_Font = "Gotham"
 
 local Player = Players.LocalPlayer
@@ -103,13 +104,6 @@ if game:isLoaded() then
                     PaddingRight = UDim.new(0, 45),
                     PaddingBottom = UDim.new(0, 30),
                 }),
-                Create("Frame", {
-                    Size = UDim2.new(1,90,0,1),
-                    Position = UDim2.fromOffset(-45, 16),
-                    BackgroundColor3 = UsingTheme.Stroke,
-                    BackgroundTransparency = 0.6,
-                    BorderSizePixel = 0
-                }),
                 Create("TextLabel", {
                     Font = GUI_Font .. "Medium",
                     Text = "Dozer",
@@ -133,7 +127,7 @@ if game:isLoaded() then
                     Size = UDim2.new(0,1,1,60),
                     Position = UDim2.new(1,45,0,-30),
                     BorderSizePixel = 0,
-                    BackgroundTransparency = 0.6,
+                    BackgroundTransparency = GUI_StrokeTransparency,
                     BackgroundColor3 = UsingTheme.Stroke,
                     AnchorPoint = Vector2.new(1,0),
                 })
