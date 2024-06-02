@@ -106,7 +106,7 @@ if game:isLoaded() then
                     Text = "Dozer",
                     TextColor3 = UsingTheme.Text,
                     BackgroundTransparency = 1,
-                    TextSize = 50,
+                    TextSize = 40,
                     Size = UDim2.new(1,0,0,50),
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
@@ -115,7 +115,7 @@ if game:isLoaded() then
                     Image = GetIcon("x"),
                     BackgroundTransparency = 1,
                     AnchorPoint = Vector2.new(1,0),
-                    Size = UDim2.fromOffset(40,40),
+                    Size = UDim2.fromOffset(30,30),
                     Position = UDim2.new(1,0,0,0),
                     Name = "CloseButton"
                 })
@@ -123,11 +123,11 @@ if game:isLoaded() then
         })
     })
     ScreenGui.OpenButton.MouseButton1Click:Connect(function()
-        TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.3), {BackgroundTransparency = GUI_Transparency}):Play()
-        TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.3), {AnchorPoint = Vector2.new(0,0)}):Play()
+        TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.2), {BackgroundTransparency = GUI_Transparency}):Play()
+        TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2), {AnchorPoint = Vector2.new(0,0)}):Play()
     end)
     ScreenGui.Frame.Sidebar.CloseButton.MouseButton1Click:Connect(function()
-        TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play()
-        TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.3), {AnchorPoint = Vector2.new(1,0)}):Play()
+        TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+        TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
     end)
 end
