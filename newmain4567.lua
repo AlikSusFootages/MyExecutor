@@ -216,7 +216,7 @@ if game:isLoaded() then
                 }),
                 Create("Frame", {
                     Size = UDim2.new(1,0,1,-130),
-                    Position = UDim2.new(0,0,0,65),
+                    Position = UDim2.new(0,0,0,60),
                     BackgroundTransparency = 1,
                     BorderSizePixel = 0
                 }, {
