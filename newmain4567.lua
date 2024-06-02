@@ -232,6 +232,7 @@ if game:isLoaded() then
                         Font = GUI_Font,
                         Size = UDim2.new(1,0,0,20),
                         BackgroundTransparency = 1,
+                        TextXAlignment = "Left"
                     }, {
                         Create("UIPadding", {
                             PaddingLeft = UDim.new(0,26)
