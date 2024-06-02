@@ -177,10 +177,15 @@ if game:isLoaded() then
                     AnchorPoint = Vector2.new(0,1)
                 }, {
                     Create("ImageLabel", {
-                        Image = "https://www.roblox.com/headshot-thumbnail/image?userId=".. Player.UserId .."&width=420&height=420&format=png"
+                        Image = "https://www.roblox.com/headshot-thumbnail/image?userId=".. Player.UserId .."&width=420&height=420&format=png",
                         Size = UDim2.fromOffset(45,45),
                         Position = UDim2.new(0,0,0.5,0),
-                        AnchorPoint = Vector2.new(0,0.5)
+                        AnchorPoint = Vector2.new(0,0.5),
+                        BackgroundTransparency = 1,
+                    }, {
+                        Create("UICorner", {
+                            CornerRadius = UDim.new(1,1)
+                        })
                     })
                 }),
                 Create("Frame", {
