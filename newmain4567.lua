@@ -175,6 +175,10 @@ if game:isLoaded() then
                     Size = UDim2.new(1,0,0,60),
                     Position = UDim2.new(0,0,1,0),
                     AnchorPoint = Vector2.new(0,1)
+                }),
+                Create("Frame", {
+                    Size = UDim2.new(1,0,1,-100)
+                    Position = UDim2.new(0,0,0,30)
                 })
             })
         })
