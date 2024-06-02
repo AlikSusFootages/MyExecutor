@@ -198,6 +198,19 @@ if game:isLoaded() then
                         TextYAlignment = "Top",
                         Size = UDim2.new(1,-70,0,20),
                         TextTruncate = "AtEnd"
+                    }),
+                    Create("TextLabel", {
+                        Text = Player.Name,
+                        Position = UDim2.new(0,70,1,-6),
+                        BackgroundTransparency = 1,
+                        TextSize = 18,
+                        AnchorPoint = Vector2.new(0,1),
+                        Font = GUI_Font .. "Medium",
+                        TextColor3 = UsingTheme.Stroke,
+                        TextXAlignment = "Left",
+                        TextYAlignment = "Top",
+                        Size = UDim2.new(1,-70,0,20),
+                        TextTruncate = "AtEnd"
                     })
                 }),
                 Create("Frame", {
