@@ -69,7 +69,7 @@ if game:isLoaded() then
         ZIndexBehavior = "Sibling",
         Enabled = true,
         ResetOnSpawn = false,
-        IgnoreGuiInset = true,
+        IgnoreGuiInset = false,
         Parent = PlayerGui
     }, {
         Create("TextButton", {
@@ -96,7 +96,7 @@ if game:isLoaded() then
                 AnchorPoint = Vector2.new(1,0)
             }, {
                 Create("UIPadding", {
-                    PaddingTop = UDim.new(0, 60),
+                    PaddingTop = UDim.new(0, 30),
                     PaddingLeft = UDim.new(0, 45),
                     PaddingRight = UDim.new(0, 45),
                     PaddingBottom = UDim.new(0, 30),
