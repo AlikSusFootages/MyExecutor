@@ -178,7 +178,7 @@ if game:isLoaded() then
                 }, {
                     Create("ImageLabel", {
                         Image = "https://www.roblox.com/headshot-thumbnail/image?userId=".. Player.UserId .."&width=420&height=420&format=png",
-                        Size = UDim2.fromOffset(45,45),
+                        Size = UDim2.fromOffset(60,60),
                         Position = UDim2.new(0,0,0.5,0),
                         AnchorPoint = Vector2.new(0,0.5),
                         BackgroundTransparency = 1,
@@ -189,14 +189,15 @@ if game:isLoaded() then
                     }),
                     Create("TextLabel", {
                         Text = Player.DisplayName,
-                        Position = UDim2.new(0,60,0,20),
+                        Position = UDim2.new(0,70,0,20),
                         BackgroundTransparency = 1,
                         TextSize = 20,
                         Font = GUI_Font .. "Medium",
                         TextColor3 = UsingTheme.Text,
                         TextXAlignment = "Left",
                         TextYAlignment = "Top",
-                        Size = UDim2.new(1,-60,0,20),
+                        Size = UDim2.new(1,-70,0,20),
+                        TextTruncate = "AtEnd"
                     })
                 }),
                 Create("Frame", {
