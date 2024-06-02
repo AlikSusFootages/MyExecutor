@@ -50,8 +50,8 @@ local Settings = {
 
 if not isfolder("Dozer") then
     makefolder("Dozer")
-    if not isfile("Settings.json") then
-        writefile("Settings.json", HttpService:JSONDecode(Settings))
+    if not isfile("Dozer/Settings.json") then
+        writefile("Dozer/Settings.json", Settings)
     end
 end
 
