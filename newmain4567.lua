@@ -48,7 +48,7 @@ if game:isLoaded() then
         ZIndexBehavior = "Sibling",
         Enabled = true,
         ResetOnSpawn = false,
-        IgnoreGuilnest = true,
+        IgnoreGuilnset = true,
         Parent = PlayerGui
     }, {
         Create("Frame", {
