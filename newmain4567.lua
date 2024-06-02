@@ -70,7 +70,8 @@ if game:isLoaded() then
         Enabled = true,
         ResetOnSpawn = false,
         IgnoreGuiInset = true,
-        Parent = PlayerGui
+        Parent = PlayerGui,
+        DisplayOrder = 9999
     }, {
         Create("TextButton", {
             Name = "OpenButton",
