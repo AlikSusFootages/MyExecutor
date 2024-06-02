@@ -82,7 +82,11 @@ if game:isLoaded() then
                 }),
                 Create("TextLabel", {
                     Font = "Gotham",
-                    Text = "Dozer"
+                    Text = "Dozer",
+                    TextSize = 50,
+                    Size = UDim2.new(1,0,0,50),
+                    TextXAlignment = "Left",
+                    TextYAlignment = "Top",
                 })
             })
         })
