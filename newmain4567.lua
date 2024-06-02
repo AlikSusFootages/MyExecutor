@@ -240,7 +240,7 @@ if game:isLoaded() then
                         Create("ImageLabel", {
                             Size = UDim2.fromOffset(24,24), 
                             Image = GetIcon("info"),
-                            Position = UDim2.new(0, -26, 0.5, 0),
+                            Position = UDim2.new(0, -32, 0.5, 0),
                             AnchorPoint = Vector2.new(0,0.5),
                             BackgroundTransparency = 1
                         })
