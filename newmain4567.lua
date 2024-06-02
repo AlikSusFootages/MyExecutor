@@ -103,7 +103,10 @@ if game:isLoaded() then
                 }),
                 Create("Frame", {
                     Size = UDim2.new(1,0,0,1),
-                    Position = UDim2.fromOffset(0, 33)
+                    Position = UDim2.fromOffset(0, 16),
+                    BackgroundColor3 = UsingTheme.Stroke,
+                    BackgroundTransparency = GUI_Transparency,
+                    BorderSizePixel = 0
                 }),
                 Create("TextLabel", {
                     Font = GUI_Font .. "Medium",
@@ -114,14 +117,14 @@ if game:isLoaded() then
                     Size = UDim2.new(1,0,0,50),
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
-                    Position = UDim2.fromOffset(0, 40)
+                    Position = UDim2.fromOffset(0, 30)
                 }),
                 Create("ImageButton", {
                     Image = GetIcon("x"),
                     BackgroundTransparency = 1,
                     AnchorPoint = Vector2.new(1,0),
                     Size = UDim2.fromOffset(30,30),
-                    Position = UDim2.new(1,0,0,40),
+                    Position = UDim2.new(1,0,0,30),
                     Name = "CloseButton"
                 })
             })
