@@ -52,7 +52,7 @@ if game:isLoaded() then
         Parent = PlayerGui
     }, {
         Create("Frame", {
-            BackgroundColor3 = UsingTheme.Main,
+            BackgroundColor3 = Color3.fromRGB(0,3,6),
             BackgroundTransparency = GUI_Transparency,
             Size = UDim2.new(1, 0, 1, 0),
             BorderSizePixel = 0,
