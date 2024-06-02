@@ -128,8 +128,8 @@ if game:isLoaded() then
                     Name = "CloseButton"
                 }),
                 Create("Frame", {
-                    Size = UDim2.new(0,1,1,0),
-                    Position = UDim2.new(1,0,0,0),
+                    Size = UDim2.new(0,1,1,60),
+                    Position = UDim2.new(1,45,0,0),
                     BorderSizePixel = 0,
                     BackgroundTransparency = GUI_Transparency,
                     BackgroundColor3 = UsingTheme.Stroke
