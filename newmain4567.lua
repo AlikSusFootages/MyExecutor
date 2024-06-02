@@ -2,6 +2,7 @@
 --/° Services °/--
 
 local TweenService = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
 
@@ -38,12 +39,16 @@ local PlayerGui = game.CoreGui
 getgenv().identifyexecutor = function() return _fullName end
 getgenv().getexecutorname = function() return _fullName end
 
- 
+local Settings = {
+    CurrentTheme = GUI_CurrentTheme,
+    Scripts = {},
+    
+}
 
 if not isfolder("Dozer") then
     makefolder("Dozer")
     if not isfile("Settings.json") then
-        writefile("Settings.json", "{}")
+        writefile("Settings.json", Settings)
     end
 end
 
