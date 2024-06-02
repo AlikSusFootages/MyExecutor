@@ -193,7 +193,8 @@ if game:isLoaded() then
                         BackgroundTransparency = 1,
                         TextSize = 30,
                         Font = GUI_Font .. "Medium",
-                        TextColor3 = UsingTheme.Text
+                        TextColor3 = UsingTheme.Text,
+                        TextXAlignment = "Left"
                     })
                 }),
                 Create("Frame", {
