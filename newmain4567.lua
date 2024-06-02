@@ -24,7 +24,7 @@ local _version = "1.0.0"
 local _fullName = Dozer.Name .. " v" .. _version
 
 local GUI_CurrentTheme = "Dark"
-local GUI_Transparency = 0
+local GUI_Transparency = 0.5
 local GUI_Font = "Gotham"
 
 local Player = Players.LocalPlayer
