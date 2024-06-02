@@ -99,6 +99,13 @@ if game:isLoaded() then
                     Size = UDim2.new(1,0,0,50),
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
+                }),
+                Create("ImageButton", {
+                    Image = GetIcon("x"),
+                    BackgroundTransparency = 1,
+                    AnchorPoint = Vector2.new(1,0),
+                    Size = UDim2.fromOffset(40,40),
+                    Position = UDim2.new(1,0,0,0)
                 })
             })
         })
