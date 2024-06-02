@@ -221,7 +221,9 @@ if game:isLoaded() then
                     BorderSizePixel = 0
                 }, {
                     Create("UIListLayout", {
-                        
+                        FillDirection = "Vertical",
+                        Padding = UDim.new(0,14),
+                        SortOrder = "LayoutOrder",
                     })
                 })
             })
