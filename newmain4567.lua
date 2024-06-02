@@ -50,9 +50,9 @@ local GUI_Settings = {
 
 if not isfolder("Dozer") then
     makefolder("Dozer")
-    if not isfile("Dozer/Settings.json") then
-        writefile("Dozer/Settings.json", GUI_Settings)
-    end
+end
+if not isfile("Dozer/Settings.json") then
+    writefile("Dozer/Settings.json", GUI_Settings)
 end
 
 
