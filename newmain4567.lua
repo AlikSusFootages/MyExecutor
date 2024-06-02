@@ -76,6 +76,15 @@ local function GetIcon(Name)
     return nil 
 end
 
+local function ChangeTheme(Theme)
+    GUI_Settings.UISettings.Theme = Theme
+    if not isfile("Dozer/Settings.json") then
+        writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
+    else
+        
+    end
+end
+
 
 --/° Main °/--
 
