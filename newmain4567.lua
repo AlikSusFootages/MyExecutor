@@ -42,7 +42,8 @@ getgenv().getexecutorname = function() return _fullName end
 local GUI_Settings = {
     UISettings = {
         Theme = GUI_CurrentTheme,
-        Language = "En"
+        Language = "En",
+        Transparency = GUI_Transparency
     },
     Scripts = {},
     
@@ -218,6 +219,10 @@ if game:isLoaded() then
                     Position = UDim2.new(0,0,0,45),
                     BackgroundTransparency = 0.9,
                     BorderSizePixel = 0
+                }, {
+                    Create("UIListLayout", {
+                        
+                    })
                 })
             })
         })
