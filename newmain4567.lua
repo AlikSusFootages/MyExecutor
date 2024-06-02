@@ -215,9 +215,9 @@ if game:isLoaded() then
                     })
                 }),
                 Create("Frame", {
-                    Size = UDim2.new(1,0,1,-110),
-                    Position = UDim2.new(0,0,0,45),
-                    BackgroundTransparency = 0.9,
+                    Size = UDim2.new(1,0,1,-130),
+                    Position = UDim2.new(0,0,0,65),
+                    BackgroundTransparency = 1,
                     BorderSizePixel = 0
                 }, {
                     Create("UIListLayout", {
