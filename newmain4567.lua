@@ -13,6 +13,8 @@ local GUI_CurrentTheme = "Dark"
 local GUI_Transparency = 0.7
 
 local Player = Players.LocalPlayer
+local PlayerGui = Player.PlayerGui
+
 local Dozer = {
     Name = "Dozer",
     Themes = {
