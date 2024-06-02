@@ -1,8 +1,10 @@
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.CoreGui
 
-getgenv().identifyexecutor = function() return "Dozer" end
-getgenv().getexecutorname = function() return "Dozer" end
+local name = "Dozer v0.0.1 BETA"
+
+getgenv().identifyexecutor = function() return name end
+getgenv().getexecutorname = function() return name end
 
 local menu = Instance.new("Frame")
 menu.Size = UDim2.new(0, 400, 0, 300)
