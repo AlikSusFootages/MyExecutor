@@ -39,5 +39,8 @@ end
 if game:isLoaded() then
     local ScreenGui = Create("ScreenGui", {
         Name = "Dozer Executor v" .. _version,
+        ZIndexBehavior = "Sibling",
+        Enabled = true,
+        ResetOnSpawn = false
     })
 end
