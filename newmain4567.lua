@@ -72,6 +72,13 @@ if game:isLoaded() then
                 BackgroundTransparency = GUI_Transparency,
                 Size = UDim2.new(0, 340, 1, 0),
                 BorderSizePixel = 0
+            }, {
+                Create("UIPadding", {
+                    PaddingTop = UDim.new(0, 30),
+                    PaddingLeft = UDim.new(0, 45),
+                    PaddingRight = UDim.new(0, 45),
+                    PaddingBottom = UDim.new(0, 45),
+                })
             })
         })
     })
