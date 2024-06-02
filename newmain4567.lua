@@ -86,6 +86,7 @@ if game:isLoaded() then
             BackgroundTransparency = 1,
             Size = UDim2.new(1, 0, 1, 0),
             BorderSizePixel = 0,
+            ZIndex = 99999
         }, {
             Create("Frame", {
                 BackgroundColor3 = UsingTheme.Main,
