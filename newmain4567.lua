@@ -228,9 +228,10 @@ if game:isLoaded() then
                     Create("TextButton", {
                         Text = "Info",
                         TextColor3 = UsingTheme.Text,
-                        TextSize = 17,
+                        TextSize = 19,
                         Font = GUI_Font,
                         Size = UDim2.new(1,0,0,20),
+                        BackgroundTransparency = 1,
                     }, {
                         Create("UIPadding", {
                             PaddingLeft = UDim.new(0,26)
@@ -240,6 +241,7 @@ if game:isLoaded() then
                             Image = GetIcon("info"),
                             Position = UDim2.new(0, -26, 0.5, 0),
                             AnchorPoint = Vector2.new(0,0.5),
+                            BackgroundTransparency = 1
                         })
                     })
                 })
