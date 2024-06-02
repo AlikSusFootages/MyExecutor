@@ -120,7 +120,7 @@ if game:isLoaded() then
                     BackgroundTransparency = 1,
                     AnchorPoint = Vector2.new(1,0),
                     Size = UDim2.fromOffset(30,30),
-                    Position = UDim2.new(1,0,0,16),
+                    Position = UDim2.new(1,0,0,6),
                     Name = "CloseButton"
                 }),
                 Create("Frame", {
