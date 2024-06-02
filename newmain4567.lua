@@ -122,7 +122,7 @@ if game:isLoaded() then
             })
         })
     })
-    ScreenGuiOpenButton.MouseButton1Click:Connect(function()
+    ScreenGui.OpenButton.MouseButton1Click:Connect(function()
         TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.3), {BackgroundTransparency = GUI_Transparency}):Play()
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.3), {AnchorPoint = Vector2.new(0,0)}):Play()
     end)
