@@ -24,6 +24,7 @@ local _fullName = Dozer.Name .. " v" .. _version
 
 local GUI_CurrentTheme = "Dark"
 local GUI_Transparency = 0.7
+local GUI_Font = "Gotham"
 
 local Player = Players.LocalPlayer
 local PlayerGui = Player.PlayerGui
@@ -78,6 +79,10 @@ if game:isLoaded() then
                     PaddingLeft = UDim.new(0, 45),
                     PaddingRight = UDim.new(0, 45),
                     PaddingBottom = UDim.new(0, 30),
+                }),
+                Create("TextLabel", {
+                    Font = "Gotham",
+                    Text = "Dozer"
                 })
             })
         })
