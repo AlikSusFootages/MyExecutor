@@ -81,6 +81,11 @@ local function ChangeTheme(Theme)
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
 end
 
+local function ChangeLanguage(Language)
+    GUI_Settings.UISettings.Language = Language
+    writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
+end
+
 
 --/° Main °/--
 
