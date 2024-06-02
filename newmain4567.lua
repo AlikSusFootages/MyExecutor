@@ -72,6 +72,14 @@ if game:isLoaded() then
         IgnoreGuiInset = true,
         Parent = PlayerGui
     }, {
+        Create("TextButton", {
+            Name = "OpenButton",
+            Size = UDim2.fromOffset(60,60),
+            Position = UDim2.fromOffset(10,10),
+            TextColor3 = UsingTheme.Text,
+            BackgroundColor3 = UsingTheme.Main,
+            BorderSizePixel = 0
+        }),
         Create("Frame", {
             BackgroundColor3 = Color3.fromRGB(0,3,6),
             BackgroundTransparency = GUI_Transparency,
@@ -82,7 +90,8 @@ if game:isLoaded() then
                 BackgroundColor3 = UsingTheme.Main,
                 BackgroundTransparency = GUI_Transparency,
                 Size = UDim2.new(0, 340, 1, 0),
-                BorderSizePixel = 0
+                BorderSizePixel = 0,
+                Name = "Sidebar"
             }, {
                 Create("UIPadding", {
                     PaddingTop = UDim.new(0, 30),
@@ -105,9 +114,13 @@ if game:isLoaded() then
                     BackgroundTransparency = 1,
                     AnchorPoint = Vector2.new(1,0),
                     Size = UDim2.fromOffset(40,40),
-                    Position = UDim2.new(1,0,0,0)
+                    Position = UDim2.new(1,0,0,0),
+                    Name = "CloseButton"
                 })
             })
         })
     })
+    ScreenGui.Frame.Sidebar.CloseButton.MouseButton1Click:Connect(function()
+        
+    end)
 end
