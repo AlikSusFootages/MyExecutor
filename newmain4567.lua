@@ -191,10 +191,12 @@ if game:isLoaded() then
                         Text = Player.DisplayName,
                         Position = UDim2.new(0,60,0,20),
                         BackgroundTransparency = 1,
-                        TextSize = 30,
+                        TextSize = 20,
                         Font = GUI_Font .. "Medium",
                         TextColor3 = UsingTheme.Text,
-                        TextXAlignment = "Left"
+                        TextXAlignment = "Left",
+                        TextYAlignment = "Top",
+                        Size = UDim2.new(1,-60,0,20),
                     })
                 }),
                 Create("Frame", {
