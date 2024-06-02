@@ -78,7 +78,8 @@ if game:isLoaded() then
             Position = UDim2.fromOffset(10,10),
             TextColor3 = UsingTheme.Text,
             BackgroundColor3 = UsingTheme.Main,
-            BorderSizePixel = 0
+            BorderSizePixel = 0,
+            Text = "Open"
         }),
         Create("Frame", {
             BackgroundColor3 = Color3.fromRGB(0,3,6),
@@ -121,6 +122,6 @@ if game:isLoaded() then
         })
     })
     ScreenGui.Frame.Sidebar.CloseButton.MouseButton1Click:Connect(function()
-        
+        TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.3), {AnchorPoint = Vector2.new(1,0)}):Play()
     end)
 end
