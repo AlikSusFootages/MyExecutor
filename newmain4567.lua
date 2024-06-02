@@ -113,14 +113,14 @@ if game:isLoaded() then
                     Size = UDim2.new(1,0,0,50),
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
-                    Position = UDim2.fromOffset(0, 45)
+                    Position = UDim2.fromOffset(0, 0)
                 }),
                 Create("ImageButton", {
                     Image = GetIcon("x"),
                     BackgroundTransparency = 1,
                     AnchorPoint = Vector2.new(1,0),
                     Size = UDim2.fromOffset(30,30),
-                    Position = UDim2.new(1,0,0,51),
+                    Position = UDim2.new(1,0,0,16),
                     Name = "CloseButton"
                 }),
                 Create("Frame", {
