@@ -224,6 +224,17 @@ if game:isLoaded() then
                         FillDirection = "Vertical",
                         Padding = UDim.new(0,14),
                         SortOrder = "LayoutOrder",
+                    }),
+                    Create("TextButton", {
+                        Text = "Info",
+                        TextColor3 = UsingTheme.Text,
+                        TextSize = 16,
+                        Font = GUI_Font,
+                        Size = UDim2.new(1,0,0,20),
+                    }, {
+                        Create("UIPadding", {
+                            PaddingLeft = UDim.new(0,18)
+                        })
                     })
                 })
             })
