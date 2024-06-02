@@ -40,8 +40,8 @@ getgenv().getexecutorname = function() return _fullName end
 
  
 
-if not isfolder("../../../../../../../Dozer") then
-    makefolder("../../../../../../../Dozer")
+if not isfolder("Dozer") then
+    makefolder("Dozer")
 end
 
 
