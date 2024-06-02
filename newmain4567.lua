@@ -9,7 +9,8 @@ local Players = game:GetService("Players")
 
 local _version = "1.0.0"
 
-local CurrentTheme = "Dark"
+local GUI_CurrentTheme = "Dark"
+local GUI_Transparency = 0.7
 
 local Player = Players.LocalPlayer
 local Dozer = {
@@ -39,6 +40,7 @@ end
 
 
 if game:isLoaded() then
+    local UsingTheme = Dozer.Themes[GUI_CurrentTheme]
     local ScreenGui = Create("ScreenGui", {
         Name = "Dozer Executor v" .. _version,
         ZIndexBehavior = "Sibling",
@@ -46,7 +48,8 @@ if game:isLoaded() then
         ResetOnSpawn = false
     }, {
         Create("Frame", {
-            Back
+            BackgroundColor3 = UsingTheme.Main,
+            BackgroundTransparency = GUI_Transparency,
         })
     })
 end
