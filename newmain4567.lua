@@ -44,6 +44,7 @@ if not isfolder("Dozer") then
     makefolder("Dozer")
     if not isfile("Settings.json") then
         writefile("Settings.json", "{}")
+    end
 end
 
 
