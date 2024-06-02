@@ -33,8 +33,8 @@ local PlayerGui = Player.PlayerGui
 
 --/° Other °/--
 
-getgenv().identifyexecutor = function() return name end
-getgenv().getexecutorname = function() return name end
+getgenv().identifyexecutor = function() return _fullName end
+getgenv().getexecutorname = function() return _fullName end
 
 
 
