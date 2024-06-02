@@ -7,8 +7,9 @@ local Players = game:GetService("Players")
 
 --/° Variables °/--
 
-local Player = Players.LocalPlayer
+local _version = "1.0.0"
 
+local Player = Players.LocalPlayer
 local Dozer = {
     Name = "Dozer",
     Themes = {
@@ -19,6 +20,7 @@ local Dozer = {
         }
     }
 }
+
 
 --/° Functions °/--
 
@@ -33,3 +35,9 @@ local function Create(Name, Properties, Children)
 	return Object
 end
 
+
+if game:isLoaded() then
+    local ScreenGui = Create("ScreenGui", {
+        Name = "Dozer Executor"
+    })
+end
