@@ -130,6 +130,12 @@ if game:isLoaded() then
                     BackgroundTransparency = GUI_StrokeTransparency,
                     BackgroundColor3 = UsingTheme.Stroke,
                     AnchorPoint = Vector2.new(1,0),
+                }),
+                Create("TextButton", {
+                    Text = "",
+                    BackgroundTransparency = 1,
+                    BackgroundColor3 = UsingTheme.Stroke,
+                    AutoButtonColor = False,
                 })
             })
         })
