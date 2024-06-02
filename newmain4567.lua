@@ -129,10 +129,11 @@ if game:isLoaded() then
                 }),
                 Create("Frame", {
                     Size = UDim2.new(0,1,1,60),
-                    Position = UDim2.new(1,45,0,0),
+                    Position = UDim2.new(1,45,0,-30),
                     BorderSizePixel = 0,
                     BackgroundTransparency = GUI_Transparency,
-                    BackgroundColor3 = UsingTheme.Stroke
+                    BackgroundColor3 = UsingTheme.Stroke,
+                    AnchorPoint = Vector2.new(1,0),
                 })
             })
         })
