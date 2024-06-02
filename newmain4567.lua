@@ -189,7 +189,7 @@ if game:isLoaded() then
                     }),
                     Create("TextLabel", {
                         Text = Player.DisplayName,
-                        Position = UDim2.new(0,70,0,20),
+                        Position = UDim2.new(0,70,0,6),
                         BackgroundTransparency = 1,
                         TextSize = 20,
                         Font = GUI_Font .. "Medium",
