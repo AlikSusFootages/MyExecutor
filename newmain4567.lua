@@ -28,7 +28,7 @@ local GUI_Transparency = 0.5
 local GUI_Font = "Gotham"
 
 local Player = Players.LocalPlayer
-local PlayerGui = Player.PlayerGui
+local PlayerGui = game.CoreGui
 
 
 
