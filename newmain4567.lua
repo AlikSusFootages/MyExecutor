@@ -3,6 +3,7 @@
 
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
+local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
 
 
 --/° Variables °/--
@@ -51,6 +52,15 @@ local function Create(Name, Properties, Children)
 	return Object
 end
 
+local function GetIcon(Name) 
+    if Name ~= nil and Icons["lucide-" .. Name] then 
+        return Icons["lucide-" .. Name] 
+    end 
+    return nil 
+end
+
+
+--/° Main °/--
 
 if game:isLoaded() then
     local UsingTheme = Dozer.Themes[GUI_CurrentTheme]
