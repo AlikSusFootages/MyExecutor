@@ -81,7 +81,7 @@ local function ChangeTheme(Theme)
     if not isfile("Dozer/Settings.json") then
         writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
     else
-        
+        writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
     end
 end
 
