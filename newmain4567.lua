@@ -103,7 +103,7 @@ if game:isLoaded() then
                 }),
                 Create("Frame", {
                     Size = UDim2.new(1,60,0,1),
-                    Position = UDim2.fromOffset(30, 16),
+                    Position = UDim2.fromOffset(-30, 16),
                     BackgroundColor3 = UsingTheme.Stroke,
                     BackgroundTransparency = 0.6,
                     BorderSizePixel = 0
