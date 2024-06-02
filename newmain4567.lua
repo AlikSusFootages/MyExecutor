@@ -7,14 +7,6 @@ local Players = game:GetService("Players")
 
 --/° Variables °/--
 
-local _version = "1.0.0"
-
-local GUI_CurrentTheme = "Dark"
-local GUI_Transparency = 0.7
-
-local Player = Players.LocalPlayer
-local PlayerGui = Player.PlayerGui
-
 local Dozer = {
     Name = "Dozer",
     Themes = {
@@ -25,6 +17,24 @@ local Dozer = {
         }
     }
 }
+
+local _version = "1.0.0"
+
+local _fullName = Dozer.Name .. " v" .. _version
+
+local GUI_CurrentTheme = "Dark"
+local GUI_Transparency = 0.7
+
+local Player = Players.LocalPlayer
+local PlayerGui = Player.PlayerGui
+
+
+
+--/° Other °/--
+
+getgenv().identifyexecutor = function() return name end
+getgenv().getexecutorname = function() return name end
+
 
 
 --/° Functions °/--
