@@ -43,7 +43,7 @@ local Settings = {
     UISettings = {
         Theme = GUI_CurrentTheme,
         Language = "En"
-    }
+    },
     Scripts = {},
     
 }
@@ -51,7 +51,7 @@ local Settings = {
 if not isfolder("Dozer") then
     makefolder("Dozer")
     if not isfile("Settings.json") then
-        writefile("Settings.json", Settings)
+        writefile("Settings.json", HttpService:JSONDecode(Settings))
     end
 end
 
