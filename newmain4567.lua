@@ -39,7 +39,7 @@ local PlayerGui = game.CoreGui
 getgenv().identifyexecutor = function() return _fullName end
 getgenv().getexecutorname = function() return _fullName end
 
-local Settings = {
+local GUI_Settings = {
     UISettings = {
         Theme = GUI_CurrentTheme,
         Language = "En"
@@ -51,7 +51,7 @@ local Settings = {
 if not isfolder("Dozer") then
     makefolder("Dozer")
     if not isfile("Dozer/Settings.json") then
-        writefile("Dozer/Settings.json", Settings)
+        writefile("Dozer/Settings.json", GUI_Settings)
     end
 end
 
