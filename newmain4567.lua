@@ -66,6 +66,13 @@ if game:isLoaded() then
             BackgroundTransparency = GUI_Transparency,
             Size = UDim2.new(1, 0, 1, 0),
             BorderSizePixel = 0,
+        }, {
+            Create("Frame", {
+                BackgroundColor3 = UsingTheme.Main,
+                BackgroundTransparency = GUI_Transparency,
+                Size = UDim2.new(0, 340, 1, 0),
+                BorderSizePixel = 0
+            })
         })
     })
 end
