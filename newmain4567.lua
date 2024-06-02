@@ -52,7 +52,7 @@ if not isfolder("Dozer") then
     makefolder("Dozer")
 end
 if not isfile("Dozer/Settings.json") then
-    writefile("Dozer/Settings.json", HttpService:JSONDecode(GUI_Settings))
+    writefile("Dozer/Settings.json", tostring(HttpService:JSONDecode(GUI_Settings)))
 end
 
 
