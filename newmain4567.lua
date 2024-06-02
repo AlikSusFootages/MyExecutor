@@ -40,7 +40,10 @@ getgenv().identifyexecutor = function() return _fullName end
 getgenv().getexecutorname = function() return _fullName end
 
 local Settings = {
-    CurrentTheme = GUI_CurrentTheme,
+    UISettings = {
+        Theme = GUI_CurrentTheme,
+        Language = "En"
+    }
     Scripts = {},
     
 }
