@@ -86,6 +86,16 @@ local function ChangeLanguage(Language)
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
 end
 
+local function AddScript(Name, Script)
+    GUI_Settings.Scripts[Name] = Script
+    writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
+end
+local function DelScript(Name)
+    GUI_Settings.Scripts[Name] = nil
+    writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
+end
+
+
 
 --/° Main °/--
 
