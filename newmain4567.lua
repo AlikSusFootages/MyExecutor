@@ -38,6 +38,6 @@ end
 
 if game:isLoaded() then
     local ScreenGui = Create("ScreenGui", {
-        Name = "Dozer Executor"
+        Name = "Dozer Executor v" .. _version,
     })
 end
