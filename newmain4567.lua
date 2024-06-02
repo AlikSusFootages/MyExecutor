@@ -81,8 +81,10 @@ if game:isLoaded() then
                     PaddingBottom = UDim.new(0, 30),
                 }),
                 Create("TextLabel", {
-                    Font = "Gotham",
+                    Font = GUI_Font .. "Medium",
                     Text = "Dozer",
+                    TextColor3 = UsingTheme.Text,
+                    BackgroundTransparency = 1,
                     TextSize = 50,
                     Size = UDim2.new(1,0,0,50),
                     TextXAlignment = "Left",
