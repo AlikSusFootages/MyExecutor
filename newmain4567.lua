@@ -9,6 +9,8 @@ local Players = game:GetService("Players")
 
 local _version = "1.0.0"
 
+local CurrentTheme = "Dark"
+
 local Player = Players.LocalPlayer
 local Dozer = {
     Name = "Dozer",
@@ -42,5 +44,9 @@ if game:isLoaded() then
         ZIndexBehavior = "Sibling",
         Enabled = true,
         ResetOnSpawn = false
+    }, {
+        Create("Frame", {
+            Back
+        })
     })
 end
