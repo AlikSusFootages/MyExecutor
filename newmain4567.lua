@@ -75,7 +75,7 @@ if game:isLoaded() then
         Create("TextButton", {
             Name = "OpenButton",
             Size = UDim2.fromOffset(60,60),
-            Position = UDim2.fromOffset(10,10),
+            Position = UDim2.fromOffset(10,46),
             TextColor3 = UsingTheme.Text,
             BackgroundColor3 = UsingTheme.Main,
             BorderSizePixel = 0,
