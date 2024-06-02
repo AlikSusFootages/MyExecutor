@@ -47,7 +47,8 @@ if game:isLoaded() then
         Name = "Dozer Executor v" .. _version,
         ZIndexBehavior = "Sibling",
         Enabled = true,
-        ResetOnSpawn = false
+        ResetOnSpawn = false,
+        Parent = PlayerGui
     }, {
         Create("Frame", {
             BackgroundColor3 = UsingTheme.Main,
