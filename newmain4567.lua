@@ -186,6 +186,14 @@ if game:isLoaded() then
                         Create("UICorner", {
                             CornerRadius = UDim.new(1,1)
                         })
+                    }),
+                    Create("TextLabel", {
+                        Text = Player.DisplayName,
+                        Position = UDim2.new(0,60,0,20),
+                        BackgroundTransparency = 1,
+                        TextSize = 30,
+                        Font = GUI_Font .. "Medium",
+                        TextColor3 = UsingTheme.Text
                     })
                 }),
                 Create("Frame", {
