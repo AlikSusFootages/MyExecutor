@@ -69,7 +69,7 @@ if game:isLoaded() then
         ZIndexBehavior = "Sibling",
         Enabled = true,
         ResetOnSpawn = false,
-        IgnoreGuiInset = false,
+        IgnoreGuiInset = true,
         Parent = PlayerGui
     }, {
         Create("TextButton", {
@@ -101,6 +101,10 @@ if game:isLoaded() then
                     PaddingRight = UDim.new(0, 45),
                     PaddingBottom = UDim.new(0, 30),
                 }),
+                Create("Frame", {
+                    Size = UDim2.new(1,0,0,1),
+                    Position = UDim2.fromOffset(0, 33)
+                }),
                 Create("TextLabel", {
                     Font = GUI_Font .. "Medium",
                     Text = "Dozer",
@@ -110,13 +114,14 @@ if game:isLoaded() then
                     Size = UDim2.new(1,0,0,50),
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
+                    Position = UDim2.fromOffset(0, 40)
                 }),
                 Create("ImageButton", {
                     Image = GetIcon("x"),
                     BackgroundTransparency = 1,
                     AnchorPoint = Vector2.new(1,0),
                     Size = UDim2.fromOffset(30,30),
-                    Position = UDim2.new(1,0,0,0),
+                    Position = UDim2.new(1,0,0,40),
                     Name = "CloseButton"
                 })
             })
