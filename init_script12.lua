@@ -104,7 +104,6 @@ local specialInfo = {
 	Terrain = { "SmoothGrid", "MaterialColors" },
 };
 
-local selected_identifier = cheatIdentifier[identifiedcheat];
 
 --[[ Compatibility ]]--
 
