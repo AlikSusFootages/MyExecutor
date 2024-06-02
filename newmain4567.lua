@@ -178,7 +178,7 @@ if game:isLoaded() then
                 }),
                 Create("Frame", {
                     Size = UDim2.new(1,0,1,-100)
-                    Position = UDim2.new(0,0,0,30)
+                    Position = UDim2.new(0,0,0,35)
                 })
             })
         })
