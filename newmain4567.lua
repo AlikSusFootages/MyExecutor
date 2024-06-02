@@ -285,6 +285,26 @@ if game:isLoaded() then
                             BackgroundTransparency = 1
                         })
                     }),
+                    Create("TextButton", {
+                        Text = "Settings",
+                        TextColor3 = UsingTheme.Text,
+                        TextSize = 22,
+                        Font = GUI_Font,
+                        Size = UDim2.new(1,0,0,26),
+                        BackgroundTransparency = 1,
+                        TextXAlignment = "Left"
+                    }, {
+                        Create("UIPadding", {
+                            PaddingLeft = UDim.new(0,32)
+                        }),
+                        Create("ImageLabel", {
+                            Size = UDim2.fromOffset(24,24), 
+                            Image = GetIcon("settings"),
+                            Position = UDim2.new(0, -32, 0.5, 0),
+                            AnchorPoint = Vector2.new(0,0.5),
+                            BackgroundTransparency = 1
+                        })
+                    })
                 })
             })
         })
