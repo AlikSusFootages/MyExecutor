@@ -91,12 +91,6 @@ local userAgent = table.concat({ identifyexecutor() }, " ");
 local userFingerprint = gethwid();
 local userIdentifier = ""; -- Add this when you actually make it work, don't fake it
 
-local cheatIdentifier = {
-    -- Hydrogen = "Hydrogen-Fingerprint",
-    -- Delta = "Delta-Fingerprint",
-    -- Codex = "Codex-Fingerprint",
-    Dozer = "Dozer-Fingerprint"
-}
 
 local specialInfo = {
 	MeshPart = { "PhysicsData", "InitialSize" },
