@@ -228,17 +228,17 @@ if game:isLoaded() then
                     Create("TextButton", {
                         Text = "Info",
                         TextColor3 = UsingTheme.Text,
-                        TextSize = 19,
+                        TextSize = 22,
                         Font = GUI_Font,
-                        Size = UDim2.new(1,0,0,20),
+                        Size = UDim2.new(1,0,0,26),
                         BackgroundTransparency = 1,
                         TextXAlignment = "Left"
                     }, {
                         Create("UIPadding", {
-                            PaddingLeft = UDim.new(0,26)
+                            PaddingLeft = UDim.new(0,32)
                         }),
                         Create("ImageLabel", {
-                            Size = UDim2.fromOffset(20,20), 
+                            Size = UDim2.fromOffset(24,24), 
                             Image = GetIcon("info"),
                             Position = UDim2.new(0, -26, 0.5, 0),
                             AnchorPoint = Vector2.new(0,0.5),
