@@ -313,15 +313,17 @@ if game:isLoaded() then
                 BackgroundColor3 = UsingTheme.Main,
                 BorderSizePixel = 0,
                 Size = UDim2.new(1, -340, 1, -40),
-                Position = UDim2.new(1,-20,0,0),
+                Position = UDim2.new(1,-20,0,20),
                 AnchorPoint = Vector2.new(1,0),
                 TextXAlignment = "Left",
                 TextYAlignment = "Top",
                 TextColor3 = UsingTheme.Text,
-                TextSize = 28
+                TextSize = 28,
+                Text = "Info",
+                Font = GUI_Font .. "Medium"
             }, {
                 Create("UICorner", {
-                    CornerRadius = UDim.new(0, 10)
+                    CornerRadius = UDim.new(0, 14)
                 }),
                 Create("UIStroke", {
                     Thickness = 1,
