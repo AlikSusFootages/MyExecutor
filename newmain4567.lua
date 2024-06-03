@@ -222,7 +222,7 @@ if game:isLoaded() then
                 }, {
                     Create("UIListLayout", {
                         FillDirection = "Vertical",
-                        Padding = UDim.new(0,20),
+                        Padding = UDim.new(0,36),
                         SortOrder = "LayoutOrder",
                     }),
                     Create("TextButton", {
@@ -255,7 +255,7 @@ if game:isLoaded() then
                         TextXAlignment = "Left"
                     }, {
                         Create("UIPadding", {
-                            PaddingLeft = UDim.new(0,48)
+                            PaddingLeft = UDim.new(0,32)
                         }),
                         Create("ImageLabel", {
                             Size = UDim2.fromOffset(24,24), 
