@@ -332,7 +332,7 @@ if game:isLoaded() then
                     Text = "Info",
                     Font = GUI_Font .. "Medium",
                     Name = "InfoPage",
-                    Visible = True
+                    Visible = true
                 }, {
                     Create("UICorner", {
                         CornerRadius = UDim.new(0, 14)
@@ -353,6 +353,9 @@ if game:isLoaded() then
             })
         })
     })
+    
+    --/° Scripts °/--
+    
     ScreenGui.OpenButton.MouseButton1Click:Connect(function()
         TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.4}):Play()
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0,0)}):Play()
