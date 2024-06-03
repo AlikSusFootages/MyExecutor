@@ -255,7 +255,7 @@ if game:isLoaded() then
                         TextXAlignment = "Left"
                     }, {
                         Create("UIPadding", {
-                            PaddingLeft = UDim.new(0,32)
+                            PaddingLeft = UDim.new(0,48)
                         }),
                         Create("ImageLabel", {
                             Size = UDim2.fromOffset(24,24), 
