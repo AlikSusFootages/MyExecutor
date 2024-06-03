@@ -467,11 +467,12 @@ if game:isLoaded() then
     ScreenGui.OpenButton.MouseButton1Click:Connect(function()
         TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.4}):Play()
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0,0)}):Play()
-        TweenService:Create(RightFrames, TweenInfo.new(0.2), {AnchorPoint = Vector2.new(1,0)})
+        TweenService:Create(RightFrames, TweenInfo.new(0.2), {AnchorPoint = Vector2.new(1,0)}):Play()
     end)
     ScreenGui.Frame.Sidebar.CloseButton.MouseButton1Click:Connect(function()
         TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 1}):Play()
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
+        TweenService:Create(RightFrames, TweenInfo.new(0.2), {AnchorPoint = Vector2.new(0,0)}):Play()
     end)
     
     
