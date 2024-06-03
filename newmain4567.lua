@@ -319,6 +319,7 @@ if game:isLoaded() then
                 BackgroundTransparency = 1,
                 Name = "RightFrames"
             }, {
+                -- Info
                 Create("TextLabel", {
                     BackgroundTransparency = GUI_Transparency -0.2,
                     BackgroundColor3 = UsingTheme.Main,
@@ -333,6 +334,105 @@ if game:isLoaded() then
                     Text = "Info",
                     Font = GUI_Font .. "Medium",
                     Name = "InfoPage",
+                    Visible = true
+                }, {
+                    Create("UICorner", {
+                        CornerRadius = UDim.new(0, 14)
+                    }),
+                    Create("UIStroke", {
+                        Thickness = 1,
+                        Color = UsingTheme.Stroke,
+                        Transparency = GUI_StrokeTransparency,
+                        ApplyStrokeMode = "Border"
+                    }),
+                    Create("UIPadding", {
+                        PaddingTop = UDim.new(0, 20),
+                        PaddingLeft = UDim.new(0, 25),
+                        PaddingRight = UDim.new(0, 25),
+                        PaddingBottom = UDim.new(0, 20),
+                    })
+                }),
+                -- Executor
+                Create("TextLabel", {
+                    BackgroundTransparency = GUI_Transparency -0.2,
+                    BackgroundColor3 = UsingTheme.Main,
+                    BorderSizePixel = 0,
+                    Size = UDim2.new(1, -40, 1, -40),
+                    Position = UDim2.new(0.5,0,0.5,0),
+                    AnchorPoint = Vector2.new(0.5,0.5),
+                    TextXAlignment = "Left",
+                    TextYAlignment = "Top",
+                    TextColor3 = UsingTheme.Text,
+                    TextSize = 28,
+                    Text = "Executor",
+                    Font = GUI_Font .. "Medium",
+                    Name = "ExecutorPage",
+                    Visible = true
+                }, {
+                    Create("UICorner", {
+                        CornerRadius = UDim.new(0, 14)
+                    }),
+                    Create("UIStroke", {
+                        Thickness = 1,
+                        Color = UsingTheme.Stroke,
+                        Transparency = GUI_StrokeTransparency,
+                        ApplyStrokeMode = "Border"
+                    }),
+                    Create("UIPadding", {
+                        PaddingTop = UDim.new(0, 20),
+                        PaddingLeft = UDim.new(0, 25),
+                        PaddingRight = UDim.new(0, 25),
+                        PaddingBottom = UDim.new(0, 20),
+                    })
+                }),
+                -- Script Search
+                Create("TextLabel", {
+                    BackgroundTransparency = GUI_Transparency -0.2,
+                    BackgroundColor3 = UsingTheme.Main,
+                    BorderSizePixel = 0,
+                    Size = UDim2.new(1, -40, 1, -40),
+                    Position = UDim2.new(0.5,0,0.5,0),
+                    AnchorPoint = Vector2.new(0.5,0.5),
+                    TextXAlignment = "Left",
+                    TextYAlignment = "Top",
+                    TextColor3 = UsingTheme.Text,
+                    TextSize = 28,
+                    Text = "Script Search",
+                    Font = GUI_Font .. "Medium",
+                    Name = "ScriptSearchPage",
+                    Visible = true
+                }, {
+                    Create("UICorner", {
+                        CornerRadius = UDim.new(0, 14)
+                    }),
+                    Create("UIStroke", {
+                        Thickness = 1,
+                        Color = UsingTheme.Stroke,
+                        Transparency = GUI_StrokeTransparency,
+                        ApplyStrokeMode = "Border"
+                    }),
+                    Create("UIPadding", {
+                        PaddingTop = UDim.new(0, 20),
+                        PaddingLeft = UDim.new(0, 25),
+                        PaddingRight = UDim.new(0, 25),
+                        PaddingBottom = UDim.new(0, 20),
+                    })
+                }),
+                -- Settings
+                Create("TextLabel", {
+                    BackgroundTransparency = GUI_Transparency -0.2,
+                    BackgroundColor3 = UsingTheme.Main,
+                    BorderSizePixel = 0,
+                    Size = UDim2.new(1, -40, 1, -40),
+                    Position = UDim2.new(0.5,0,0.5,0),
+                    AnchorPoint = Vector2.new(0.5,0.5),
+                    TextXAlignment = "Left",
+                    TextYAlignment = "Top",
+                    TextColor3 = UsingTheme.Text,
+                    TextSize = 28,
+                    Text = "Settings",
+                    Font = GUI_Font .. "Medium",
+                    Name = "SettingsPage",
                     Visible = true
                 }, {
                     Create("UICorner", {
