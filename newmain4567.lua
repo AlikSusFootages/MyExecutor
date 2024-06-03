@@ -229,6 +229,7 @@ if game:isLoaded() then
                     }),
                     Create("TextButton", {
                         Text = "Info",
+                        Name = "Info",
                         TextColor3 = UsingTheme.Text,
                         TextSize = 22,
                         Font = GUI_Font,
@@ -249,6 +250,7 @@ if game:isLoaded() then
                     }),
                     Create("TextButton", {
                         Text = "Executor",
+                        Name = "Executor",
                         TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
                         Font = GUI_Font,
@@ -270,6 +272,7 @@ if game:isLoaded() then
                     }),
                     Create("TextButton", {
                         Text = "Search Scripts",
+                        Name = "SearchScripts",
                         TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
                         Font = GUI_Font,
@@ -291,6 +294,7 @@ if game:isLoaded() then
                     }),
                     Create("TextButton", {
                         Text = "Settings",
+                        Name = "Settings",
                         TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
                         Font = GUI_Font,
@@ -333,7 +337,7 @@ if game:isLoaded() then
                     TextSize = 38,
                     Text = "Info",
                     Font = GUI_Font .. "Medium",
-                    Name = "InfoPage",
+                    Name = "Info",
                     Visible = true
                 }, {
                     Create("UICorner", {
@@ -366,7 +370,7 @@ if game:isLoaded() then
                     TextSize = 38,
                     Text = "Executor",
                     Font = GUI_Font .. "Medium",
-                    Name = "ExecutorPage",
+                    Name = "Executor",
                     Visible = false
                 }, {
                     Create("UICorner", {
@@ -399,7 +403,7 @@ if game:isLoaded() then
                     TextSize = 38,
                     Text = "Script Search",
                     Font = GUI_Font .. "Medium",
-                    Name = "ScriptSearchPage",
+                    Name = "ScriptSearch",
                     Visible = false
                 }, {
                     Create("UICorner", {
@@ -432,7 +436,7 @@ if game:isLoaded() then
                     TextSize = 38,
                     Text = "Settings",
                     Font = GUI_Font .. "Medium",
-                    Name = "SettingsPage",
+                    Name = "Settings",
                     Visible = false
                 }, {
                     Create("UICorner", {
