@@ -369,4 +369,16 @@ if game:isLoaded() then
     
     local Navbar = ScreenGui.Frame.Sidebar.Navbar.Navbar
     
+    for i,v in next, Navbar:GetChildren() do
+        if v:IsA("TextButton") then
+            v.MouseButton1Click:Connect(function()
+                for i,v in next, Navbar:GetChildren() do 
+                    if v:IsA("TextButton") then
+                        TweenService:Create(v, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Stroke}):Play()
+                    end
+                end
+                TweenService:Create(TabFrame, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Text}):Play()
+            end)
+        end
+    end
 end
