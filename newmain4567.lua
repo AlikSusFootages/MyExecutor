@@ -263,7 +263,8 @@ if game:isLoaded() then
                             Image = GetIcon("scroll"),
                             Position = UDim2.new(0, -32, 0.5, 0),
                             AnchorPoint = Vector2.new(0,0.5),
-                            BackgroundTransparency = 1
+                            BackgroundTransparency = 1,
+                            ImageColor3 = UsingTheme.Stroke
                         })
                     }),
                     Create("TextButton", {
@@ -283,7 +284,8 @@ if game:isLoaded() then
                             Image = GetIcon("file-search-2"),
                             Position = UDim2.new(0, -32, 0.5, 0),
                             AnchorPoint = Vector2.new(0,0.5),
-                            BackgroundTransparency = 1
+                            BackgroundTransparency = 1,
+                            ImageColor3 = UsingTheme.Stroke
                         })
                     }),
                     Create("TextButton", {
@@ -303,7 +305,8 @@ if game:isLoaded() then
                             Image = GetIcon("settings"),
                             Position = UDim2.new(0, -32, 0.5, 0),
                             AnchorPoint = Vector2.new(0,0.5),
-                            BackgroundTransparency = 1
+                            BackgroundTransparency = 1,
+                            ImageColor3 = UsingTheme.Stroke
                         })
                     })
                 })
@@ -328,7 +331,8 @@ if game:isLoaded() then
                 Create("UIStroke", {
                     Thickness = 1,
                     Color = UsingTheme.Stroke,
-                    Transparency = GUI_StrokeTransparency
+                    Transparency = GUI_StrokeTransparency,
+                    ApplyStrokeMode = "Border"
                 }),
                 Create("UIPadding", {
                     PaddingTop = UDim.new(0, 20),
