@@ -248,7 +248,7 @@ if game:isLoaded() then
                     }),
                     Create("TextButton", {
                         Text = "Executor",
-                        TextColor3 = UsingTheme.Text,
+                        TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
                         Font = GUI_Font,
                         Size = UDim2.new(1,0,0,26),
@@ -268,7 +268,7 @@ if game:isLoaded() then
                     }),
                     Create("TextButton", {
                         Text = "Search Scripts",
-                        TextColor3 = UsingTheme.Text,
+                        TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
                         Font = GUI_Font,
                         Size = UDim2.new(1,0,0,26),
@@ -288,7 +288,7 @@ if game:isLoaded() then
                     }),
                     Create("TextButton", {
                         Text = "Settings",
-                        TextColor3 = UsingTheme.Text,
+                        TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
                         Font = GUI_Font,
                         Size = UDim2.new(1,0,0,26),
