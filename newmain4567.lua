@@ -133,6 +133,7 @@ if game:isLoaded() then
                 Size = UDim2.new(0, 300, 1, 0),
                 BorderSizePixel = 0,
                 Name = "Sidebar",
+                Active = true,
                 AnchorPoint = Vector2.new(1,0)
             }, {
                 Create("UIPadding", {
