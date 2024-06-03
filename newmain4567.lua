@@ -272,7 +272,7 @@ if game:isLoaded() then
                     }),
                     Create("TextButton", {
                         Text = "Search Scripts",
-                        Name = "SearchScripts",
+                        Name = "ScriptSearch",
                         TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
                         Font = GUI_Font,
