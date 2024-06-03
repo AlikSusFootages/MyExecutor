@@ -224,7 +224,7 @@ if game:isLoaded() then
                 }, {
                     Create("UIListLayout", {
                         FillDirection = "Vertical",
-                        Padding = UDim.new(0,32),
+                        Padding = UDim.new(0,28),
                         SortOrder = "LayoutOrder",
                     }),
                     Create("TextButton", {
