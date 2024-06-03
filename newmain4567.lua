@@ -330,7 +330,7 @@ if game:isLoaded() then
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
                     TextColor3 = UsingTheme.Text,
-                    TextSize = 28,
+                    TextSize = 38,
                     Text = "Info",
                     Font = GUI_Font .. "Medium",
                     Name = "InfoPage",
@@ -363,11 +363,11 @@ if game:isLoaded() then
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
                     TextColor3 = UsingTheme.Text,
-                    TextSize = 28,
+                    TextSize = 38,
                     Text = "Executor",
                     Font = GUI_Font .. "Medium",
                     Name = "ExecutorPage",
-                    Visible = true
+                    Visible = false
                 }, {
                     Create("UICorner", {
                         CornerRadius = UDim.new(0, 14)
@@ -396,11 +396,11 @@ if game:isLoaded() then
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
                     TextColor3 = UsingTheme.Text,
-                    TextSize = 28,
+                    TextSize = 38,
                     Text = "Script Search",
                     Font = GUI_Font .. "Medium",
                     Name = "ScriptSearchPage",
-                    Visible = true
+                    Visible = false
                 }, {
                     Create("UICorner", {
                         CornerRadius = UDim.new(0, 14)
@@ -429,11 +429,11 @@ if game:isLoaded() then
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
                     TextColor3 = UsingTheme.Text,
-                    TextSize = 28,
+                    TextSize = 38,
                     Text = "Settings",
                     Font = GUI_Font .. "Medium",
                     Name = "SettingsPage",
-                    Visible = true
+                    Visible = false
                 }, {
                     Create("UICorner", {
                         CornerRadius = UDim.new(0, 14)
