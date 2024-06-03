@@ -350,10 +350,10 @@ if game:isLoaded() then
                         ApplyStrokeMode = "Border"
                     }),
                     Create("UIPadding", {
-                        PaddingTop = UDim.new(0, 20),
-                        PaddingLeft = UDim.new(0, 25),
-                        PaddingRight = UDim.new(0, 25),
-                        PaddingBottom = UDim.new(0, 20),
+                        PaddingTop = UDim.new(0, 25),
+                        PaddingLeft = UDim.new(0, 30),
+                        PaddingRight = UDim.new(0, 30),
+                        PaddingBottom = UDim.new(0, 25),
                     })
                 }),
                 -- Executor
@@ -383,10 +383,10 @@ if game:isLoaded() then
                         ApplyStrokeMode = "Border"
                     }),
                     Create("UIPadding", {
-                        PaddingTop = UDim.new(0, 20),
-                        PaddingLeft = UDim.new(0, 25),
-                        PaddingRight = UDim.new(0, 25),
-                        PaddingBottom = UDim.new(0, 20),
+                        PaddingTop = UDim.new(0, 25),
+                        PaddingLeft = UDim.new(0, 30),
+                        PaddingRight = UDim.new(0, 30),
+                        PaddingBottom = UDim.new(0, 25),
                     })
                 }),
                 -- Script Search
@@ -416,10 +416,10 @@ if game:isLoaded() then
                         ApplyStrokeMode = "Border"
                     }),
                     Create("UIPadding", {
-                        PaddingTop = UDim.new(0, 20),
-                        PaddingLeft = UDim.new(0, 25),
-                        PaddingRight = UDim.new(0, 25),
-                        PaddingBottom = UDim.new(0, 20),
+                        PaddingTop = UDim.new(0, 25),
+                        PaddingLeft = UDim.new(0, 30),
+                        PaddingRight = UDim.new(0, 30),
+                        PaddingBottom = UDim.new(0, 25),
                     })
                 }),
                 -- Settings
@@ -449,10 +449,10 @@ if game:isLoaded() then
                         ApplyStrokeMode = "Border"
                     }),
                     Create("UIPadding", {
-                        PaddingTop = UDim.new(0, 20),
-                        PaddingLeft = UDim.new(0, 25),
-                        PaddingRight = UDim.new(0, 25),
-                        PaddingBottom = UDim.new(0, 20),
+                        PaddingTop = UDim.new(0, 25),
+                        PaddingLeft = UDim.new(0, 30),
+                        PaddingRight = UDim.new(0, 30),
+                        PaddingBottom = UDim.new(0, 25),
                     })
                 })
             })
