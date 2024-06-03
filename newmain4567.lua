@@ -330,6 +330,9 @@ if game:isLoaded() then
                 }),
                 Create("UIPadding", {
                     PaddingTop = UDim.new(0, 30),
+                    PaddingLeft = UDim.new(0, 45),
+                    PaddingRight = UDim.new(0, 45),
+                    PaddingBottom = UDim.new(0, 30),
                 })
             })
         })
