@@ -472,13 +472,12 @@ if game:isLoaded() then
     for i,v in next, Navbar:GetChildren() do
         if v:IsA("TextButton") then
             v.MouseButton1Click:Connect(function()
-                -- Rightframe
                 for i,v in next, RightFrames:GetChildren() do 
                     v.Visible = false
                 end	
                 v.Visible = true
-                
-                --nav
+            end)
+            v.MouseButton1Click:Connect(function()
                 for i,v in next, Navbar:GetChildren() do 
                     if v:IsA("TextButton") then
                         TweenService:Create(v, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Stroke}):Play()
