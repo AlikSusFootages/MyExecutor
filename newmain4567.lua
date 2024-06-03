@@ -311,34 +311,41 @@ if game:isLoaded() then
                     })
                 })
             }),
-            Create("TextLabel", {
-                BackgroundTransparency = GUI_Transparency -0.2,
-                BackgroundColor3 = UsingTheme.Main,
-                BorderSizePixel = 0,
-                Size = UDim2.new(1, -340, 1, -40),
-                Position = UDim2.new(1,-20,0,20),
+            Create("Frame", {
+                Size = UDim2.new(1, -300, 1, 0),
+                Position = UDim2.new(1,0,0,0),
                 AnchorPoint = Vector2.new(1,0),
-                TextXAlignment = "Left",
-                TextYAlignment = "Top",
-                TextColor3 = UsingTheme.Text,
-                TextSize = 28,
-                Text = "Info",
-                Font = GUI_Font .. "Medium"
+                BackgroundTransparency = 1,
             }, {
-                Create("UICorner", {
-                    CornerRadius = UDim.new(0, 14)
-                }),
-                Create("UIStroke", {
-                    Thickness = 1,
-                    Color = UsingTheme.Stroke,
-                    Transparency = GUI_StrokeTransparency,
-                    ApplyStrokeMode = "Border"
-                }),
-                Create("UIPadding", {
-                    PaddingTop = UDim.new(0, 20),
-                    PaddingLeft = UDim.new(0, 25),
-                    PaddingRight = UDim.new(0, 25),
-                    PaddingBottom = UDim.new(0, 20),
+                Create("TextLabel", {
+                    BackgroundTransparency = GUI_Transparency -0.2,
+                    BackgroundColor3 = UsingTheme.Main,
+                    BorderSizePixel = 0,
+                    Size = UDim2.new(1, -40, 1, -40),
+                    Position = UDim2.new(0.5,0.5),
+                    AnchorPoint = Vector2.new(0.5,0.5),
+                    TextXAlignment = "Left",
+                    TextYAlignment = "Top",
+                    TextColor3 = UsingTheme.Text,
+                    TextSize = 28,
+                    Text = "Info",
+                    Font = GUI_Font .. "Medium"
+                }, {
+                    Create("UICorner", {
+                        CornerRadius = UDim.new(0, 14)
+                    }),
+                    Create("UIStroke", {
+                        Thickness = 1,
+                        Color = UsingTheme.Stroke,
+                        Transparency = GUI_StrokeTransparency,
+                        ApplyStrokeMode = "Border"
+                    }),
+                    Create("UIPadding", {
+                        PaddingTop = UDim.new(0, 20),
+                        PaddingLeft = UDim.new(0, 25),
+                        PaddingRight = UDim.new(0, 25),
+                        PaddingBottom = UDim.new(0, 20),
+                    })
                 })
             })
         })
