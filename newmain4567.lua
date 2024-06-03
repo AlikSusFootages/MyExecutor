@@ -319,7 +319,7 @@ if game:isLoaded() then
             Create("Frame", {
                 Size = UDim2.new(1, -300, 1, 0),
                 Position = UDim2.new(1,0,0,0),
-                AnchorPoint = Vector2.new(1,0),
+                AnchorPoint = Vector2.new(0,0),
                 BackgroundTransparency = 1,
                 Name = "RightFrames"
             }, {
@@ -460,18 +460,20 @@ if game:isLoaded() then
     })
     
     --/° Scripts °/--
+    local Navbar = ScreenGui.Frame.Sidebar.Navbar
+    local RightFrames = ScreenGui.Frame.RightFrames
+    
     
     ScreenGui.OpenButton.MouseButton1Click:Connect(function()
         TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.4}):Play()
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0,0)}):Play()
+        TweenService:Create(RightFrames, TweenInfo.new(0.2), {AnchorPoint = Vector2.new(1,0)})
     end)
     ScreenGui.Frame.Sidebar.CloseButton.MouseButton1Click:Connect(function()
         TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 1}):Play()
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
     end)
     
-    local Navbar = ScreenGui.Frame.Sidebar.Navbar
-    local RightFrames = ScreenGui.Frame.RightFrames
     
     for i,b in next, Navbar:GetChildren() do
         if b:IsA("TextButton") then
@@ -479,6 +481,8 @@ if game:isLoaded() then
                 for i,v in next, RightFrames:GetChildren() do
                     v.Visible = false
                     if string.find(v.Name, b.Name) then
+                        v.Position = UDim2.new(0.5, -30, 0.5,0)
+                        TweenService:Create(v, TweenInfo.new(0.15), {Position = UDim2.fromScale(0.5,0.5)}):Play()
                         v.Visible = true
                     end
                 end
