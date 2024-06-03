@@ -495,13 +495,4 @@ if game:isLoaded() then
             end)
         end
     end
-    
-    local Sidebar = script.Parent.Frame.Sidebar
-    local RightFrames = script.Parent.Frame.RightFrames
-    
-    require(13699518434):BlurFrame(Sidebar)
-    for i,v in next, RightFrames:GetChildren() do
-        require(13699518434):BlurFrame(v)
-    end
-    
 end
