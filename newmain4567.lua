@@ -328,6 +328,9 @@ if game:isLoaded() then
                     Color = UsingTheme.Stroke,
                     Transparency = GUI_StrokeTransparency
                 }),
+                Create("UIPadding", {
+                    PaddingTop = UDim.new(0, 30),
+                })
             })
         })
     })
