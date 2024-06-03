@@ -324,7 +324,7 @@ if game:isLoaded() then
                     BackgroundColor3 = UsingTheme.Main,
                     BorderSizePixel = 0,
                     Size = UDim2.new(1, -40, 1, -40),
-                    Position = UDim2.new(0.5,0.5),
+                    Position = UDim2.new(0.5,0,0.5,0),
                     AnchorPoint = Vector2.new(0.5,0.5),
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
