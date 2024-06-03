@@ -331,7 +331,8 @@ if game:isLoaded() then
                     TextSize = 28,
                     Text = "Info",
                     Font = GUI_Font .. "Medium",
-                    Name = "InfoPage"
+                    Name = "InfoPage",
+                    Visible = True
                 }, {
                     Create("UICorner", {
                         CornerRadius = UDim.new(0, 14)
