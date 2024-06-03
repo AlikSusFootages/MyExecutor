@@ -315,6 +315,15 @@ if game:isLoaded() then
                 Size = UDim2.new(1, -340, 1, -40),
                 Position = UDim2.new(1,-20,0,0),
                 AnchorPoint = Vector2.new(1,0)
+            }, {
+                Create("UICorner", {
+                    CornerRadius = UDim.new(0, 20)
+                }),
+                Create("UIStroke", {
+                    Thickness = 1,
+                    Color = UsingTheme.Stroke,
+                    Transparency = GUI_StrokeTransparency
+                })
             })
         })
     })
