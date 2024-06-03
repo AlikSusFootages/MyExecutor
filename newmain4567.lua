@@ -469,23 +469,25 @@ if game:isLoaded() then
     local Navbar = ScreenGui.Frame.Sidebar.Navbar
     local RightFrames = ScreenGui.Frame.RightFrames
     
-    for i,v in next, Navbar:GetChildren() do
-        if v:IsA("TextButton") then
-            v.MouseButton1Click:Connect(function()
-                for i,v in next, RightFrames:GetChildren() do 
+    for i,b in next, Navbar:GetChildren() do
+        if b:IsA("TextButton") then
+            b.MouseButton1Click:Connect(function()
+                for i,v in next, RightFrames:GetChildren() do
                     v.Visible = false
-                end	
-                v.Visible = true
+                    if string.find(v.Name, b.Name) then
+                        v.Visible = true
+                    end
+                end
             end)
-            v.MouseButton1Click:Connect(function()
+            b.MouseButton1Click:Connect(function()
                 for i,v in next, Navbar:GetChildren() do 
                     if v:IsA("TextButton") then
                         TweenService:Create(v, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Stroke}):Play()
                         TweenService:Create(v.ImageLabel, TweenInfo.new(0.15), {ImageColor3 = UsingTheme.Stroke}):Play()
                     end
                 end
-                TweenService:Create(v, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Text}):Play()
-                TweenService:Create(v.ImageLabel, TweenInfo.new(0.15), {ImageColor3 = UsingTheme.Text}):Play()
+                TweenService:Create(b, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Text}):Play()
+                TweenService:Create(b.ImageLabel, TweenInfo.new(0.15), {ImageColor3 = UsingTheme.Text}):Play()
             end)
         end
     end
