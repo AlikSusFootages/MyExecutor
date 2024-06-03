@@ -316,6 +316,7 @@ if game:isLoaded() then
                 Position = UDim2.new(1,0,0,0),
                 AnchorPoint = Vector2.new(1,0),
                 BackgroundTransparency = 1,
+                Name = "RightFrames"
             }, {
                 Create("TextLabel", {
                     BackgroundTransparency = GUI_Transparency -0.2,
@@ -329,7 +330,8 @@ if game:isLoaded() then
                     TextColor3 = UsingTheme.Text,
                     TextSize = 28,
                     Text = "Info",
-                    Font = GUI_Font .. "Medium"
+                    Font = GUI_Font .. "Medium",
+                    Name = "InfoPage"
                 }, {
                     Create("UICorner", {
                         CornerRadius = UDim.new(0, 14)
