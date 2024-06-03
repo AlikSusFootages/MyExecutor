@@ -130,7 +130,7 @@ if game:isLoaded() then
             Create("Frame", {
                 BackgroundColor3 = UsingTheme.Main,
                 BackgroundTransparency = GUI_Transparency - 0.1,
-                Size = UDim2.new(0, 340, 1, 0),
+                Size = UDim2.new(0, 300, 1, 0),
                 BorderSizePixel = 0,
                 Name = "Sidebar",
                 AnchorPoint = Vector2.new(1,0)
