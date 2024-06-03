@@ -312,7 +312,7 @@ if game:isLoaded() then
                 })
             }),
             Create("TextLabel", {
-                BackgroundTransparency = GUI_Transparency,
+                BackgroundTransparency = GUI_Transparency -0.2,
                 BackgroundColor3 = UsingTheme.Main,
                 BorderSizePixel = 0,
                 Size = UDim2.new(1, -340, 1, -40),
