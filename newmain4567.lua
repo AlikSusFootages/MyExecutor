@@ -176,7 +176,8 @@ if game:isLoaded() then
                     AutoButtonColor = false,
                     Size = UDim2.new(1,0,0,60),
                     Position = UDim2.new(0,0,1,0),
-                    AnchorPoint = Vector2.new(0,1)
+                    AnchorPoint = Vector2.new(0,1),
+                    Name = "Navbar"
                 }, {
                     Create("ImageLabel", {
                         Image = "https://www.roblox.com/headshot-thumbnail/image?userId=".. Player.UserId .."&width=420&height=420&format=png",
@@ -219,7 +220,8 @@ if game:isLoaded() then
                     Size = UDim2.new(1,0,1,-150),
                     Position = UDim2.new(0,0,0,70),
                     BackgroundTransparency = 1,
-                    BorderSizePixel = 0
+                    BorderSizePixel = 0,
+                    Name = "Navbar"
                 }, {
                     Create("UIListLayout", {
                         FillDirection = "Vertical",
@@ -364,4 +366,7 @@ if game:isLoaded() then
         TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {BackgroundTransparency = 1}):Play()
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
     end)
+    
+    local Navbar = ScreenGui.Frame.Sidebar.Navbar.Navbar
+    
 end
