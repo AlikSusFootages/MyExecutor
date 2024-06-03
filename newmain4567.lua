@@ -481,8 +481,8 @@ if game:isLoaded() then
             b.MouseButton1Click:Connect(function()
                 for i,v in next, RightFrames:GetChildren() do
                     v.Visible = false
+                    v.Position = UDim2.new(0.5, 50, 0.5,0)
                     if string.find(v.Name, b.Name) then
-                        v.Position = UDim2.new(0.5, 50, 0.5,0)
                         TweenService:Create(v, TweenInfo.new(0.2), {Position = UDim2.fromScale(0.5,0.5)}):Play()
                         v.Visible = true
                     end
