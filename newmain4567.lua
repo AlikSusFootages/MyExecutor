@@ -366,7 +366,7 @@ if game:isLoaded() then
         TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
     end)
     
-    local Navbar = ScreenGui.Frame.Sidebar.Navbar.Navbar
+    local Navbar = ScreenGui.Frame.Sidebar.Navbar
     
     for i,v in next, Navbar:GetChildren() do
         if v:IsA("TextButton") then
@@ -376,7 +376,7 @@ if game:isLoaded() then
                         TweenService:Create(v, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Stroke}):Play()
                     end
                 end
-                TweenService:Create(TabFrame, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Text}):Play()
+                TweenService:Create(v, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Text}):Play()
             end)
         end
     end
