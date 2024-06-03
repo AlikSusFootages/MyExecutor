@@ -467,9 +467,17 @@ if game:isLoaded() then
     end)
     
     local Navbar = ScreenGui.Frame.Sidebar.Navbar
+    local RightFrames = ScreenGui.Frame.RightFrames
     
     for i,v in next, Navbar:GetChildren() do
         if v:IsA("TextButton") then
+            v.MouseButton1Click:Connect(function()
+                for i,v in next, RightFrames:GetChildren() do 
+                    v.Visible = false
+                end	
+                v.Visible = true
+            end)
+    
             v.MouseButton1Click:Connect(function()
                 for i,v in next, Navbar:GetChildren() do 
                     if v:IsA("TextButton") then
@@ -482,4 +490,5 @@ if game:isLoaded() then
             end)
         end
     end
+    
 end
