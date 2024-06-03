@@ -321,7 +321,7 @@ if game:isLoaded() then
                 TextSize = 28
             }, {
                 Create("UICorner", {
-                    CornerRadius = UDim.new(0, 20)
+                    CornerRadius = UDim.new(0, 10)
                 }),
                 Create("UIStroke", {
                     Thickness = 1,
@@ -329,10 +329,10 @@ if game:isLoaded() then
                     Transparency = GUI_StrokeTransparency
                 }),
                 Create("UIPadding", {
-                    PaddingTop = UDim.new(0, 30),
-                    PaddingLeft = UDim.new(0, 45),
-                    PaddingRight = UDim.new(0, 45),
-                    PaddingBottom = UDim.new(0, 30),
+                    PaddingTop = UDim.new(0, 20),
+                    PaddingLeft = UDim.new(0, 25),
+                    PaddingRight = UDim.new(0, 25),
+                    PaddingBottom = UDim.new(0, 20),
                 })
             })
         })
