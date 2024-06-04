@@ -371,7 +371,7 @@ if game:isLoaded() then
                             BackgroundTransparency = 1,
                         }, {
                             Create("TextLabel", {
-                                Text = "Server Stats",
+                                Text = "Server Network",
                                 TextSize = 26,
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
@@ -425,7 +425,17 @@ if game:isLoaded() then
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,58),
                                 Name = "FPSText",
-                            })
+                            }),
+                            Create("TextLabel", {
+                                Text = "User Network",
+                                TextSize = 26,
+                                TextColor3 = UsingTheme.Text,
+                                BackgroundTransparency = 1,
+                                Size = UDim2.new(1,0,0,21),
+                                Font = GUI_Font .. "Medium",
+                                TextXAlignment = "Left",
+                                TextYAlignment = "Top",
+                            }),
                         }),
                         Create("Frame", {
                             Name = "Right",
