@@ -412,7 +412,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,68)
+                                Position = UDim2.new(0,0,0,58)
                             }),
                             Create("TextLabel", {
                                 Text = "",
@@ -423,7 +423,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,68),
+                                Position = UDim2.new(0,0,0,58),
                                 Name = "FPSText",
                             })
                         }),
