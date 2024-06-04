@@ -370,10 +370,11 @@ if game:isLoaded() then
                         }, {
                             Create("TextLabel", {
                                 Text = "Server Stats",
-                                TextSize = 22,
+                                TextSize = 16,
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,22),
+                                Size = UDim2.new(1,0,0,16),
+                                Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
                                 
