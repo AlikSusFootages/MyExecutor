@@ -595,7 +595,7 @@ if game:isLoaded() then
     
     while wait(1) do
         local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
-        LeftFramess.PingText.Text = math.floor(ping + 0.5)
+        LeftFramess.PingText.Text = math.floor(ping + 0.5) .. "ms"
         
         local fps = 1 / RunService.RenderStepped:Wait()
         LeftFramess.FPSText.Text = math.floor(fps)
