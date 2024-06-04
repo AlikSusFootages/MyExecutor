@@ -374,7 +374,7 @@ if game:isLoaded() then
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,0,21),
-                                Font = GUI_Font,
+                                Font = GUI_Font .. "Medium",
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
                             }),
