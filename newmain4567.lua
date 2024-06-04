@@ -388,6 +388,17 @@ if game:isLoaded() then
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,20)
+                            }),
+                            Create("TextLabel", {
+                                Text = "",
+                                TextSize = 20,
+                                TextColor3 = UsingTheme.Stroke,
+                                BackgroundTransparency = 1,
+                                Size = UDim2.new(1,0,0,26),
+                                Font = GUI_Font,
+                                TextXAlignment = "Right",
+                                TextYAlignment = "Top",
+                                Position = UDim2.new(0,0,0,20)
                             })
                         }),
                         Create("Frame", {
