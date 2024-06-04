@@ -437,7 +437,7 @@ if game:isLoaded() then
                             Create("TextLabel", {
                                 Text = "Changelogs",
                                 TextColor3 = UsingTheme.Text,
-                                Font = GUI_Font,
+                                Font = GUI_Font .. "Medium",
                                 TextSize = 26,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
