@@ -354,6 +354,26 @@ if game:isLoaded() then
                         PaddingLeft = UDim.new(0, 30),
                         PaddingRight = UDim.new(0, 30),
                         PaddingBottom = UDim.new(0, 25),
+                    }),
+                    Create("Frame", {
+                        Name = "Content",
+                        Size = UDim2.new(1,0,1,-40),
+                        Position = UDim2.new(0,0,1,0),
+                        AnchorPoint = Vector2.new(0,1),
+                        BackgroundTransparency = 1,
+                    }, {
+                        Create("Frame", {
+                            Name = "Left",
+                            Size = UDim2.new(0.5,0,1,0),
+                            BackgroundTransparency = 1,
+                        }),
+                        Create("Frame", {
+                            Name = "Right",
+                            Size = UDim2.new(0.5,0,1,0),
+                            BackgroundTransparency = 1,
+                            Position = UDim2.new(1,0,0,0),
+                            AnchorPoint = Vector2.new(1,0)
+                        })
                     })
                 }),
                 -- Executor
