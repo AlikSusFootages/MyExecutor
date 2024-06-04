@@ -367,6 +367,17 @@ if game:isLoaded() then
                             Name = "Left",
                             Size = UDim2.new(0.5,0,1,0),
                             BackgroundTransparency = 1,
+                        }, {
+                            Create("TextLabel", {
+                                Text = "Server Stats",
+                                TextSize = 22,
+                                TextColor3 = UsingTheme.Text,
+                                BackgroundTransparency = 1,
+                                Size = UDim2.new(1,0,0,22),
+                                TextXAlignment = "Left",
+                                TextYAlignment = "Top",
+                                
+                            })
                         }),
                         Create("Frame", {
                             Name = "Right",
