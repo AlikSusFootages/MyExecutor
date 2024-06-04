@@ -3,6 +3,9 @@ gui.Parent = game.CoreGui
 
 local name = "Dozer v0.0.1 BETA"
 
+local openButton = Instance.new("TextButton", gui)
+openButton.BackgroundColor3 = Color3.fromRGB(200,200,200)
+
 getgenv().identifyexecutor = function() return name end
 getgenv().getexecutorname = function() return name end
 
@@ -13,7 +16,18 @@ menu.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
 menu.Active = true
 menu.Draggable = true
 menu.Parent = gui
+menu.Visible = false
 
+local clicked = false
+openButton.MouseButton1Click:Connect(function()
+    if clicked == false then
+        menu.Visible = true
+        clicked = true
+    else
+        menu.Visible = false
+        clicked = false
+    end
+end)
 
 local text = Instance.new("TextLabel")
 text.TextSize = 15
