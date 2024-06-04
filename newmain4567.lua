@@ -366,14 +366,14 @@ if game:isLoaded() then
                         Create("Frame", {
                             Name = "Left",
                             Size = UDim2.new(0.5,0,1,0),
-                            BackgroundTransparency = 1,
+                            BackgroundTransparency = 0.9,
                         }, {
                             Create("TextLabel", {
                                 Text = "Server Stats",
-                                TextSize = 16,
+                                TextSize = 20,
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,16),
+                                Size = UDim2.new(1,0,0,20),
                                 Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
