@@ -389,7 +389,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,26)
+                                Position = UDim2.new(0,0,0,28)
                             }),
                             Create("TextLabel", {
                                 Text = "",
@@ -400,7 +400,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,26),
+                                Position = UDim2.new(0,0,0,28),
                                 Name = "PingText",
                             }),
                             Create("TextLabel", {
@@ -412,7 +412,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,48)
+                                Position = UDim2.new(0,0,0,54)
                             }),
                             Create("TextLabel", {
                                 Text = "",
@@ -423,7 +423,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,48),
+                                Position = UDim2.new(0,0,0,54),
                                 Name = "FPSText",
                             })
                         }),
@@ -433,6 +433,16 @@ if game:isLoaded() then
                             BackgroundTransparency = 1,
                             Position = UDim2.new(1,0,0,0),
                             AnchorPoint = Vector2.new(1,0)
+                        }, {
+                            Create("TextLabel", {
+                                Text = "Changelogs",
+                                TextColor3 = UsingTheme.Text,
+                                Font = GUI_Font,
+                                TextSize = 26,
+                                TextXAlignment = "Left",
+                                TextYAlignment = "Top",
+                                BackgroundTransparency = 1,
+                            })
                         })
                     })
                 }),
