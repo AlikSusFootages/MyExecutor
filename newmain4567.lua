@@ -379,7 +379,15 @@ if game:isLoaded() then
                                 TextYAlignment = "Top",
                             }),
                             Create("TextLabel", {
-                                
+                                Text = "Ping",
+                                TextSize = 20,
+                                TextColor3 = UsingTheme.Text,
+                                BackgroundTransparency = 1,
+                                Size = UDim2.new(1,0,0,20),
+                                Font = GUI_Font,
+                                TextXAlignment = "Left",
+                                TextYAlignment = "Top",
+                                Position = UDim2.new(0,0,0,20)
                             })
                         }),
                         Create("Frame", {
