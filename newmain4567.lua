@@ -46,7 +46,6 @@ local GUI_Settings = {
         Transparency = GUI_Transparency
     },
     Scripts = {},
-    
 }
 
 if not isfolder("Dozer") then
@@ -54,6 +53,8 @@ if not isfolder("Dozer") then
 end
 if not isfile("Dozer/Settings.json") then
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
+else
+    GUI_Settings = HttpService:JSONDecode(readfile("Dozer/Settings.json"))
 end
 
 
