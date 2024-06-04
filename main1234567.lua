@@ -40,7 +40,7 @@ text.TextSize = 15
 text.Position = UDim2.new(0, 110, 0, 20)
 text.Text = "MrAlikSus's executor"
 text.BackgroundTransparency = 1
-text.TextColor3 = Color3.fromRGB(0, 0, 0)
+text.TextColor3 = ColorsLoadstring.indigo["900"].RGB
 text.Parent = menu
 
 local textbox = Instance.new("TextBox")
