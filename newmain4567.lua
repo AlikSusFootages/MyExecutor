@@ -368,7 +368,7 @@ if game:isLoaded() then
                         Create("Frame", {
                             Name = "Left",
                             Size = UDim2.new(0.5,-20,1,0),
-                            BackgroundTransparency = 0.9,
+                            BackgroundTransparency = 1,
                         }, {
                             Create("TextLabel", {
                                 Text = "Server Stats",
