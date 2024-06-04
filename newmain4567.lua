@@ -367,7 +367,7 @@ if game:isLoaded() then
                     }, {
                         Create("Frame", {
                             Name = "Left",
-                            Size = UDim2.new(0.5,0,1,0),
+                            Size = UDim2.new(0.5,-20,1,0),
                             BackgroundTransparency = 0.9,
                         }, {
                             Create("TextLabel", {
@@ -429,7 +429,7 @@ if game:isLoaded() then
                         }),
                         Create("Frame", {
                             Name = "Right",
-                            Size = UDim2.new(0.5,0,1,0),
+                            Size = UDim2.new(0.5,-20,1,0),
                             BackgroundTransparency = 1,
                             Position = UDim2.new(1,0,0,0),
                             AnchorPoint = Vector2.new(1,0)
