@@ -555,4 +555,11 @@ if game:isLoaded() then
             end)
         end
     end
+    
+    local PingText = RightFrames.Info.Content.Left.PingText
+    
+    while wait(1) do
+        local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
+        PingText.Text = math.floor(ping + 0.5)
+    end
 end
