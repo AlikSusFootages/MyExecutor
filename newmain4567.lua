@@ -389,7 +389,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,20)
+                                Position = UDim2.new(0,0,0,26)
                             }),
                             Create("TextLabel", {
                                 Text = "",
@@ -400,8 +400,31 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,20),
+                                Position = UDim2.new(0,0,0,26),
                                 Name = "PingText",
+                            }),
+                            Create("TextLabel", {
+                                Text = "FPS",
+                                TextSize = 20,
+                                TextColor3 = UsingTheme.Text,
+                                BackgroundTransparency = 1,
+                                Size = UDim2.new(1,0,0,20),
+                                Font = GUI_Font,
+                                TextXAlignment = "Left",
+                                TextYAlignment = "Top",
+                                Position = UDim2.new(0,0,0,32)
+                            }),
+                            Create("TextLabel", {
+                                Text = "",
+                                TextSize = 20,
+                                TextColor3 = UsingTheme.Stroke,
+                                BackgroundTransparency = 1,
+                                Size = UDim2.new(1,0,0,20),
+                                Font = GUI_Font,
+                                TextXAlignment = "Right",
+                                TextYAlignment = "Top",
+                                Position = UDim2.new(0,0,0,32),
+                                Name = "FPSText",
                             })
                         }),
                         Create("Frame", {
