@@ -398,7 +398,8 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,20)
+                                Position = UDim2.new(0,0,0,20),
+                                Name = "PingText",
                             })
                         }),
                         Create("Frame", {
