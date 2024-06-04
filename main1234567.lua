@@ -40,7 +40,7 @@ text.TextSize = 15
 text.Position = UDim2.new(0, 110, 0, 20)
 text.Text = "MrAlikSus's executor"
 text.BackgroundTransparency = 1
-text.TextColor3 = ColorsLoadstring.indigo["900"].RGB
+text.TextColor3 = ColorsLoadstring.white.RGB
 text.Parent = menu
 
 local textbox = Instance.new("TextBox")
@@ -62,22 +62,24 @@ textbox.MultiLine = true
 
 local padding = Instance.new("UIPadding", textbox)
 padding.PaddingTop = UDim.new(0, 6)
-padding.PaddingLeft = UDim.new(0, 6)
-padding.PaddingRight = UDim.new(0, 6)
+padding.PaddingLeft = UDim.new(0, 10)
+padding.PaddingRight = UDim.new(0, 10)
 padding.PaddingBottom = UDim.new(0, 6)
 
 local execute = Instance.new("TextButton")
 execute.Size = UDim2.new(0, 100, 0, 50)
 execute.Position = UDim2.new(0, 0, 0, 305)
-execute.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+execute.BackgroundColor3 = ColorsLoadstring.indigo["600"].RGB
 execute.Text = "Execute"
+execute.TextColor3 = ColorsLoadstring.white.RGB
 execute.Active = true
 execute.Parent = menu
 
 local clear = Instance.new("TextButton")
 clear.Size = UDim2.new(0, 100, 0, 50)
 clear.Position = UDim2.new(0, 110, 0, 305)
-clear.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+clear.BackgroundColor3 = ColorsLoadstring.indigo["600"].RGB
+clear.TextColor3 = ColorsLoadstring.white.RGB
 clear.Text = "Clear"
 clear.Active = true
 clear.Parent = menu
@@ -85,8 +87,9 @@ clear.Parent = menu
 local paste = Instance.new("TextButton")
 paste.Size = UDim2.new(0, 100, 0, 50)
 paste.Position = UDim2.new(0, 220, 0, 305)
-paste.BackgroundColor3 = Color3.fromRGB(100, 200, 100)
+paste.BackgroundColor3 = ColorsLoadstring.indigo["600"].RGB
 paste.Text = "execute clipboard"
+paste.TextColor3 = ColorsLoadstring.white.RGB
 paste.Active = true
 paste.Parent = menu
 
