@@ -5,6 +5,8 @@ local name = "Dozer v0.0.1 BETA"
 
 local openButton = Instance.new("TextButton", gui)
 openButton.BackgroundColor3 = Color3.fromRGB(200,200,200)
+openButton.Size = UDim2.new(0,50,0,30)
+openButton.Text = "Open"
 
 getgenv().identifyexecutor = function() return name end
 getgenv().getexecutorname = function() return name end
