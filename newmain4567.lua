@@ -389,7 +389,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,28)
+                                Position = UDim2.new(0,0,0,36)
                             }),
                             Create("TextLabel", {
                                 Text = "",
@@ -400,7 +400,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,28),
+                                Position = UDim2.new(0,0,0,36),
                                 Name = "PingText",
                             }),
                             Create("TextLabel", {
@@ -412,7 +412,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,54)
+                                Position = UDim2.new(0,0,0,68)
                             }),
                             Create("TextLabel", {
                                 Text = "",
@@ -423,7 +423,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,54),
+                                Position = UDim2.new(0,0,0,68),
                                 Name = "FPSText",
                             })
                         }),
