@@ -624,5 +624,6 @@ if game:isLoaded() then
         LeftFramess.FPSText.Text = math.floor(fps)
         
         local playersAmount = #Players:GetPlayers()
+        LeftFramess.PlayersText.Text = playersAmount
     end
 end
