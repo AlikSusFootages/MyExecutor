@@ -427,7 +427,7 @@ if game:isLoaded() then
                                 Name = "FPSText",
                             }),
                             Create("TextLabel", {
-                                Text = "",
+                                Text = "Players Amount",
                                 TextSize = 20,
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
@@ -435,10 +435,10 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,58)
+                                Position = UDim2.new(0,0,0,80)
                             }),
                             Create("TextLabel", {
-                                Text = "Players Amount",
+                                Text = "",
                                 TextSize = 20,
                                 TextColor3 = UsingTheme.Stroke,
                                 BackgroundTransparency = 1,
@@ -446,7 +446,7 @@ if game:isLoaded() then
                                 Font = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,58),
+                                Position = UDim2.new(0,0,0,80),
                                 Name = "PlayersText",
                             }),
                         }),
