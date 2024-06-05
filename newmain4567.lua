@@ -438,7 +438,7 @@ if game:isLoaded() then
                                 Position = UDim2.new(0,0,0,58)
                             }),
                             Create("TextLabel", {
-                                Text = "",
+                                Text = "Players Amount",
                                 TextSize = 20,
                                 TextColor3 = UsingTheme.Stroke,
                                 BackgroundTransparency = 1,
@@ -447,7 +447,7 @@ if game:isLoaded() then
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,58),
-                                Name = "FPSText",
+                                Name = "PlayersText",
                             }),
                         }),
                         Create("Frame", {
@@ -622,5 +622,7 @@ if game:isLoaded() then
         
         local fps = 1 / RunService.RenderStepped:Wait()
         LeftFramess.FPSText.Text = math.floor(fps)
+        
+        local playersAmount = #Players:GetPlayers()
     end
 end
