@@ -728,3 +728,4 @@ function Start()
 end
 
 Start()
+-- return Start
