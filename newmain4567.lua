@@ -694,7 +694,7 @@ function Start()
         
         local RightFramess = RightFrames.Info.Content.Right.Content
         
-        
+        for version, content in pairs(Changelogs)
     end
 end
 
