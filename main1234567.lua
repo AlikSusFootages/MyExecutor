@@ -162,5 +162,7 @@ paste.MouseButton1Click:Connect(function()
 end)
 
 newgui.MouseButton1Click:Connect(function()
-    require(Root.newmain4567).Start()
+    if isfile("newmain4567.lua") then
+        loadstring(readfile("newmain4567.lua"))()
+    end
 end)
