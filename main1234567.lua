@@ -123,6 +123,10 @@ local corner5 = Instance.new("UICorner")
 corner5.CornerRadius = UDim.new(0, 5)
 corner5.Parent = paste
 
+local corner6 = Instance.new("UICorner")
+corner6.CornerRadius = UDim.new(0, 5)
+corner6.Parent = newgui
+
 
 
 local menuu = menu
