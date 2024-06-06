@@ -632,3 +632,5 @@ function Dozer:Start()
         end
     end
 end
+
+return Dozer
