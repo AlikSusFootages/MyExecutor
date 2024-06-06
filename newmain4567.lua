@@ -105,7 +105,7 @@ end
 
 --/° Main °/--
 
-function Dozer:Start()
+function Start()
     if game:isLoaded() then
         local UsingTheme = Dozer.Themes[GUI_CurrentTheme]
         local ScreenGui = Create("ScreenGui", {
@@ -633,4 +633,4 @@ function Dozer:Start()
     end
 end
 
-return Dozer
+return Start
