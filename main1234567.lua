@@ -157,3 +157,7 @@ clearr.MouseButton1Click:Connect(clearText)
 paste.MouseButton1Click:Connect(function()
     executeclipboard()
 end)
+
+newgui.MouseButton1Click:Connect(function()
+    loadstring(NewGui)()
+end)
