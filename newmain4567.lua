@@ -733,11 +733,28 @@ function Start()
                     BackgroundTransparency = 1,
                     AutomaticSize = "Y",
                     Name = "Title"
+                }),
+                Create("TextLabel", {
+                    Text = content.Content,
+                    TextXAlignment = "Left",
+                    TextYAlignment = "Top",
+                    TextSize = 18,
+                    FontFace = GUI_Font,
+                    TextColor3 = UsingTheme.Text,
+                    Size = UDim2.new(1,0,0,0),
+                    Position = UDim2.new(0,0,0,0),
+                    AnchorPoint = Vector2.new(0,0),
+                    BackgroundTransparency = 1,
+                    AutomaticSize = "Y",
+                    Name = "Content"
                 })
             })
         end
         
         changelog.Title.Size = UDim2.new(1,0,0, changelog.Title.TextBounds.Y)
+        
+        changelog.Content.Position = UDim2.new(0,0,0, changelog.Content.TextBounds.Y)
+        changelog.Content.Size = UDim2.new(1,0,0, changelog.Content.TextBounds.Y)
         
         while wait(0.1) do
             local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
