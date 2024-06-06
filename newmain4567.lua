@@ -751,11 +751,11 @@ function Start()
             })
         end
         
-        changelog.Title:getPropertyChangedSignal("TextBounds"):Connect(function()
+        changelog.Title:GetPropertyChangedSignal("TextBounds"):Connect(function()
             changelog.Title.Size = UDim2.new(1,0,0, changelog.Title.TextBounds.Y)
             changelog.Content.Position = UDim2.new(0,0,0, changelog.Title.TextBounds.Y)
         end)
-        changelog.Content:getPropertyChangedSignal("TextBounds"):Connect(function()
+        changelog.Content:GetPropertyChangedSignal("TextBounds"):Connect(function()
             changelog.Content.Size = UDim2.new(1,0,0, changelog.Content.TextBounds.Y)
         end)
         
