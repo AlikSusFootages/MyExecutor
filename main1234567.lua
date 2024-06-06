@@ -165,6 +165,5 @@ paste.MouseButton1Click:Connect(function()
 end)
 
 newgui.MouseButton1Click:Connect(function()
-    print("1")
     NewGui()
 end)
