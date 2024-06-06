@@ -728,7 +728,7 @@ function Start()
                     FontFace = GUI_Font,
                     TextColor3 = UsingTheme.Text,
                     Size = UDim2.new(1,0,0,0),
-                    Position = UDim2.new(0,0,0,20),
+                    Position = UDim2.new(0,0,0,22),
                     AnchorPoint = Vector2.new(0,0),
                     BackgroundTransparency = 1,
                     AutomaticSize = "Y",
@@ -751,7 +751,7 @@ function Start()
             })
             changelog.Title:GetPropertyChangedSignal("TextBounds"):Connect(function()
                 changelog.Title.Size = UDim2.new(1,0,0, changelog.Title.TextBounds.Y)
-                changelog.Content.Position = UDim2.new(0,0,0, changelog.Title.TextBounds.Y)
+                changelog.Content.Position = UDim2.new(0,0,0, changelog.Title.TextBounds.Y + 22)
             end)
             changelog.Content:GetPropertyChangedSignal("TextBounds"):Connect(function()
                 changelog.Content.Size = UDim2.new(1,0,0, changelog.Content.TextBounds.Y)
