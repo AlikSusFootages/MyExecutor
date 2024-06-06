@@ -698,7 +698,7 @@ function Start()
         for version, content in pairs(Changelogs) do
             local changelog = Create("TextLabel", {
                 Parent = RightFramesss,
-                Size = UDim2.new(1,0,0,80),
+                Size = UDim2.new(1,0,0,0),
                 Text = "v" .. version,
                 TextYAlignment = "Top",
                 TextXAlignment = "Left",
