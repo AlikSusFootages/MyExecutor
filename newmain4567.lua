@@ -501,6 +501,11 @@ function Start()
                                     Create("UIListLayout", {
                                         FillDirection = "Vertical",
                                         Padding = UDim.new(0,8)
+                                    }),
+                                    Create("ScrollingFrame", {
+                                        CanvasSize = UDim2.new(1,0,1,0),
+                                        Size = UDim2.new(1,0,1,0),
+                                        BackgroundTransparency = 0.9
                                     })
                                 })
                             })
