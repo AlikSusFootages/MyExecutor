@@ -165,5 +165,5 @@ end)
 
 newgui.MouseButton1Click:Connect(function()
     print("1")
-    NewGui:Start()
+    NewGui()
 end)
