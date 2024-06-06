@@ -29,7 +29,7 @@ local _fullName = Dozer.Name .. " v" .. _version
 local GUI_CurrentTheme = "Dark"
 local GUI_Transparency = 0.4
 local GUI_StrokeTransparency = 0.7
-local GUI_Font = "Gotham"
+local GUI_Font = "rbxassetid://12187365364"
 
 local Player = Players.LocalPlayer
 local PlayerGui = game.CoreGui
