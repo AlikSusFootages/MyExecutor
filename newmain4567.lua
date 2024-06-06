@@ -501,7 +501,7 @@ function Start()
                                     Create("ScrollingFrame", {
                                         CanvasSize = UDim2.new(1,0,1,0),
                                         Size = UDim2.new(1,0,1,0),
-                                        BackgroundTransparency = 0.9
+                                        BackgroundTransparency = 1
                                     }, {
                                         Create("UIListLayout", {
                                             FillDirection = "Vertical",
@@ -710,7 +710,9 @@ function Start()
                     TextXAlignment = "Right",
                     TextYAlignment = "Top",
                     TextColor3 = UsingTheme.Stroke,
-                    TextSize = 20
+                    TextSize = 20,
+                    Size = UDim2.new(1,0,1,0),
+                    BackgroundTransparency = 1,
                 })
             })
         end
