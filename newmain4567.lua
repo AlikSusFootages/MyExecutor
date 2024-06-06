@@ -706,7 +706,7 @@ function Start()
         local RightFramesss = RightFrames.Info.Content.Right.Content.ScrollingFrame
         
         for version, content in pairs(Changelogs) do
-            Create("TextLabel", {
+            local changelog = Create("TextLabel", {
                 Parent = RightFramesss,
                 Size = UDim2.new(1,0,0,80),
                 Text = "v" .. version,
