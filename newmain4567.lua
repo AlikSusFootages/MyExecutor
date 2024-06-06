@@ -497,6 +497,11 @@ function Start()
                                     AnchorPoint = Vector2.new(0,1),
                                     BackgroundTransparency = 1,
                                     Name = "Content"
+                                }, {
+                                    Create("UIListLayout", {
+                                        FillDirection = "Vertical",
+                                        Padding = UDim.new(0,8)
+                                    })
                                 })
                             })
                         })
@@ -697,7 +702,7 @@ function Start()
         for version, content in pairs(Changelog) do
             Create("TextLabel", {
                 Parent = RightFramess,
-                Size = UDim2.new(1,0,0,0),
+                Size = UDim2.new(1,0,0,80),
                 Text = "v" .. version,
                 TextYAlignment = "Top",
                 TextXAlignment = "Left",
