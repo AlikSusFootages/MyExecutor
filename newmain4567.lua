@@ -508,7 +508,8 @@ function Start()
                                     }, {
                                         Create("UIListLayout", {
                                             FillDirection = "Vertical",
-                                            Padding = UDim.new(0,8)
+                                            Padding = UDim.new(0,8),
+                                            SortOrder = "LayoutOrder"
                                         })
                                     })
                                 })
