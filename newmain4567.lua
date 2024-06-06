@@ -277,6 +277,28 @@ function Start()
                             })
                         }),
                         Create("TextButton", {
+                            Text = "Saved Scripts",
+                            Name = "SavedScripts",
+                            TextColor3 = UsingTheme.Stroke,
+                            TextSize = 22,
+                            FontFace = GUI_Font,
+                            Size = UDim2.new(1,0,0,26),
+                            BackgroundTransparency = 1,
+                            TextXAlignment = "Left"
+                        }, {
+                            Create("UIPadding", {
+                                PaddingLeft = UDim.new(0,32)
+                            }),
+                            Create("ImageLabel", {
+                                Size = UDim2.fromOffset(24,24), 
+                                Image = GetIcon("save-all"),
+                                Position = UDim2.new(0, -32, 0.5, 0),
+                                AnchorPoint = Vector2.new(0,0.5),
+                                BackgroundTransparency = 1,
+                                ImageColor3 = UsingTheme.Stroke
+                            })
+                        }),
+                        Create("TextButton", {
                             Text = "Search Scripts",
                             Name = "ScriptSearch",
                             TextColor3 = UsingTheme.Stroke,
