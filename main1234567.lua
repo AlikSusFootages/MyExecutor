@@ -94,6 +94,15 @@ paste.TextColor3 = ColorsLoadstring.white.RGB
 paste.Active = true
 paste.Parent = menu
 
+local newgui = Instance.new("TextButton")
+newgui.Size = UDim2.new(0, 100, 0, 50)
+newgui.Position = UDim2.new(0, 330, 0, 305)
+newgui.BackgroundColor3 = ColorsLoadstring.green["600"].RGB
+newgui.Text = "Load new gui"
+newgui.TextColor3 = ColorsLoadstring.black.RGB
+newgui.Active = true
+newgui.Parent = menu
+
 
 local corner1 = Instance.new("UICorner")
 corner1.CornerRadius = UDim.new(0, 5)
