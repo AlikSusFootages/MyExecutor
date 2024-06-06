@@ -105,6 +105,7 @@ end
 
 function Start()
     if game:isLoaded() then
+        print(" ------ /° Dozer Executor started! °/ ------")
         local UsingTheme = Dozer.Themes[GUI_CurrentTheme]
         local ScreenGui = Create("ScreenGui", {
             Name = "Dozer Executor v" .. _version,
