@@ -509,7 +509,7 @@ function Start()
                                         Create("UIListLayout", {
                                             FillDirection = "Vertical",
                                             Padding = UDim.new(0,8),
-                                            SortOrder = "LayoutOrder"
+                                            SortOrder = "Name"
                                         })
                                     })
                                 })
@@ -712,7 +712,7 @@ function Start()
                 TextSize = 20,
                 FontFace = GUI_Font,
                 AutomaticSize = "Y",
-                LayoutOrder = order
+                Name = order
             }, {
                 Create("TextLabel", {
                     Text = content.Date,
