@@ -718,6 +718,7 @@ function Start()
                     BackgroundTransparency = 1,
                     FontFace = GUI_Font,
                     AutomaticSize = "Y",
+                    Name = "Version"
                 }),
                 Create("TextLabel", {
                     Text = content.Title,
@@ -731,11 +732,12 @@ function Start()
                     AnchorPoint = Vector2.new(0,0),
                     BackgroundTransparency = 1,
                     AutomaticSize = "Y",
+                    Name = "Title"
                 })
             })
         end
         
-        
+        changelog.Title.Size = UDim2.new(1,0,0, changelog.Title.TextBounds.Y)
         
         while wait(0.1) do
             local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
