@@ -101,6 +101,7 @@ newgui.Text = "Load new gui"
 newgui.TextColor3 = ColorsLoadstring.black.RGB
 newgui.Active = true
 newgui.Parent = menu
+newgui.ZIndex = 999
 
 
 local corner1 = Instance.new("UICorner")
