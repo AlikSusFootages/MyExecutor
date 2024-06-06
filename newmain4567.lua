@@ -721,12 +721,13 @@ function Start()
                     Text = content.Title,
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
-                    TextSize = 19,
+                    TextSize = 20,
                     FontFace = GUI_Font,
                     TextColor3 = UsingTheme.Text,
                     Size = UDim2.new(1,0,1,-20),
                     Position = UDim2.new(0,0,1,0),
                     AnchorPoint = Vector2.new(0,1),
+                    BackgroundTransparency = 1
                 })
             })
         end
