@@ -1,6 +1,7 @@
 
 local ColorsLoadstring = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/Tailwindcss-Roblox/main/colors.lua"))()
 local Root = script.Parent
+local NewGui = require(Root.newmain4567)
 
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.CoreGui
@@ -164,8 +165,5 @@ end)
 
 newgui.MouseButton1Click:Connect(function()
     print("1")
-    if isfile("newmain4567.lua") then
-        print("2")
-        loadstring(readfile("newmain4567.lua"))()
-    end
+    NewGui:Start()
 end)
