@@ -162,5 +162,5 @@ paste.MouseButton1Click:Connect(function()
 end)
 
 newgui.MouseButton1Click:Connect(function()
-    loadstring(require(Root.newmain4567))()
+    require(Root.newmain4567).Start()
 end)
