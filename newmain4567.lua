@@ -7,7 +7,7 @@ local RunService = game:GetService("RunService")
 local Stats = game:GetService("Stats")
 local Players = game:GetService("Players")
 local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
-local Changelog = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/MyExecutor/main/changelog.lua"))()
+local Changelogs = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/MyExecutor/main/changelog.lua"))()
 
 --/° Variables °/--
 
@@ -699,7 +699,7 @@ function Start()
         
         local RightFramess = RightFrames.Info.Content.Right.Content
         
-        for version, content in pairs(Changelog) do
+        for version, content in pairs(Changelogs) do
             Create("TextLabel", {
                 Parent = RightFramess,
                 Size = UDim2.new(1,0,0,80),
