@@ -704,6 +704,7 @@ function Start()
                 TextXAlignment = "Left",
                 TextColor3 = UsingTheme.Text,
                 TextSize = 22,
+                FontFace = GUI_Font
             }, {
                 Create("TextLabel", {
                     Text = content.Date,
@@ -713,6 +714,7 @@ function Start()
                     TextSize = 20,
                     Size = UDim2.new(1,0,1,0),
                     BackgroundTransparency = 1,
+                    FontFace = GUI_Font
                 })
             })
         end
