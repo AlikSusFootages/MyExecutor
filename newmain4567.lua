@@ -701,7 +701,16 @@ function Start()
                 Text = "v" .. version,
                 TextYAlignment = "Top",
                 TextXAlignment = "Left",
-                TextColor3 = UsingTheme.Stroke
+                TextColor3 = UsingTheme.Text,
+                TextSize = 22,
+            }, {
+                Create("TextLabel", {
+                    Text = content.Date,
+                    TextXAlignment = "Right",
+                    TextYAlignment = "Top",
+                    TextColor3 = UsingTheme.Stroke,
+                    TextSize = 20
+                })
             })
         end
     end
