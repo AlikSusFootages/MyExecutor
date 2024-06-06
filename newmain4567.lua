@@ -632,3 +632,5 @@ if game:isLoaded() then
         end
     end
 end
+
+return Dozer
