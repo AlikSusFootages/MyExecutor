@@ -718,7 +718,7 @@ function Start()
                     FontFace = GUI_Font
                 }),
                 Create("TextLabel", {
-                    Text = Content.Title,
+                    Text = content.Title,
                     TextXAlignment = "Left",
                     TextYAlignment = "Top",
                     TextSize = 19,
