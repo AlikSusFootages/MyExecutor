@@ -162,7 +162,9 @@ paste.MouseButton1Click:Connect(function()
 end)
 
 newgui.MouseButton1Click:Connect(function()
+    print("1")
     if isfile("newmain4567.lua") then
+        print("2")
         loadstring(readfile("newmain4567.lua"))()
     end
 end)
