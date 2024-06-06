@@ -703,11 +703,11 @@ function Start()
             LeftFramess.PlayersText.Text = playersAmount
         end
         
-        local RightFramess = RightFrames.Info.Content.Right.Content.ScrollingFrame
+        local RightFramesss = RightFrames.Info.Content.Right.Content.ScrollingFrame
         
         for version, content in pairs(Changelogs) do
             Create("TextLabel", {
-                Parent = RightFramess,
+                Parent = RightFramesss,
                 Size = UDim2.new(1,0,0,80),
                 Text = "v" .. version,
                 TextYAlignment = "Top",
