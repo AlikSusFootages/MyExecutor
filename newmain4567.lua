@@ -753,7 +753,7 @@ function Start()
         
         changelog.Title.Size = UDim2.new(1,0,0, changelog.Title.TextBounds.Y)
         
-        changelog.Content.Position = UDim2.new(0,0,0, changelog.Content.TextBounds.Y)
+        changelog.Content.Position = UDim2.new(0,0,0, changelog.Title.TextBounds.Y)
         changelog.Content.Size = UDim2.new(1,0,0, changelog.Content.TextBounds.Y)
         
         while wait(0.1) do
