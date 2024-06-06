@@ -699,6 +699,7 @@ function Start()
         
         local RightFramesss = RightFrames.Info.Content.Right.Content.ScrollingFrame
         
+        local order = 0
         for version, content in pairs(Changelogs) do
             local changelog = Create("TextLabel", {
                 Parent = RightFramesss,
@@ -711,6 +712,7 @@ function Start()
                 TextSize = 20,
                 FontFace = GUI_Font,
                 AutomaticSize = "Y",
+                LayoutOrder = order
             }, {
                 Create("TextLabel", {
                     Text = content.Date,
@@ -760,6 +762,7 @@ function Start()
             changelog.Content:GetPropertyChangedSignal("TextBounds"):Connect(function()
                 changelog.Content.Size = UDim2.new(1,0,0, changelog.Content.TextBounds.Y)
             end)
+            order = order + 1
         end
         
         RightFramesss.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
