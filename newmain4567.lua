@@ -703,7 +703,7 @@ function Start()
             LeftFramess.PlayersText.Text = playersAmount
         end
         
-        local RightFramess = RightFrames.Info.Content.Right.Content
+        local RightFramess = RightFrames.Info.Content.Right.Content.ScrollingFrame
         
         for version, content in pairs(Changelogs) do
             Create("TextLabel", {
