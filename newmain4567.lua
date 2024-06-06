@@ -691,6 +691,10 @@ function Start()
             local playersAmount = #Players:GetPlayers()
             LeftFramess.PlayersText.Text = playersAmount
         end
+        
+        local RightFramess = RightFrames.Info.Content.Right.Content
+        
+        
     end
 end
 
