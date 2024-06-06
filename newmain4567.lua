@@ -1,15 +1,13 @@
 
 --/° Services °/--
   
-local Root = script.Parent
-
 local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 local Stats = game:GetService("Stats")
 local Players = game:GetService("Players")
 local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
-local Changelog = require(Root.changelog)
+local Changelog = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/MyExecutor/main/changelog.lua"))()
 
 --/° Variables °/--
 
