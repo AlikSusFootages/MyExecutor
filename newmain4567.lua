@@ -703,7 +703,7 @@ function Start()
                 TextYAlignment = "Top",
                 TextXAlignment = "Left",
                 TextColor3 = UsingTheme.Text,
-                BackgroundTransparency = .9,
+                BackgroundTransparency = 1,
                 TextSize = 20,
                 FontFace = GUI_Font,
                 AutomaticSize = "Y",
