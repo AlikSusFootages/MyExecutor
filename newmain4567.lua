@@ -490,6 +490,11 @@ function Start()
                                     TextXAlignment = "Left",
                                     TextYAlignment = "Top",
                                     BackgroundTransparency = 1,
+                                }),
+                                Create("Frame", {
+                                    Size = UDim2.new(1,0,1,-36),
+                                    Position = UDim2.fromScale(0,1),
+                                    AnchorPoint = Vector2.new(0,1)
                                 })
                             })
                         })
