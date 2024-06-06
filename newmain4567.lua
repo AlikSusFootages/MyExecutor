@@ -527,6 +527,39 @@ function Start()
                             PaddingBottom = UDim.new(0, 25),
                         })
                     }),
+                    -- Saved Scripts
+                    Create("TextLabel", {
+                        BackgroundTransparency = GUI_Transparency -0.2,
+                        BackgroundColor3 = UsingTheme.Main,
+                        BorderSizePixel = 0,
+                        Size = UDim2.new(1, -40, 1, -40),
+                        Position = UDim2.new(0.5,0,0.5,0),
+                        AnchorPoint = Vector2.new(0.5,0.5),
+                        TextXAlignment = "Left",
+                        TextYAlignment = "Top",
+                        TextColor3 = UsingTheme.Text,
+                        TextSize = 38,
+                        Text = "Saved Scripts",
+                        FontFace = GUI_Font ,
+                        Name = "SavedScripts",
+                        Visible = false
+                    }, {
+                        Create("UICorner", {
+                            CornerRadius = UDim.new(0, 14)
+                        }),
+                        Create("UIStroke", {
+                            Thickness = 1,
+                            Color = UsingTheme.Stroke,
+                            Transparency = GUI_StrokeTransparency,
+                            ApplyStrokeMode = "Border"
+                        }),
+                        Create("UIPadding", {
+                            PaddingTop = UDim.new(0, 25),
+                            PaddingLeft = UDim.new(0, 30),
+                            PaddingRight = UDim.new(0, 30),
+                            PaddingBottom = UDim.new(0, 25),
+                        })
+                    }),
                     -- Script Search
                     Create("TextLabel", {
                         BackgroundTransparency = GUI_Transparency -0.2,
