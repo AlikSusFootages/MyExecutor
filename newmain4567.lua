@@ -758,7 +758,9 @@ function Start()
             end)
         end
         
-        
+        RightFramesss.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+            RightFramesss.CanvasSize = UDim2.new(0,0,0, RightFramesss.UIListLayout.AbsoluteContentSize.Y)
+        end)
         
         while wait(0.1) do
             local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
