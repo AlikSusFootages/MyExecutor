@@ -121,7 +121,8 @@ if game:isLoaded() then
             TextColor3 = UsingTheme.Text,
             BackgroundColor3 = UsingTheme.Main,
             BorderSizePixel = 0,
-            Text = "Open"
+            Text = "Open",
+            FontFace = GUI_Font
         }),
         Create("Frame", {
             BackgroundColor3 = Color3.fromRGB(0,3,6),
@@ -146,7 +147,7 @@ if game:isLoaded() then
                     PaddingBottom = UDim.new(0, 25),
                 }),
                 Create("TextLabel", {
-                    Font = GUI_Font ,
+                    FontFace = GUI_Font ,
                     Text = "Dozer",
                     TextColor3 = UsingTheme.Text,
                     BackgroundTransparency = 1,
@@ -197,7 +198,7 @@ if game:isLoaded() then
                         Position = UDim2.new(0,70,0,6),
                         BackgroundTransparency = 1,
                         TextSize = 20,
-                        Font = GUI_Font,
+                        FontFace = GUI_Font,
                         TextColor3 = UsingTheme.Text,
                         TextXAlignment = "Left",
                         TextYAlignment = "Top",
@@ -210,7 +211,7 @@ if game:isLoaded() then
                         BackgroundTransparency = 1,
                         TextSize = 18,
                         AnchorPoint = Vector2.new(0,1),
-                        Font = GUI_Font,
+                        FontFace = GUI_Font,
                         TextColor3 = UsingTheme.Stroke,
                         TextXAlignment = "Left",
                         TextYAlignment = "Top",
@@ -235,7 +236,7 @@ if game:isLoaded() then
                         Name = "Info",
                         TextColor3 = UsingTheme.Text,
                         TextSize = 22,
-                        Font = GUI_Font,
+                        FontFace = GUI_Font,
                         Size = UDim2.new(1,0,0,26),
                         BackgroundTransparency = 1,
                         TextXAlignment = "Left"
@@ -256,7 +257,7 @@ if game:isLoaded() then
                         Name = "Executor",
                         TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
-                        Font = GUI_Font,
+                        FontFace = GUI_Font,
                         Size = UDim2.new(1,0,0,26),
                         BackgroundTransparency = 1,
                         TextXAlignment = "Left"
@@ -278,7 +279,7 @@ if game:isLoaded() then
                         Name = "ScriptSearch",
                         TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
-                        Font = GUI_Font,
+                        FontFace = GUI_Font,
                         Size = UDim2.new(1,0,0,26),
                         BackgroundTransparency = 1,
                         TextXAlignment = "Left"
@@ -300,7 +301,7 @@ if game:isLoaded() then
                         Name = "Settings",
                         TextColor3 = UsingTheme.Stroke,
                         TextSize = 22,
-                        Font = GUI_Font,
+                        FontFace = GUI_Font,
                         Size = UDim2.new(1,0,0,26),
                         BackgroundTransparency = 1,
                         TextXAlignment = "Left"
@@ -339,7 +340,7 @@ if game:isLoaded() then
                     TextColor3 = UsingTheme.Text,
                     TextSize = 38,
                     Text = "Info",
-                    Font = GUI_Font ,
+                    FontFace = GUI_Font ,
                     Name = "Info",
                     Visible = true
                 }, {
@@ -376,7 +377,7 @@ if game:isLoaded() then
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,0,21),
-                                Font = GUI_Font ,
+                                FontFace = GUI_Font ,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
                             }),
@@ -386,7 +387,7 @@ if game:isLoaded() then
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,0,32),
-                                Font = GUI_Font,
+                                FontFace = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,36)
@@ -397,7 +398,7 @@ if game:isLoaded() then
                                 TextColor3 = UsingTheme.Stroke,
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,0,32),
-                                Font = GUI_Font,
+                                FontFace = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,36),
@@ -409,7 +410,7 @@ if game:isLoaded() then
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,0,20),
-                                Font = GUI_Font,
+                                FontFace = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,58)
@@ -420,7 +421,7 @@ if game:isLoaded() then
                                 TextColor3 = UsingTheme.Stroke,
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,0,20),
-                                Font = GUI_Font,
+                                FontFace = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,58),
@@ -432,7 +433,7 @@ if game:isLoaded() then
                                 TextColor3 = UsingTheme.Text,
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,0,20),
-                                Font = GUI_Font,
+                                FontFace = GUI_Font,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,80)
@@ -443,7 +444,7 @@ if game:isLoaded() then
                                 TextColor3 = UsingTheme.Stroke,
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,0,20),
-                                Font = GUI_Font,
+                                FontFace = GUI_Font,
                                 TextXAlignment = "Right",
                                 TextYAlignment = "Top",
                                 Position = UDim2.new(0,0,0,80),
@@ -460,7 +461,7 @@ if game:isLoaded() then
                             Create("TextLabel", {
                                 Text = "Changelogs",
                                 TextColor3 = UsingTheme.Text,
-                                Font = GUI_Font ,
+                                FontFace = GUI_Font ,
                                 TextSize = 26,
                                 TextXAlignment = "Left",
                                 TextYAlignment = "Top",
@@ -482,7 +483,7 @@ if game:isLoaded() then
                     TextColor3 = UsingTheme.Text,
                     TextSize = 38,
                     Text = "Executor",
-                    Font = GUI_Font ,
+                    FontFace = GUI_Font ,
                     Name = "Executor",
                     Visible = false
                 }, {
@@ -515,7 +516,7 @@ if game:isLoaded() then
                     TextColor3 = UsingTheme.Text,
                     TextSize = 38,
                     Text = "Script Search",
-                    Font = GUI_Font ,
+                    FontFace = GUI_Font ,
                     Name = "ScriptSearch",
                     Visible = false
                 }, {
@@ -548,7 +549,7 @@ if game:isLoaded() then
                     TextColor3 = UsingTheme.Text,
                     TextSize = 38,
                     Text = "Settings",
-                    Font = GUI_Font ,
+                    FontFace = GUI_Font ,
                     Name = "Settings",
                     Visible = false
                 }, {
