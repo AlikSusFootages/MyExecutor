@@ -727,4 +727,4 @@ function Start()
     end
 end
 
-return Start
+Start()
