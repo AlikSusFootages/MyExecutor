@@ -3,7 +3,7 @@ local ColorsLoadstring = loadstring(game:HttpGet("https://raw.githubusercontent.
 local Root = script.Parent
 local NewGui = require(script.newmain4567)
 
-print("Starter")
+print("Started")
 
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.CoreGui
