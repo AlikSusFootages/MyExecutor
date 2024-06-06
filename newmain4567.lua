@@ -705,7 +705,8 @@ function Start()
                 TextColor3 = UsingTheme.Text,
                 BackgroundTransparency = .9,
                 TextSize = 20,
-                FontFace = GUI_Font
+                FontFace = GUI_Font,
+                AutomaticSize = "Y",
             }, {
                 Create("TextLabel", {
                     Text = content.Date,
