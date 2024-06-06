@@ -105,528 +105,530 @@ end
 
 --/° Main °/--
 
+function Dozer:Start()
 if game:isLoaded() then
-    local UsingTheme = Dozer.Themes[GUI_CurrentTheme]
-    local ScreenGui = Create("ScreenGui", {
-        Name = "Dozer Executor v" .. _version,
-        ZIndexBehavior = "Sibling",
-        Enabled = true,
-        ResetOnSpawn = false,
-        IgnoreGuiInset = true,
-        Parent = PlayerGui,
-        DisplayOrder = 9999
-    }, {
-        Create("TextButton", {
-            Name = "OpenButton",
-            Size = UDim2.fromOffset(60,60),
-            Position = UDim2.fromOffset(10,46),
-            TextColor3 = UsingTheme.Text,
-            BackgroundColor3 = UsingTheme.Main,
-            BorderSizePixel = 0,
-            Text = "Open",
-            FontFace = GUI_Font
-        }),
-        Create("Frame", {
-            BackgroundColor3 = Color3.fromRGB(0,3,6),
-            BackgroundTransparency = 1,
-            Size = UDim2.new(1, 0, 1, 0),
-            BorderSizePixel = 0,
-            ZIndex = 99999
+        local UsingTheme = Dozer.Themes[GUI_CurrentTheme]
+        local ScreenGui = Create("ScreenGui", {
+            Name = "Dozer Executor v" .. _version,
+            ZIndexBehavior = "Sibling",
+            Enabled = true,
+            ResetOnSpawn = false,
+            IgnoreGuiInset = true,
+            Parent = PlayerGui,
+            DisplayOrder = 9999
         }, {
-            Create("Frame", {
+            Create("TextButton", {
+                Name = "OpenButton",
+                Size = UDim2.fromOffset(60,60),
+                Position = UDim2.fromOffset(10,46),
+                TextColor3 = UsingTheme.Text,
                 BackgroundColor3 = UsingTheme.Main,
-                BackgroundTransparency = GUI_Transparency - 0.2,
-                Size = UDim2.new(0, 300, 1, 0),
                 BorderSizePixel = 0,
-                Name = "Sidebar",
-                Active = true,
-                AnchorPoint = Vector2.new(1,0)
-            }, {
-                Create("UIPadding", {
-                    PaddingTop = UDim.new(0, 30),
-                    PaddingLeft = UDim.new(0, 45),
-                    PaddingRight = UDim.new(0, 45),
-                    PaddingBottom = UDim.new(0, 25),
-                }),
-                Create("TextLabel", {
-                    FontFace = GUI_Font ,
-                    Text = "Dozer",
-                    TextColor3 = UsingTheme.Text,
-                    BackgroundTransparency = 1,
-                    TextSize = 40,
-                    Size = UDim2.new(1,0,0,50),
-                    TextXAlignment = "Left",
-                    TextYAlignment = "Top",
-                    Position = UDim2.fromOffset(0, 0)
-                }),
-                Create("ImageButton", {
-                    Image = GetIcon("x"),
-                    BackgroundTransparency = 1,
-                    AnchorPoint = Vector2.new(1,0),
-                    Size = UDim2.fromOffset(30,30),
-                    Position = UDim2.new(1,0,0,6),
-                    Name = "CloseButton"
-                }),
-                Create("Frame", {
-                    Size = UDim2.new(0,1,1,60),
-                    Position = UDim2.new(1,45,0,-30),
-                    BorderSizePixel = 0,
-                    BackgroundTransparency = GUI_StrokeTransparency,
-                    BackgroundColor3 = UsingTheme.Stroke,
-                    AnchorPoint = Vector2.new(1,0),
-                }),
-                Create("TextButton", {
-                    Text = "",
-                    BackgroundTransparency = 1,
-                    BackgroundColor3 = UsingTheme.Stroke,
-                    AutoButtonColor = false,
-                    Size = UDim2.new(1,0,0,60),
-                    Position = UDim2.new(0,0,1,0),
-                    AnchorPoint = Vector2.new(0,1),
-                }, {
-                    Create("ImageLabel", {
-                        Image = "https://www.roblox.com/headshot-thumbnail/image?userId=".. Player.UserId .."&width=420&height=420&format=png",
-                        Size = UDim2.fromOffset(60,60),
-                        Position = UDim2.new(0,0,0.5,0),
-                        AnchorPoint = Vector2.new(0,0.5),
-                        BackgroundTransparency = 1,
-                    }, {
-                        Create("UICorner", {
-                            CornerRadius = UDim.new(1,1)
-                        })
-                    }),
-                    Create("TextLabel", {
-                        Text = Player.DisplayName,
-                        Position = UDim2.new(0,70,0,6),
-                        BackgroundTransparency = 1,
-                        TextSize = 20,
-                        FontFace = GUI_Font,
-                        TextColor3 = UsingTheme.Text,
-                        TextXAlignment = "Left",
-                        TextYAlignment = "Top",
-                        Size = UDim2.new(1,-70,0,20),
-                        TextTruncate = "AtEnd"
-                    }),
-                    Create("TextLabel", {
-                        Text = Player.Name,
-                        Position = UDim2.new(0,70,1,-6),
-                        BackgroundTransparency = 1,
-                        TextSize = 18,
-                        AnchorPoint = Vector2.new(0,1),
-                        FontFace = GUI_Font,
-                        TextColor3 = UsingTheme.Stroke,
-                        TextXAlignment = "Left",
-                        TextYAlignment = "Top",
-                        Size = UDim2.new(1,-70,0,20),
-                        TextTruncate = "AtEnd"
-                    })
-                }),
-                Create("Frame", {
-                    Size = UDim2.new(1,0,1,-150),
-                    Position = UDim2.new(0,0,0,70),
-                    BackgroundTransparency = 1,
-                    BorderSizePixel = 0,
-                    Name = "Navbar"
-                }, {
-                    Create("UIListLayout", {
-                        FillDirection = "Vertical",
-                        Padding = UDim.new(0,28),
-                        SortOrder = "LayoutOrder",
-                    }),
-                    Create("TextButton", {
-                        Text = "Info",
-                        Name = "Info",
-                        TextColor3 = UsingTheme.Text,
-                        TextSize = 22,
-                        FontFace = GUI_Font,
-                        Size = UDim2.new(1,0,0,26),
-                        BackgroundTransparency = 1,
-                        TextXAlignment = "Left"
-                    }, {
-                        Create("UIPadding", {
-                            PaddingLeft = UDim.new(0,32)
-                        }),
-                        Create("ImageLabel", {
-                            Size = UDim2.fromOffset(24,24), 
-                            Image = GetIcon("info"),
-                            Position = UDim2.new(0, -32, 0.5, 0),
-                            AnchorPoint = Vector2.new(0,0.5),
-                            BackgroundTransparency = 1
-                        })
-                    }),
-                    Create("TextButton", {
-                        Text = "Executor",
-                        Name = "Executor",
-                        TextColor3 = UsingTheme.Stroke,
-                        TextSize = 22,
-                        FontFace = GUI_Font,
-                        Size = UDim2.new(1,0,0,26),
-                        BackgroundTransparency = 1,
-                        TextXAlignment = "Left"
-                    }, {
-                        Create("UIPadding", {
-                            PaddingLeft = UDim.new(0,32)
-                        }),
-                        Create("ImageLabel", {
-                            Size = UDim2.fromOffset(24,24), 
-                            Image = GetIcon("scroll"),
-                            Position = UDim2.new(0, -32, 0.5, 0),
-                            AnchorPoint = Vector2.new(0,0.5),
-                            BackgroundTransparency = 1,
-                            ImageColor3 = UsingTheme.Stroke
-                        })
-                    }),
-                    Create("TextButton", {
-                        Text = "Search Scripts",
-                        Name = "ScriptSearch",
-                        TextColor3 = UsingTheme.Stroke,
-                        TextSize = 22,
-                        FontFace = GUI_Font,
-                        Size = UDim2.new(1,0,0,26),
-                        BackgroundTransparency = 1,
-                        TextXAlignment = "Left"
-                    }, {
-                        Create("UIPadding", {
-                            PaddingLeft = UDim.new(0,32)
-                        }),
-                        Create("ImageLabel", {
-                            Size = UDim2.fromOffset(24,24), 
-                            Image = GetIcon("file-search-2"),
-                            Position = UDim2.new(0, -32, 0.5, 0),
-                            AnchorPoint = Vector2.new(0,0.5),
-                            BackgroundTransparency = 1,
-                            ImageColor3 = UsingTheme.Stroke
-                        })
-                    }),
-                    Create("TextButton", {
-                        Text = "Settings",
-                        Name = "Settings",
-                        TextColor3 = UsingTheme.Stroke,
-                        TextSize = 22,
-                        FontFace = GUI_Font,
-                        Size = UDim2.new(1,0,0,26),
-                        BackgroundTransparency = 1,
-                        TextXAlignment = "Left"
-                    }, {
-                        Create("UIPadding", {
-                            PaddingLeft = UDim.new(0,32)
-                        }),
-                        Create("ImageLabel", {
-                            Size = UDim2.fromOffset(24,24), 
-                            Image = GetIcon("settings"),
-                            Position = UDim2.new(0, -32, 0.5, 0),
-                            AnchorPoint = Vector2.new(0,0.5),
-                            BackgroundTransparency = 1,
-                            ImageColor3 = UsingTheme.Stroke
-                        })
-                    })
-                })
+                Text = "Open",
+                FontFace = GUI_Font
             }),
             Create("Frame", {
-                Size = UDim2.new(1, -300, 1, 0),
-                Position = UDim2.new(1,0,0,0),
-                AnchorPoint = Vector2.new(1,1),
+                BackgroundColor3 = Color3.fromRGB(0,3,6),
                 BackgroundTransparency = 1,
-                Name = "RightFrames"
+                Size = UDim2.new(1, 0, 1, 0),
+                BorderSizePixel = 0,
+                ZIndex = 99999
             }, {
-                -- Info
-                Create("TextLabel", {
-                    BackgroundTransparency = GUI_Transparency -0.2,
+                Create("Frame", {
                     BackgroundColor3 = UsingTheme.Main,
+                    BackgroundTransparency = GUI_Transparency - 0.2,
+                    Size = UDim2.new(0, 300, 1, 0),
                     BorderSizePixel = 0,
-                    Size = UDim2.new(1, -40, 1, -40),
-                    Position = UDim2.new(0.5,0,0.5,0),
-                    AnchorPoint = Vector2.new(0.5,0.5),
-                    TextXAlignment = "Left",
-                    TextYAlignment = "Top",
-                    TextColor3 = UsingTheme.Text,
-                    TextSize = 38,
-                    Text = "Info",
-                    FontFace = GUI_Font ,
-                    Name = "Info",
-                    Visible = true
+                    Name = "Sidebar",
+                    Active = true,
+                    AnchorPoint = Vector2.new(1,0)
                 }, {
-                    Create("UICorner", {
-                        CornerRadius = UDim.new(0, 14)
-                    }),
-                    Create("UIStroke", {
-                        Thickness = 1,
-                        Color = UsingTheme.Stroke,
-                        Transparency = GUI_StrokeTransparency,
-                        ApplyStrokeMode = "Border"
-                    }),
                     Create("UIPadding", {
-                        PaddingTop = UDim.new(0, 25),
-                        PaddingLeft = UDim.new(0, 30),
-                        PaddingRight = UDim.new(0, 30),
+                        PaddingTop = UDim.new(0, 30),
+                        PaddingLeft = UDim.new(0, 45),
+                        PaddingRight = UDim.new(0, 45),
                         PaddingBottom = UDim.new(0, 25),
                     }),
+                    Create("TextLabel", {
+                        FontFace = GUI_Font ,
+                        Text = "Dozer",
+                        TextColor3 = UsingTheme.Text,
+                        BackgroundTransparency = 1,
+                        TextSize = 40,
+                        Size = UDim2.new(1,0,0,50),
+                        TextXAlignment = "Left",
+                        TextYAlignment = "Top",
+                        Position = UDim2.fromOffset(0, 0)
+                    }),
+                    Create("ImageButton", {
+                        Image = GetIcon("x"),
+                        BackgroundTransparency = 1,
+                        AnchorPoint = Vector2.new(1,0),
+                        Size = UDim2.fromOffset(30,30),
+                        Position = UDim2.new(1,0,0,6),
+                        Name = "CloseButton"
+                    }),
                     Create("Frame", {
-                        Name = "Content",
-                        Size = UDim2.new(1,0,1,-50),
+                        Size = UDim2.new(0,1,1,60),
+                        Position = UDim2.new(1,45,0,-30),
+                        BorderSizePixel = 0,
+                        BackgroundTransparency = GUI_StrokeTransparency,
+                        BackgroundColor3 = UsingTheme.Stroke,
+                        AnchorPoint = Vector2.new(1,0),
+                    }),
+                    Create("TextButton", {
+                        Text = "",
+                        BackgroundTransparency = 1,
+                        BackgroundColor3 = UsingTheme.Stroke,
+                        AutoButtonColor = false,
+                        Size = UDim2.new(1,0,0,60),
                         Position = UDim2.new(0,0,1,0),
                         AnchorPoint = Vector2.new(0,1),
-                        BackgroundTransparency = 1,
                     }, {
-                        Create("Frame", {
-                            Name = "Left",
-                            Size = UDim2.new(0.5,-20,1,0),
+                        Create("ImageLabel", {
+                            Image = "https://www.roblox.com/headshot-thumbnail/image?userId=".. Player.UserId .."&width=420&height=420&format=png",
+                            Size = UDim2.fromOffset(60,60),
+                            Position = UDim2.new(0,0,0.5,0),
+                            AnchorPoint = Vector2.new(0,0.5),
                             BackgroundTransparency = 1,
                         }, {
-                            Create("TextLabel", {
-                                Text = "Server Statistics",
-                                TextSize = 26,
-                                TextColor3 = UsingTheme.Text,
-                                BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,21),
-                                FontFace = GUI_Font ,
-                                TextXAlignment = "Left",
-                                TextYAlignment = "Top",
-                            }),
-                            Create("TextLabel", {
-                                Text = "Ping",
-                                TextSize = 20,
-                                TextColor3 = UsingTheme.Text,
-                                BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,32),
-                                FontFace = GUI_Font,
-                                TextXAlignment = "Left",
-                                TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,36)
-                            }),
-                            Create("TextLabel", {
-                                Text = "",
-                                TextSize = 20,
-                                TextColor3 = UsingTheme.Stroke,
-                                BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,32),
-                                FontFace = GUI_Font,
-                                TextXAlignment = "Right",
-                                TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,36),
-                                Name = "PingText",
-                            }),
-                            Create("TextLabel", {
-                                Text = "FPS",
-                                TextSize = 20,
-                                TextColor3 = UsingTheme.Text,
-                                BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,20),
-                                FontFace = GUI_Font,
-                                TextXAlignment = "Left",
-                                TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,58)
-                            }),
-                            Create("TextLabel", {
-                                Text = "",
-                                TextSize = 20,
-                                TextColor3 = UsingTheme.Stroke,
-                                BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,20),
-                                FontFace = GUI_Font,
-                                TextXAlignment = "Right",
-                                TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,58),
-                                Name = "FPSText",
-                            }),
-                            Create("TextLabel", {
-                                Text = "Players Amount",
-                                TextSize = 20,
-                                TextColor3 = UsingTheme.Text,
-                                BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,20),
-                                FontFace = GUI_Font,
-                                TextXAlignment = "Left",
-                                TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,80)
-                            }),
-                            Create("TextLabel", {
-                                Text = "",
-                                TextSize = 20,
-                                TextColor3 = UsingTheme.Stroke,
-                                BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,0,20),
-                                FontFace = GUI_Font,
-                                TextXAlignment = "Right",
-                                TextYAlignment = "Top",
-                                Position = UDim2.new(0,0,0,80),
-                                Name = "PlayersText",
-                            }),
+                            Create("UICorner", {
+                                CornerRadius = UDim.new(1,1)
+                            })
                         }),
-                        Create("Frame", {
-                            Name = "Right",
-                            Size = UDim2.new(0.5,-20,1,0),
+                        Create("TextLabel", {
+                            Text = Player.DisplayName,
+                            Position = UDim2.new(0,70,0,6),
                             BackgroundTransparency = 1,
-                            Position = UDim2.new(1,0,0,0),
-                            AnchorPoint = Vector2.new(1,0)
+                            TextSize = 20,
+                            FontFace = GUI_Font,
+                            TextColor3 = UsingTheme.Text,
+                            TextXAlignment = "Left",
+                            TextYAlignment = "Top",
+                            Size = UDim2.new(1,-70,0,20),
+                            TextTruncate = "AtEnd"
+                        }),
+                        Create("TextLabel", {
+                            Text = Player.Name,
+                            Position = UDim2.new(0,70,1,-6),
+                            BackgroundTransparency = 1,
+                            TextSize = 18,
+                            AnchorPoint = Vector2.new(0,1),
+                            FontFace = GUI_Font,
+                            TextColor3 = UsingTheme.Stroke,
+                            TextXAlignment = "Left",
+                            TextYAlignment = "Top",
+                            Size = UDim2.new(1,-70,0,20),
+                            TextTruncate = "AtEnd"
+                        })
+                    }),
+                    Create("Frame", {
+                        Size = UDim2.new(1,0,1,-150),
+                        Position = UDim2.new(0,0,0,70),
+                        BackgroundTransparency = 1,
+                        BorderSizePixel = 0,
+                        Name = "Navbar"
+                    }, {
+                        Create("UIListLayout", {
+                            FillDirection = "Vertical",
+                            Padding = UDim.new(0,28),
+                            SortOrder = "LayoutOrder",
+                        }),
+                        Create("TextButton", {
+                            Text = "Info",
+                            Name = "Info",
+                            TextColor3 = UsingTheme.Text,
+                            TextSize = 22,
+                            FontFace = GUI_Font,
+                            Size = UDim2.new(1,0,0,26),
+                            BackgroundTransparency = 1,
+                            TextXAlignment = "Left"
                         }, {
-                            Create("TextLabel", {
-                                Text = "Changelogs",
-                                TextColor3 = UsingTheme.Text,
-                                FontFace = GUI_Font ,
-                                TextSize = 26,
-                                TextXAlignment = "Left",
-                                TextYAlignment = "Top",
+                            Create("UIPadding", {
+                                PaddingLeft = UDim.new(0,32)
+                            }),
+                            Create("ImageLabel", {
+                                Size = UDim2.fromOffset(24,24), 
+                                Image = GetIcon("info"),
+                                Position = UDim2.new(0, -32, 0.5, 0),
+                                AnchorPoint = Vector2.new(0,0.5),
+                                BackgroundTransparency = 1
+                            })
+                        }),
+                        Create("TextButton", {
+                            Text = "Executor",
+                            Name = "Executor",
+                            TextColor3 = UsingTheme.Stroke,
+                            TextSize = 22,
+                            FontFace = GUI_Font,
+                            Size = UDim2.new(1,0,0,26),
+                            BackgroundTransparency = 1,
+                            TextXAlignment = "Left"
+                        }, {
+                            Create("UIPadding", {
+                                PaddingLeft = UDim.new(0,32)
+                            }),
+                            Create("ImageLabel", {
+                                Size = UDim2.fromOffset(24,24), 
+                                Image = GetIcon("scroll"),
+                                Position = UDim2.new(0, -32, 0.5, 0),
+                                AnchorPoint = Vector2.new(0,0.5),
                                 BackgroundTransparency = 1,
+                                ImageColor3 = UsingTheme.Stroke
+                            })
+                        }),
+                        Create("TextButton", {
+                            Text = "Search Scripts",
+                            Name = "ScriptSearch",
+                            TextColor3 = UsingTheme.Stroke,
+                            TextSize = 22,
+                            FontFace = GUI_Font,
+                            Size = UDim2.new(1,0,0,26),
+                            BackgroundTransparency = 1,
+                            TextXAlignment = "Left"
+                        }, {
+                            Create("UIPadding", {
+                                PaddingLeft = UDim.new(0,32)
+                            }),
+                            Create("ImageLabel", {
+                                Size = UDim2.fromOffset(24,24), 
+                                Image = GetIcon("file-search-2"),
+                                Position = UDim2.new(0, -32, 0.5, 0),
+                                AnchorPoint = Vector2.new(0,0.5),
+                                BackgroundTransparency = 1,
+                                ImageColor3 = UsingTheme.Stroke
+                            })
+                        }),
+                        Create("TextButton", {
+                            Text = "Settings",
+                            Name = "Settings",
+                            TextColor3 = UsingTheme.Stroke,
+                            TextSize = 22,
+                            FontFace = GUI_Font,
+                            Size = UDim2.new(1,0,0,26),
+                            BackgroundTransparency = 1,
+                            TextXAlignment = "Left"
+                        }, {
+                            Create("UIPadding", {
+                                PaddingLeft = UDim.new(0,32)
+                            }),
+                            Create("ImageLabel", {
+                                Size = UDim2.fromOffset(24,24), 
+                                Image = GetIcon("settings"),
+                                Position = UDim2.new(0, -32, 0.5, 0),
+                                AnchorPoint = Vector2.new(0,0.5),
+                                BackgroundTransparency = 1,
+                                ImageColor3 = UsingTheme.Stroke
                             })
                         })
                     })
                 }),
-                -- Executor
-                Create("TextLabel", {
-                    BackgroundTransparency = GUI_Transparency -0.2,
-                    BackgroundColor3 = UsingTheme.Main,
-                    BorderSizePixel = 0,
-                    Size = UDim2.new(1, -40, 1, -40),
-                    Position = UDim2.new(0.5,0,0.5,0),
-                    AnchorPoint = Vector2.new(0.5,0.5),
-                    TextXAlignment = "Left",
-                    TextYAlignment = "Top",
-                    TextColor3 = UsingTheme.Text,
-                    TextSize = 38,
-                    Text = "Executor",
-                    FontFace = GUI_Font ,
-                    Name = "Executor",
-                    Visible = false
+                Create("Frame", {
+                    Size = UDim2.new(1, -300, 1, 0),
+                    Position = UDim2.new(1,0,0,0),
+                    AnchorPoint = Vector2.new(1,1),
+                    BackgroundTransparency = 1,
+                    Name = "RightFrames"
                 }, {
-                    Create("UICorner", {
-                        CornerRadius = UDim.new(0, 14)
+                    -- Info
+                    Create("TextLabel", {
+                        BackgroundTransparency = GUI_Transparency -0.2,
+                        BackgroundColor3 = UsingTheme.Main,
+                        BorderSizePixel = 0,
+                        Size = UDim2.new(1, -40, 1, -40),
+                        Position = UDim2.new(0.5,0,0.5,0),
+                        AnchorPoint = Vector2.new(0.5,0.5),
+                        TextXAlignment = "Left",
+                        TextYAlignment = "Top",
+                        TextColor3 = UsingTheme.Text,
+                        TextSize = 38,
+                        Text = "Info",
+                        FontFace = GUI_Font ,
+                        Name = "Info",
+                        Visible = true
+                    }, {
+                        Create("UICorner", {
+                            CornerRadius = UDim.new(0, 14)
+                        }),
+                        Create("UIStroke", {
+                            Thickness = 1,
+                            Color = UsingTheme.Stroke,
+                            Transparency = GUI_StrokeTransparency,
+                            ApplyStrokeMode = "Border"
+                        }),
+                        Create("UIPadding", {
+                            PaddingTop = UDim.new(0, 25),
+                            PaddingLeft = UDim.new(0, 30),
+                            PaddingRight = UDim.new(0, 30),
+                            PaddingBottom = UDim.new(0, 25),
+                        }),
+                        Create("Frame", {
+                            Name = "Content",
+                            Size = UDim2.new(1,0,1,-50),
+                            Position = UDim2.new(0,0,1,0),
+                            AnchorPoint = Vector2.new(0,1),
+                            BackgroundTransparency = 1,
+                        }, {
+                            Create("Frame", {
+                                Name = "Left",
+                                Size = UDim2.new(0.5,-20,1,0),
+                                BackgroundTransparency = 1,
+                            }, {
+                                Create("TextLabel", {
+                                    Text = "Server Statistics",
+                                    TextSize = 26,
+                                    TextColor3 = UsingTheme.Text,
+                                    BackgroundTransparency = 1,
+                                    Size = UDim2.new(1,0,0,21),
+                                    FontFace = GUI_Font ,
+                                    TextXAlignment = "Left",
+                                    TextYAlignment = "Top",
+                                }),
+                                Create("TextLabel", {
+                                    Text = "Ping",
+                                    TextSize = 20,
+                                    TextColor3 = UsingTheme.Text,
+                                    BackgroundTransparency = 1,
+                                    Size = UDim2.new(1,0,0,32),
+                                    FontFace = GUI_Font,
+                                    TextXAlignment = "Left",
+                                    TextYAlignment = "Top",
+                                    Position = UDim2.new(0,0,0,36)
+                                }),
+                                Create("TextLabel", {
+                                    Text = "",
+                                    TextSize = 20,
+                                    TextColor3 = UsingTheme.Stroke,
+                                    BackgroundTransparency = 1,
+                                    Size = UDim2.new(1,0,0,32),
+                                    FontFace = GUI_Font,
+                                    TextXAlignment = "Right",
+                                    TextYAlignment = "Top",
+                                    Position = UDim2.new(0,0,0,36),
+                                    Name = "PingText",
+                                }),
+                                Create("TextLabel", {
+                                    Text = "FPS",
+                                    TextSize = 20,
+                                    TextColor3 = UsingTheme.Text,
+                                    BackgroundTransparency = 1,
+                                    Size = UDim2.new(1,0,0,20),
+                                    FontFace = GUI_Font,
+                                    TextXAlignment = "Left",
+                                    TextYAlignment = "Top",
+                                    Position = UDim2.new(0,0,0,58)
+                                }),
+                                Create("TextLabel", {
+                                    Text = "",
+                                    TextSize = 20,
+                                    TextColor3 = UsingTheme.Stroke,
+                                    BackgroundTransparency = 1,
+                                    Size = UDim2.new(1,0,0,20),
+                                    FontFace = GUI_Font,
+                                    TextXAlignment = "Right",
+                                    TextYAlignment = "Top",
+                                    Position = UDim2.new(0,0,0,58),
+                                    Name = "FPSText",
+                                }),
+                                Create("TextLabel", {
+                                    Text = "Players Amount",
+                                    TextSize = 20,
+                                    TextColor3 = UsingTheme.Text,
+                                    BackgroundTransparency = 1,
+                                    Size = UDim2.new(1,0,0,20),
+                                    FontFace = GUI_Font,
+                                    TextXAlignment = "Left",
+                                    TextYAlignment = "Top",
+                                    Position = UDim2.new(0,0,0,80)
+                                }),
+                                Create("TextLabel", {
+                                    Text = "",
+                                    TextSize = 20,
+                                    TextColor3 = UsingTheme.Stroke,
+                                    BackgroundTransparency = 1,
+                                    Size = UDim2.new(1,0,0,20),
+                                    FontFace = GUI_Font,
+                                    TextXAlignment = "Right",
+                                    TextYAlignment = "Top",
+                                    Position = UDim2.new(0,0,0,80),
+                                    Name = "PlayersText",
+                                }),
+                            }),
+                            Create("Frame", {
+                                Name = "Right",
+                                Size = UDim2.new(0.5,-20,1,0),
+                                BackgroundTransparency = 1,
+                                Position = UDim2.new(1,0,0,0),
+                                AnchorPoint = Vector2.new(1,0)
+                            }, {
+                                Create("TextLabel", {
+                                    Text = "Changelogs",
+                                    TextColor3 = UsingTheme.Text,
+                                    FontFace = GUI_Font ,
+                                    TextSize = 26,
+                                    TextXAlignment = "Left",
+                                    TextYAlignment = "Top",
+                                    BackgroundTransparency = 1,
+                                })
+                            })
+                        })
                     }),
-                    Create("UIStroke", {
-                        Thickness = 1,
-                        Color = UsingTheme.Stroke,
-                        Transparency = GUI_StrokeTransparency,
-                        ApplyStrokeMode = "Border"
+                    -- Executor
+                    Create("TextLabel", {
+                        BackgroundTransparency = GUI_Transparency -0.2,
+                        BackgroundColor3 = UsingTheme.Main,
+                        BorderSizePixel = 0,
+                        Size = UDim2.new(1, -40, 1, -40),
+                        Position = UDim2.new(0.5,0,0.5,0),
+                        AnchorPoint = Vector2.new(0.5,0.5),
+                        TextXAlignment = "Left",
+                        TextYAlignment = "Top",
+                        TextColor3 = UsingTheme.Text,
+                        TextSize = 38,
+                        Text = "Executor",
+                        FontFace = GUI_Font ,
+                        Name = "Executor",
+                        Visible = false
+                    }, {
+                        Create("UICorner", {
+                            CornerRadius = UDim.new(0, 14)
+                        }),
+                        Create("UIStroke", {
+                            Thickness = 1,
+                            Color = UsingTheme.Stroke,
+                            Transparency = GUI_StrokeTransparency,
+                            ApplyStrokeMode = "Border"
+                        }),
+                        Create("UIPadding", {
+                            PaddingTop = UDim.new(0, 25),
+                            PaddingLeft = UDim.new(0, 30),
+                            PaddingRight = UDim.new(0, 30),
+                            PaddingBottom = UDim.new(0, 25),
+                        })
                     }),
-                    Create("UIPadding", {
-                        PaddingTop = UDim.new(0, 25),
-                        PaddingLeft = UDim.new(0, 30),
-                        PaddingRight = UDim.new(0, 30),
-                        PaddingBottom = UDim.new(0, 25),
-                    })
-                }),
-                -- Script Search
-                Create("TextLabel", {
-                    BackgroundTransparency = GUI_Transparency -0.2,
-                    BackgroundColor3 = UsingTheme.Main,
-                    BorderSizePixel = 0,
-                    Size = UDim2.new(1, -40, 1, -40),
-                    Position = UDim2.new(0.5,0,0.5,0),
-                    AnchorPoint = Vector2.new(0.5,0.5),
-                    TextXAlignment = "Left",
-                    TextYAlignment = "Top",
-                    TextColor3 = UsingTheme.Text,
-                    TextSize = 38,
-                    Text = "Script Search",
-                    FontFace = GUI_Font ,
-                    Name = "ScriptSearch",
-                    Visible = false
-                }, {
-                    Create("UICorner", {
-                        CornerRadius = UDim.new(0, 14)
+                    -- Script Search
+                    Create("TextLabel", {
+                        BackgroundTransparency = GUI_Transparency -0.2,
+                        BackgroundColor3 = UsingTheme.Main,
+                        BorderSizePixel = 0,
+                        Size = UDim2.new(1, -40, 1, -40),
+                        Position = UDim2.new(0.5,0,0.5,0),
+                        AnchorPoint = Vector2.new(0.5,0.5),
+                        TextXAlignment = "Left",
+                        TextYAlignment = "Top",
+                        TextColor3 = UsingTheme.Text,
+                        TextSize = 38,
+                        Text = "Script Search",
+                        FontFace = GUI_Font ,
+                        Name = "ScriptSearch",
+                        Visible = false
+                    }, {
+                        Create("UICorner", {
+                            CornerRadius = UDim.new(0, 14)
+                        }),
+                        Create("UIStroke", {
+                            Thickness = 1,
+                            Color = UsingTheme.Stroke,
+                            Transparency = GUI_StrokeTransparency,
+                            ApplyStrokeMode = "Border"
+                        }),
+                        Create("UIPadding", {
+                            PaddingTop = UDim.new(0, 25),
+                            PaddingLeft = UDim.new(0, 30),
+                            PaddingRight = UDim.new(0, 30),
+                            PaddingBottom = UDim.new(0, 25),
+                        })
                     }),
-                    Create("UIStroke", {
-                        Thickness = 1,
-                        Color = UsingTheme.Stroke,
-                        Transparency = GUI_StrokeTransparency,
-                        ApplyStrokeMode = "Border"
-                    }),
-                    Create("UIPadding", {
-                        PaddingTop = UDim.new(0, 25),
-                        PaddingLeft = UDim.new(0, 30),
-                        PaddingRight = UDim.new(0, 30),
-                        PaddingBottom = UDim.new(0, 25),
-                    })
-                }),
-                -- Settings
-                Create("TextLabel", {
-                    BackgroundTransparency = GUI_Transparency -0.2,
-                    BackgroundColor3 = UsingTheme.Main,
-                    BorderSizePixel = 0,
-                    Size = UDim2.new(1, -40, 1, -40),
-                    Position = UDim2.new(0.5,0,0.5,0),
-                    AnchorPoint = Vector2.new(0.5,0.5),
-                    TextXAlignment = "Left",
-                    TextYAlignment = "Top",
-                    TextColor3 = UsingTheme.Text,
-                    TextSize = 38,
-                    Text = "Settings",
-                    FontFace = GUI_Font ,
-                    Name = "Settings",
-                    Visible = false
-                }, {
-                    Create("UICorner", {
-                        CornerRadius = UDim.new(0, 14)
-                    }),
-                    Create("UIStroke", {
-                        Thickness = 1,
-                        Color = UsingTheme.Stroke,
-                        Transparency = GUI_StrokeTransparency,
-                        ApplyStrokeMode = "Border"
-                    }),
-                    Create("UIPadding", {
-                        PaddingTop = UDim.new(0, 25),
-                        PaddingLeft = UDim.new(0, 30),
-                        PaddingRight = UDim.new(0, 30),
-                        PaddingBottom = UDim.new(0, 25),
+                    -- Settings
+                    Create("TextLabel", {
+                        BackgroundTransparency = GUI_Transparency -0.2,
+                        BackgroundColor3 = UsingTheme.Main,
+                        BorderSizePixel = 0,
+                        Size = UDim2.new(1, -40, 1, -40),
+                        Position = UDim2.new(0.5,0,0.5,0),
+                        AnchorPoint = Vector2.new(0.5,0.5),
+                        TextXAlignment = "Left",
+                        TextYAlignment = "Top",
+                        TextColor3 = UsingTheme.Text,
+                        TextSize = 38,
+                        Text = "Settings",
+                        FontFace = GUI_Font ,
+                        Name = "Settings",
+                        Visible = false
+                    }, {
+                        Create("UICorner", {
+                            CornerRadius = UDim.new(0, 14)
+                        }),
+                        Create("UIStroke", {
+                            Thickness = 1,
+                            Color = UsingTheme.Stroke,
+                            Transparency = GUI_StrokeTransparency,
+                            ApplyStrokeMode = "Border"
+                        }),
+                        Create("UIPadding", {
+                            PaddingTop = UDim.new(0, 25),
+                            PaddingLeft = UDim.new(0, 30),
+                            PaddingRight = UDim.new(0, 30),
+                            PaddingBottom = UDim.new(0, 25),
+                        })
                     })
                 })
             })
         })
-    })
-    
-    --/° Scripts °/--
-    local Navbar = ScreenGui.Frame.Sidebar.Navbar
-    local RightFrames = ScreenGui.Frame.RightFrames
-    
-    
-    ScreenGui.OpenButton.MouseButton1Click:Connect(function()
-        TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.4}):Play()
-        TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0,0)}):Play()
-        TweenService:Create(RightFrames, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
-    end)
-    ScreenGui.Frame.Sidebar.CloseButton.MouseButton1Click:Connect(function()
-        TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {BackgroundTransparency = 1}):Play()
-        TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
-        TweenService:Create(RightFrames, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,1)}):Play()
-    end)
-    
-    
-    for i,b in next, Navbar:GetChildren() do
-        if b:IsA("TextButton") then
-            b.MouseButton1Click:Connect(function()
-                for i,v in next, RightFrames:GetChildren() do
-                    v.Visible = false
-                    v.Position = UDim2.new(0.5, 50, 0.5,0)
-                    if string.find(v.Name, b.Name) then
-                        TweenService:Create(v, TweenInfo.new(0.2), {Position = UDim2.fromScale(0.5,0.5)}):Play()
-                        v.Visible = true
+        
+        --/° Scripts °/--
+        local Navbar = ScreenGui.Frame.Sidebar.Navbar
+        local RightFrames = ScreenGui.Frame.RightFrames
+        
+        
+        ScreenGui.OpenButton.MouseButton1Click:Connect(function()
+            TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.4}):Play()
+            TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(0,0)}):Play()
+            TweenService:Create(RightFrames, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
+        end)
+        ScreenGui.Frame.Sidebar.CloseButton.MouseButton1Click:Connect(function()
+            TweenService:Create(ScreenGui.Frame, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {BackgroundTransparency = 1}):Play()
+            TweenService:Create(ScreenGui.Frame.Sidebar, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,0)}):Play()
+            TweenService:Create(RightFrames, TweenInfo.new(0.35, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {AnchorPoint = Vector2.new(1,1)}):Play()
+        end)
+        
+        
+        for i,b in next, Navbar:GetChildren() do
+            if b:IsA("TextButton") then
+                b.MouseButton1Click:Connect(function()
+                    for i,v in next, RightFrames:GetChildren() do
+                        v.Visible = false
+                        v.Position = UDim2.new(0.5, 50, 0.5,0)
+                        if string.find(v.Name, b.Name) then
+                            TweenService:Create(v, TweenInfo.new(0.2), {Position = UDim2.fromScale(0.5,0.5)}):Play()
+                            v.Visible = true
+                        end
                     end
-                end
-            end)
-            b.MouseButton1Click:Connect(function()
-                for i,v in next, Navbar:GetChildren() do 
-                    if v:IsA("TextButton") then
-                        TweenService:Create(v, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Stroke}):Play()
-                        TweenService:Create(v.ImageLabel, TweenInfo.new(0.15), {ImageColor3 = UsingTheme.Stroke}):Play()
+                end)
+                b.MouseButton1Click:Connect(function()
+                    for i,v in next, Navbar:GetChildren() do 
+                        if v:IsA("TextButton") then
+                            TweenService:Create(v, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Stroke}):Play()
+                            TweenService:Create(v.ImageLabel, TweenInfo.new(0.15), {ImageColor3 = UsingTheme.Stroke}):Play()
+                        end
                     end
-                end
-                TweenService:Create(b, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Text}):Play()
-                TweenService:Create(b.ImageLabel, TweenInfo.new(0.15), {ImageColor3 = UsingTheme.Text}):Play()
-            end)
+                    TweenService:Create(b, TweenInfo.new(0.15), {TextColor3 = UsingTheme.Text}):Play()
+                    TweenService:Create(b.ImageLabel, TweenInfo.new(0.15), {ImageColor3 = UsingTheme.Text}):Play()
+                end)
+            end
         end
-    end
-    
-    local LeftFramess = RightFrames.Info.Content.Left
-    
-    while wait(0.1) do
-        local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
-        LeftFramess.PingText.Text = math.floor(ping + 0.5) .. "ms"
         
-        local fps = 1 / RunService.RenderStepped:Wait()
-        LeftFramess.FPSText.Text = math.floor(fps)
+        local LeftFramess = RightFrames.Info.Content.Left
         
-        local playersAmount = #Players:GetPlayers()
-        LeftFramess.PlayersText.Text = playersAmount
+        while wait(0.1) do
+            local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
+            LeftFramess.PingText.Text = math.floor(ping + 0.5) .. "ms"
+            
+            local fps = 1 / RunService.RenderStepped:Wait()
+            LeftFramess.FPSText.Text = math.floor(fps)
+            
+            local playersAmount = #Players:GetPlayers()
+            LeftFramess.PlayersText.Text = playersAmount
+        end
     end
 end
