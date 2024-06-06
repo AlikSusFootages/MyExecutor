@@ -694,7 +694,16 @@ function Start()
         
         local RightFramess = RightFrames.Info.Content.Right.Content
         
-        for version, content in pairs(Changelogs)
+        for version, content in pairs(Changelog) do
+            Create("TextLabel", {
+                Parent = RightFramess,
+                Size = UDim2.new(1,0,0,0),
+                Text = "v" .. version,
+                TextYAlignment = "Top",
+                TextXAlignment = "Left",
+                TextColor3 = UsingTheme.Stroke
+            })
+        end
     end
 end
 
