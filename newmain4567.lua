@@ -704,7 +704,7 @@ function Start()
                 TextXAlignment = "Left",
                 TextColor3 = UsingTheme.Text,
                 BackgroundTransparency = .9,
-                TextSize = 22,
+                TextSize = 20,
                 FontFace = GUI_Font
             }, {
                 Create("TextLabel", {
