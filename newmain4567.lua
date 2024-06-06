@@ -692,16 +692,6 @@ function Start()
         
         local LeftFramess = RightFrames.Info.Content.Left
         
-        while wait(0.1) do
-            local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
-            LeftFramess.PingText.Text = math.floor(ping + 0.5) .. "ms"
-            
-            local fps = 1 / RunService.RenderStepped:Wait()
-            LeftFramess.FPSText.Text = math.floor(fps)
-            
-            local playersAmount = #Players:GetPlayers()
-            LeftFramess.PlayersText.Text = playersAmount
-        end
         
         local RightFramesss = RightFrames.Info.Content.Right.Content.ScrollingFrame
         
@@ -723,6 +713,19 @@ function Start()
                     TextSize = 20
                 })
             })
+        end
+        
+        
+        
+        while wait(0.1) do
+            local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
+            LeftFramess.PingText.Text = math.floor(ping + 0.5) .. "ms"
+            
+            local fps = 1 / RunService.RenderStepped:Wait()
+            LeftFramess.FPSText.Text = math.floor(fps)
+            
+            local playersAmount = #Players:GetPlayers()
+            LeftFramess.PlayersText.Text = playersAmount
         end
     end
 end
