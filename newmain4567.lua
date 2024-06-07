@@ -559,7 +559,8 @@ function Dozer:Start()
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,1,-60),
                                 ElasticBehavior = "Never",
-                                CanvasSize = UDim2.new(0,0,0,0)
+                                CanvasSize = UDim2.new(0,0,0,0),
+                                ScrollBarThickness = 0
                             }, {
                                 Create("TextBox", {
                                     BackgroundTransparency = .9,
