@@ -173,6 +173,8 @@ function a.Start()
         NewGui:Start()
     end)
 end
+
+return a
 ]]
 
 ModuleScript.Start()
