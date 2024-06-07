@@ -572,7 +572,8 @@ function Dozer:Start()
                                     Font = "Code",
                                     TextXAlignment = "Left",
                                     TextYAlignment = "Top",
-                                    AutomaticSize = "XY"
+                                    AutomaticSize = "XY",
+                                    ShowNativeInput = true
                                 })
                             })
                         })
