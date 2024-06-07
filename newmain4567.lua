@@ -555,27 +555,31 @@ function Dozer:Start()
                             AnchorPoint = Vector2.new(0,1),
                             Name = "Content"
                         }, {
-                            Create("ScrollingFrame", {
-                                BackgroundTransparency = 1,
-                                Size = UDim2.new(1,0,1,-60),
-                                ElasticBehavior = "Never",
-                                CanvasSize = UDim2.new(0,0,0,0),
-                                ScrollBarThickness = 0,
+                            Create("Frame", {
+                                Size = UDim2.new(1,0,1,-60)
                             }, {
-                                Create("TextBox", {
+                                Create("ScrollingFrame", {
                                     BackgroundTransparency = 1,
                                     Size = UDim2.new(1,0,1,0),
-                                    ClearTextOnFocus = false,
-                                    MultiLine = true,
-                                    PlaceholderText = "print('Enter your script here!')",
-                                    Text = "",
-                                    TextColor3 = UsingTheme.Text,
-                                    TextSize = 20,
-                                    Font = "Code",
-                                    TextXAlignment = "Left",
-                                    TextYAlignment = "Top",
-                                    AutomaticSize = "XY",
-                                    ShowNativeInput = true
+                                    ElasticBehavior = "Never",
+                                    CanvasSize = UDim2.new(0,0,0,0),
+                                    ScrollBarThickness = 0,
+                                }, {
+                                    Create("TextBox", {
+                                        BackgroundTransparency = 1,
+                                        Size = UDim2.new(1,0,1,0),
+                                        ClearTextOnFocus = false,
+                                        MultiLine = true,
+                                        PlaceholderText = "print('Enter your script here!')",
+                                        Text = "",
+                                        TextColor3 = UsingTheme.Text,
+                                        TextSize = 20,
+                                        Font = "Code",
+                                        TextXAlignment = "Left",
+                                        TextYAlignment = "Top",
+                                        AutomaticSize = "XY",
+                                        ShowNativeInput = true
+                                    }),
                                 }),
                                 Create("UIStroke", {
                                     Color = UsingTheme.Stroke,
