@@ -590,7 +590,7 @@ function Dozer:Start()
                                     PaddingBottom = UDim.new(0,12),
                                 }),
                                 Create("UICorner", {
-                                    CornerRadius = UDim.new(0,12)
+                                    CornerRadius = UDim.new(0, 12)
                                 })
                             })
                         })
