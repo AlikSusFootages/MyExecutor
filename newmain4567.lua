@@ -563,7 +563,9 @@ function Dozer:Start()
                                 Text = "Enter your script here!",
                                 TextColor3 = UsingTheme.Text,
                                 TextSize = 20,
-                                Font = "Code"
+                                Font = "Code",
+                                TextXAlignment = "Left",
+                                TextYAlignment = "Top",
                             })
                         })
                     }),
