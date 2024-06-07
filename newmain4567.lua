@@ -563,7 +563,7 @@ function Dozer:Start()
                                 Create("TextBox", {
                                     BackgroundTransparency = .9,
                                     Size = UDim2.new(1,0,1,0),
-                                    ClearTextOnFocus = False,
+                                    ClearTextOnFocus = false,
                                     MultiLine = true,
                                     Text = "Enter your script here!",
                                     TextColor3 = UsingTheme.Text,
