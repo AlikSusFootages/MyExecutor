@@ -103,7 +103,7 @@ end
 
 --/° Main °/--
 
-function Start()
+function Dozer:Start()
     if game:isLoaded() then
         print(" ------ /° Dozer Executor started! °/ ------ ")
         local UsingTheme = Dozer.Themes[GUI_CurrentTheme]
@@ -782,4 +782,4 @@ function Start()
     end
 end
 
-return Start
+return Dozer
