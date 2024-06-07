@@ -165,4 +165,5 @@ paste.MouseButton1Click:Connect(function()
 end)
 
 newgui.MouseButton1Click:Connect(function()
+    NewGui()
 end)
