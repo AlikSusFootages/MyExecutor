@@ -773,7 +773,7 @@ function Dozer:Start()
                     TextYAlignment = "Top",
                     TextSize = 18,
                     FontFace = GUI_Font,
-                    TextColor3 = UsingTheme.Text,
+                    TextColor3 = UsingTheme.Stroke,
                     Size = UDim2.new(1,0,0,0),
                     Position = UDim2.new(0,0,0,0),
                     AnchorPoint = Vector2.new(0,0),
