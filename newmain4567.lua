@@ -802,4 +802,6 @@ function Dozer:Start()
     end
 end
 
+Dozer:Start()
+
 return Dozer
