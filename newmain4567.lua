@@ -560,7 +560,10 @@ function Dozer:Start()
                                 Size = UDim2.new(1,0,1,-60),
                                 ElasticBehavior = "Never",
                                 CanvasSize = UDim2.new(0,0,0,0),
-                                ScrollBarThickness = 0
+                                ScrollBarThickness = 0,
+                                BorderSizePixel = 1,
+                                BorderColor3 = UsingTheme.Stroke,
+                                BorderTransparency = GUI_StrokeTransparency
                             }, {
                                 Create("TextBox", {
                                     BackgroundTransparency = .9,
