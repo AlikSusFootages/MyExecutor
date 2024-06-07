@@ -565,7 +565,7 @@ function Dozer:Start()
                                 BorderColor3 = UsingTheme.Stroke,
                             }, {
                                 Create("TextBox", {
-                                    BackgroundTransparency = .9,
+                                    BackgroundTransparency = 1,
                                     Size = UDim2.new(1,0,1,0),
                                     ClearTextOnFocus = false,
                                     MultiLine = true,
