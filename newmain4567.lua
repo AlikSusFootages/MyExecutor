@@ -551,21 +551,27 @@ function Dozer:Start()
                         Create("Frame",{
                             BackgroundTransparency = 1,
                             Size = UDim2.new(1,0,1,-50),
-                            Position = UDim2.new(0,0,0,1),
+                            Position = UDim2.new(0,0,1,0),
                             AnchorPoint = Vector2.new(0,1),
                             Name = "Content"
                         }, {
-                            Create("TextBox", {
-                                BackgroundTransparency = .9,
+                            Create("ScrollingFrame", {
+                                BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,1,-60),
-                                ClearTextOnFocus = False,
-                                MultiLine = true,
-                                Text = "Enter your script here!",
-                                TextColor3 = UsingTheme.Text,
-                                TextSize = 20,
-                                Font = "Code",
-                                TextXAlignment = "Left",
-                                TextYAlignment = "Top",
+                                ElasticBehavior = "Never"
+                            }, {
+                                Create("TextBox", {
+                                    BackgroundTransparency = .9,
+                                    Size = UDim2.new(1,0,1,-60),
+                                    ClearTextOnFocus = False,
+                                    MultiLine = true,
+                                    Text = "Enter your script here!",
+                                    TextColor3 = UsingTheme.Text,
+                                    TextSize = 20,
+                                    Font = "Code",
+                                    TextXAlignment = "Left",
+                                    TextYAlignment = "Top",
+                                })
                             })
                         })
                     }),
