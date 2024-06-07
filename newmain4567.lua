@@ -782,4 +782,4 @@ function Start()
     end
 end
 
-Start()
+return Start
