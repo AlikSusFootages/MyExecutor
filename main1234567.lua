@@ -1,7 +1,7 @@
 
 local ColorsLoadstring = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/Tailwindcss-Roblox/main/colors.lua"))()
-local NewGui = require("newmain4567")
 
+local NewGui = require("newmain4567")
 print("Started")
 
 local gui = Instance.new("ScreenGui")
