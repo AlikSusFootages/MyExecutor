@@ -547,6 +547,12 @@ function Dozer:Start()
                             PaddingLeft = UDim.new(0, 30),
                             PaddingRight = UDim.new(0, 30),
                             PaddingBottom = UDim.new(0, 25),
+                        }),
+                        Create("Frame",{
+                            BackgroundTransparency = 1,
+                            Size = UDim2.new(1,0,1,-50),
+                            Position = UDim2.new(0,0,0,1),
+                            AnchorPoint = Vector2.new(0,1),
                         })
                     }),
                     -- Saved Scripts
