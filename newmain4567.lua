@@ -558,11 +558,11 @@ function Dozer:Start()
                             Create("ScrollingFrame", {
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,1,-60),
-                                ElasticBehavior = "Never"
+                                ElasticBehavior = "Never",
                             }, {
                                 Create("TextBox", {
                                     BackgroundTransparency = .9,
-                                    Size = UDim2.new(1,0,1,-60),
+                                    Size = UDim2.new(1,0,1,0),
                                     ClearTextOnFocus = False,
                                     MultiLine = true,
                                     Text = "Enter your script here!",
@@ -571,6 +571,7 @@ function Dozer:Start()
                                     Font = "Code",
                                     TextXAlignment = "Left",
                                     TextYAlignment = "Top",
+                                    AutomaticSize = "XY"
                                 })
                             })
                         })
