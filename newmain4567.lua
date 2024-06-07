@@ -561,8 +561,6 @@ function Dozer:Start()
                                 ElasticBehavior = "Never",
                                 CanvasSize = UDim2.new(0,0,0,0),
                                 ScrollBarThickness = 0,
-                                BorderSizePixel = 1,
-                                BorderColor3 = UsingTheme.Stroke,
                             }, {
                                 Create("TextBox", {
                                     BackgroundTransparency = 1,
@@ -578,6 +576,12 @@ function Dozer:Start()
                                     TextYAlignment = "Top",
                                     AutomaticSize = "XY",
                                     ShowNativeInput = true
+                                }),
+                                Create("UIStroke", {
+                                    Color = UsingTheme.Stroke,
+                                    Thickness = 1,
+                                    ApplyStrokeMode = "Border",
+                                    Transparency = GUI_StrokeTransparency
                                 })
                             })
                         })
