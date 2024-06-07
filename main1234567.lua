@@ -174,3 +174,5 @@ function a.Start()
     end)
 end
 ]]
+
+ModuleScript.Start()
