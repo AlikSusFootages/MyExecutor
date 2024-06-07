@@ -1,3 +1,6 @@
+local ModuleScript = Instance.new("ModuleScript", game.Workspace)
+
+ModuleScript.Source = [[
 
 local ColorsLoadstring = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/Tailwindcss-Roblox/main/colors.lua"))()
 
@@ -167,3 +170,5 @@ end)
 newgui.MouseButton1Click:Connect(function()
     NewGui:Start()
 end)
+
+]]
