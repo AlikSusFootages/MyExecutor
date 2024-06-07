@@ -798,6 +798,14 @@ function Dozer:Start()
             RightFramesss.CanvasSize = UDim2.new(0,0,0, RightFramesss.UIListLayout.AbsoluteContentSize.Y)
         end)
         
+        
+        local Executorr =  RightFrames.Executor.Content
+        
+        Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
+            Executorr.ScrollingFrame.CanvasSize = UDim2.fromOffset(Executorr.ScrollingFrame.TextBox.AbsoluteSize.X, Executorr.ScrollingFrame.TextBox.AbsoluteSize.Y)
+        end)
+        
+        
         while wait(0.1) do
             local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
             LeftFramess.PingText.Text = math.floor(ping + 0.5) .. "ms"
