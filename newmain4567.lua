@@ -563,7 +563,6 @@ function Dozer:Start()
                                 ScrollBarThickness = 0,
                                 BorderSizePixel = 1,
                                 BorderColor3 = UsingTheme.Stroke,
-                                BorderTransparency = GUI_StrokeTransparency
                             }, {
                                 Create("TextBox", {
                                     BackgroundTransparency = .9,
