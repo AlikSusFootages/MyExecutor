@@ -582,6 +582,12 @@ function Dozer:Start()
                                     Thickness = 1,
                                     ApplyStrokeMode = "Border",
                                     Transparency = GUI_StrokeTransparency
+                                }),
+                                Create("UIPadding", {
+                                    PaddingTop = UDim.new(0,12),
+                                    PaddingLeft = UDim.new(0,16),
+                                    PaddingRight = UDim.new(0,16),
+                                    PaddingBottom = UDim.new(0,12),
                                 })
                             })
                         })
