@@ -556,7 +556,7 @@ function Dozer:Start()
                             Name = "Content"
                         }, {
                             Create("TextBox", {
-                                BackgroundTransparency = 1,
+                                BackgroundTransparency = .9,
                                 Size = UDim2.new(1,0,1,-60),
                                 ClearTextOnFocus = False,
                                 MultiLine = true,
