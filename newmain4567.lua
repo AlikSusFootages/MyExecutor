@@ -559,13 +559,14 @@ function Dozer:Start()
                                 BackgroundTransparency = 1,
                                 Size = UDim2.new(1,0,1,-60),
                                 ElasticBehavior = "Never",
+                                AutomaticSize = "XY"
                             }, {
                                 Create("TextBox", {
                                     BackgroundTransparency = .9,
                                     Size = UDim2.new(1,0,1,0),
                                     ClearTextOnFocus = false,
                                     MultiLine = true,
-                                    Text = "Enter your script here!",
+                                    Text = "print('Enter your script here!')",
                                     TextColor3 = UsingTheme.Text,
                                     TextSize = 20,
                                     Font = "Code",
