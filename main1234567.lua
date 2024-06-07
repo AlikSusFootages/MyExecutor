@@ -1,5 +1,6 @@
 
 local ColorsLoadstring = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/Tailwindcss-Roblox/main/colors.lua"))()
+local NewGui = require(script.newmain4567)
 
 print("Started")
 
@@ -164,5 +165,5 @@ paste.MouseButton1Click:Connect(function()
 end)
 
 newgui.MouseButton1Click:Connect(function()
-    print("no")
+    NewGui()
 end)
