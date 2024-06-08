@@ -837,6 +837,7 @@ function Dozer:Start()
             local playersAmount = #Players:GetPlayers()
             LeftFramess.PlayersText.Text = playersAmount
         end
+    end
 end
 
 Dozer:Start()
