@@ -25,7 +25,7 @@ local Dozer = {
             "local", "function", "return", "error", "print", "self", "if", "else", "then", "end", "do"
         },
         [Color3.fromRGB(255, 198, 0)] = {
-            "true", "false", "nil", "warn"
+            "true", "false", "nil", "warn", "%d+"
         },
         [Color3.fromRGB(253, 251, 172)] = {
             ":Connect", ":WaitForChild", ":FindFirstChild", ":GetService"
@@ -866,7 +866,7 @@ function Dozer:Start()
             for color, keywords in pairs(Dozer.SyntaxColor) do
                 for _, keyword in pairs(keywords) do
                     do
-                        text = string.gsub(text, keyword, function(n) Colorize(n, color) end)
+                        text = string.gsub(text, keyword, function() Colorize(keyword, color) end)
                     end
                 end
             end
