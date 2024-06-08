@@ -861,10 +861,8 @@ function Dozer:Start()
         end
         
         local function ProcessText(text)
-            -- Подсветка по шаблонам
             for color, patterns in pairs(Dozer.SyntaxColor) do
                 for _, pattern in pairs(patterns) do
-                    -- Специальная обработка для строк в кавычках и комментариев
                     if pattern == [["(.-)"]] then
                         text = string.gsub(text, pattern, function(str)
                             return Colorize('"' .. str .. '"', color)
