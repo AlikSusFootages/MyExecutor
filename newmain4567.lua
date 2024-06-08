@@ -37,7 +37,7 @@ local Dozer = {
             "%-%-.-"
         },]]
         [Color3.fromRGB(131, 241, 132)] = {
-            '"(.-)"', "'(.-)'"
+            [["(.-)"]],[['(.-)']]
         }, 
     }
 }
@@ -864,9 +864,9 @@ function Dozer:Start()
         local function ProcessText(text)
             for color, keywords in pairs(Dozer.SyntaxColor) do
                 for _, keyword in pairs(keywords) do
-                    if keyword == "'(.-)'" then
+                    if keyword == [['(.-)']] then
                         text = string.gsub(text, keyword, function(n) return Colorize("'" .. n .. "'", color) end)
-                    elseif keyword == '"(.-)"' then
+                    elseif keyword == [["(.-)"]] then
                         text = string.gsub(text, keyword, function(n) return Colorize('"' .. n .. '"', color) end)
                     else
                         text = string.gsub(text, keyword, function(n) return Colorize(n, color) end)
