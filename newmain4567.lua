@@ -640,7 +640,7 @@ function Dozer:Start()
                                 BackgroundTransparency = GUI_Transparency,
                                 TextColor3 = UsingTheme.Main,
                                 TextSize = 20,
-                                
+                                FontFace = GUI_Font
                             }, {
                                 Create("UICorner", {
                                     CornerRadius = UDim.new(0,12)
