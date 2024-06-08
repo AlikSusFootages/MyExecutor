@@ -979,7 +979,7 @@ function Dozer:Start()
         ExecutorButtons.Execute.MouseButton1Click:Connect(function()
             runcode(Executorr.ScrollingFrame.TextBox.Text)
         end)
-        ExecutorButtons.Close.MouseButton1Click:Connect(function()
+        ExecutorButtons.Clear.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = ""
         end)
         
