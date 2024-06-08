@@ -31,7 +31,7 @@ local Dozer = {
             [[true]], [[false]], [[nil]], [[warn]]
         },
         [Color3.fromRGB(253, 251, 172)] = {
-            [[:Connect]], [[:WaitForChild]], [[:FindFirstChild]], [[:GetService]], [[(.-)()]]
+            [[:Connect]], [[:WaitForChild]], [[:FindFirstChild]], [[:GetService]], [[.-()]]
         },
         [Color3.fromRGB(132, 214, 247)] = {
             [[new]], [[game]], [[ipairs]], [[pairs]], [[script]], [[wait]], [[math]], [[random]], [[Instance]]
@@ -870,7 +870,7 @@ function Dozer:Start()
                         text = string.gsub(text, pattern, function(str)
                             return Colorize([["]] .. str .. [["]], color)
                         end)
-                    elseif pattern == "(.-)()" then
+                    elseif pattern == ".-()" then
                         text = string.gsub(text, pattern, function(str)
                             return Colorize(str .. "()", color)
                         end)
