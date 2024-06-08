@@ -615,6 +615,12 @@ function Dozer:Start()
                                         
                                     })
                                 }),
+                                Create("UIPadding", {
+                                    PaddingTop = UDim.new(0,12),
+                                    PaddingLeft = UDim.new(0,16),
+                                    PaddingRight = UDim.new(0,16),
+                                    PaddingBottom = UDim.new(0,12),
+                                }),
                                 Create("Frame", {
                                     BackgroundTransparency = 1,
                                     Size = UDim2.new(1, -4, 1, -4),
@@ -626,12 +632,6 @@ function Dozer:Start()
                                         Thickness = 2,
                                         ApplyStrokeMode = "Border",
                                         Transparency = GUI_StrokeTransparency
-                                    }),
-                                    Create("UIPadding", {
-                                        PaddingTop = UDim.new(0,12),
-                                        PaddingLeft = UDim.new(0,16),
-                                        PaddingRight = UDim.new(0,16),
-                                        PaddingBottom = UDim.new(0,12),
                                     }),
                                     Create("UICorner", {
                                         CornerRadius = UDim.new(0, 10)
