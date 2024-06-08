@@ -27,6 +27,9 @@ local Dozer = {
         [Color3.fromRGB(255, 198, 0)] = {
             "true", "false", "nil", "warn"
         },
+        [Color3.fromRGB(253, 251, 172)] = {
+            "function%s+[%w_]+"
+        },
     }
 }
 
