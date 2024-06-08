@@ -857,7 +857,19 @@ function Dozer:Start()
         local function ProcessText(text)
             for color, keywords in pairs(Dozer.SyntaxColor) do
                 for _, keyword in pairs(keywords) do
-                    text = string.gsub(text, keyword, Colorize(keyword, color))
+                    if color == Color3.fromRGB(253, 251, 172) then
+                        local funcPattern = "(%a[%w_]+)%("
+                        text = string.gsub(text, funcPattern, function(func)
+                            return Colorize(func, color) .. "("
+                        end)
+                    elseif color == Color3.fromRGB(131, 241, 0) then -- Оранжевый для строк
+                        local stringPattern = '"(.-)"'
+                        text = string.gsub(text, stringPattern, function(str)
+                            return Colorize(str, color)
+                        end)
+                    else
+                        text = string.gsub(text, keyword, Colorize(keyword, color))
+                    end
                 end
             end
             return text
