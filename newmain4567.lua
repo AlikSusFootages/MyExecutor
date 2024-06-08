@@ -28,7 +28,7 @@ local Dozer = {
             "true", "false", "nil", "warn", "%d+"
         },
         [Color3.fromRGB(253, 251, 172)] = {
-            "function%s+[%w_]+", ":Connect", ":WaitForChild", ":FindFirstChild"
+            ":Connect", ":WaitForChild", ":FindFirstChild"
         },
         [Color3.fromRGB(131, 241, 132)] = {
             '".-"', "'.-'"
