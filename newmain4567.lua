@@ -33,11 +33,11 @@ local Dozer = {
         [Color3.fromRGB(132, 214, 247)] = {
             "new", "game", "ipairs", "pairs", "script", "wait", "math", "random", "Instance"
         },
-        -- [Color3.fromRGB(106, 153, 85)] = {
-        --     [[--(.-)]]
-        -- },
+        [Color3.fromRGB(106, 153, 85)] = {
+            [[--(.-)]]
+        },
         [Color3.fromRGB(131, 241, 132)] = {
-            '"' .. "(.-)" .. '"',[['(.-)']]
+            [['(.-)']]
         }, 
     }
 }
