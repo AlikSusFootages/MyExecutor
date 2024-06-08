@@ -576,7 +576,7 @@ function Dozer:Start()
                             Name = "Content"
                         }, {
                             Create("Frame", {
-                                Size = UDim2.new(1,0,1,-60),
+                                Size = UDim2.new(1,0,1,-70),
                                 BackgroundTransparency = 1,
                             }, {
                                 Create("ScrollingFrame", {
@@ -633,7 +633,7 @@ function Dozer:Start()
                             }),
                             Create("TextButton", {
                                 Text = "Execute",
-                                Size = UDim2.new(0,140,0,45),
+                                Size = UDim2.new(0,100,0,55),
                                 Position = UDim2.new(0,0,1,0),
                                 AnchorPoint = Vector2.new(0,1),
                                 BackgroundColor3 = UsingTheme.Text,
