@@ -21,7 +21,9 @@ local Dozer = {
         }
     },
     SyntaxColor = {
-        
+        [Color3.fromRGB()] = {
+            "local", "function", "return"
+        }
     }
 }
 
