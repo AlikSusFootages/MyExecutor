@@ -930,7 +930,10 @@ function Dozer:Start()
         end)
         
         Executorr.ScrollingFrame.TextBox.Focused:Connect(function()
-            TweenService:Create(Executorr.UIStroke, TweenInfo.new(0.15), {Color = UsingTheme.Text})
+            TweenService:Create(Executorr.UIStroke, TweenInfo.new(0.15), {Color = UsingTheme.Text}):Play()
+        end)
+        Executorr.ScrollingFrame.TextBox.FocusLost:Connect(function()
+            TweenService:Create(Executorr.UIStroke, TweenInfo.new(0.15), {Color = UsingTheme.Stroke}):Play()
         end)
         
         
