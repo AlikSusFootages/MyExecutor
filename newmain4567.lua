@@ -633,13 +633,13 @@ function Dozer:Start()
                             }),
                             Create("TextButton", {
                                 Text = "Execute",
-                                Size = UDim2.new(0,100,0,40),
+                                Size = UDim2.new(0,140,0,45),
                                 Position = UDim2.new(0,0,1,0),
                                 AnchorPoint = Vector2.new(0,1),
                                 BackgroundColor3 = UsingTheme.Text,
                                 BackgroundTransparency = GUI_Transparency,
                                 TextColor3 = UsingTheme.Main,
-                                TextSize = 22,
+                                TextSize = 20,
                                 
                             }, {
                                 Create("UICorner", {
