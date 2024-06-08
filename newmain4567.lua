@@ -858,7 +858,7 @@ function Dozer:Start()
             for color, keywords in pairs(Dozer.SyntaxColor) do
                 for _, keyword in pairs(keywords) do
                     if color == Color3.fromRGB(253, 251, 172) then
-                        local funcPattern = "(%a[%w_]+)%("
+                        local funcPattern = "(%a+)%([^%)]*%)"
                         text = string.gsub(text, funcPattern, function()
                             return Colorize(keyword, color) .. "("
                         end)
