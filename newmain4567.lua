@@ -31,7 +31,7 @@ local Dozer = {
             [[true]], [[false]], [[nil]], [[warn]]
         },
         [Color3.fromRGB(253, 251, 172)] = {
-            [[:Connect]], [[:WaitForChild]], [[:FindFirstChild]], [[:GetService]], [[(%a+)()]]
+            [[:Connect]], [[:WaitForChild]], [[:FindFirstChild]], [[:GetService]], [[(%a+)%(%)]]
         },
         [Color3.fromRGB(132, 214, 247)] = {
             [[new]], [[game]], [[ipairs]], [[pairs]], [[script]], [[wait]], [[math]], [[random]], [[Instance]]
@@ -865,6 +865,7 @@ function Dozer:Start()
                     text = string.gsub(text, pattern, function(match)
                         return Colorize(match, color)
                     end)
+                    
                 end
             end
         
