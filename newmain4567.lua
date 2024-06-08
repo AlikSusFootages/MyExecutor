@@ -858,10 +858,10 @@ function Dozer:Start()
         end
         
         local function ProcessText(text)
-            for color, patterns in pairs(Dozer.SyntaxColor) do
-                for _, pattern in pairs(patterns) do
-                    text = string.gsub(text, pattern, function()
-                        return Colorize(pattern, color)
+            for color, keywords in pairs(Dozer.SyntaxColor) do
+                for _, keyword in pairs(patterns) do
+                    text = string.gsub(text, keyword, function()
+                        return Colorize(keyword, color)
                     end)
                 end
             end
