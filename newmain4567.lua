@@ -30,10 +30,10 @@ local Dozer = {
         [Color3.fromRGB(253, 251, 172)] = {
             ":Connect", ":WaitForChild", ":FindFirstChild"
         },
-        [Color3.fromRGB(106, 153, 85)] = {
+        --[[ [Color3.fromRGB(106, 153, 85)] = {
             "%-%-.-"
         },
-        --[[ [Color3.fromRGB(131, 241, 132)] = {
+        [Color3.fromRGB(131, 241, 132)] = {
             '".-"', "'.-'"
         }, 
         ]]
