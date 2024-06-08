@@ -854,9 +854,7 @@ function Dozer:Start()
         end)
         
         -- syntax highlighting
-        
-        -- local ColorizePattern = "<font color=''></font>"
-        
+
         local function GetColor(color)
             return "rgb(" .. math.floor(color.r*255 + 0.5) .. ", " .. math.floor(color.g*255 + 0.5) .. ", " .. math.floor(color.b*255 + 0.5) .. ")"
         end
@@ -867,17 +865,39 @@ function Dozer:Start()
         end
         
         local function ProcessText(text)
-            for color, keywords in pairs(Dozer.SyntaxColor) do
-                for _, keyword in pairs(keywords) do
-                    if keyword == [['(.-)']] then
-                        text = string.gsub(text, keyword, function(n) return Colorize("'" .. n .. "'", color) end)
-                    elseif keyword == [["(.-)"]] then
-                        text = string.gsub(text, keyword, function(n) return Colorize('"' .. n .. '"', color) end)
+            -- Подсветка по шаблонам
+            for color, patterns in pairs(Dozer.SyntaxColor) do
+                for _, pattern in pairs(patterns) do
+                    -- Специальная обработка для строк в кавычках и комментариев
+                    if pattern == [["(.-)"]] then
+                        text = string.gsub(text, pattern, function(str)
+                            return Colorize('"' .. str .. '"', color)
+                        end)
+                    elseif pattern == [['(.-)']] then
+                        text = string.gsub(text, pattern, function(str)
+                            return Colorize("'" .. str .. "'", color)
+                        end)
+                    elseif pattern == "%-%-.-\n" then
+                        text = string.gsub(text, pattern, function(comment)
+                            return Colorize(comment, color)
+                        end)
                     else
-                        text = string.gsub(text, keyword, function(n) return Colorize(n, color) end)
+                        text = string.gsub(text, pattern, function(match)
+                            return Colorize(match, color)
+                        end)
                     end
                 end
             end
+            
+            -- Подсветка после "=" синим цветом, за исключением точек
+            text = string.gsub(text, "=([^%.]+)", function(match)
+                if not string.find(match, "%.") then
+                    return "=<font color='rgb(0, 0, 255)'>" .. match .. "</font>"
+                else
+                    return "=" .. match
+                end
+            end)
+        
             return text
         end
         
@@ -886,6 +906,7 @@ function Dozer:Start()
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
             Executorr.ScrollingFrame.CanvasSize = UDim2.new(0,Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["X"], 0, Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["Y"])
         end)
+        
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             Executorr.ScrollingFrame.TextLabel.Text = ProcessText(Executorr.ScrollingFrame.TextBox.Text)
         end)
