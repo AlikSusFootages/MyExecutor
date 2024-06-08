@@ -870,10 +870,10 @@ function Dozer:Start()
                         text = string.gsub(text, pattern, function(str)
                             return Colorize([["]] .. str .. [["]], color)
                         end)
-                    -- elseif pattern == "(.-)()" then
-                    --     text = string.gsub(text, pattern, function(str)
-                    --         return Colorize(str .. "()", color)
-                    --     end)
+                    elseif pattern == "(.-)()" then
+                        text = string.gsub(text, pattern, function(str)
+                            return Colorize(str .. "()", color)
+                        end)
                     else
                         text = string.gsub(text, pattern, function(match)
                             return Colorize(match, color)
@@ -894,6 +894,8 @@ function Dozer:Start()
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             Executorr.ScrollingFrame.TextLabel.Text = ProcessText(Executorr.ScrollingFrame.TextBox.Text)
         end)
+        
+        Executorr.ScrollingFrame.TextBox
         
         
         
