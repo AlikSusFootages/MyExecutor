@@ -639,7 +639,9 @@ function Dozer:Start()
                                 BackgroundColor3 = UsingTheme.Text,
                                 TextColor3 = UsingTheme.Main,
                                 TextSize = 20,
-                                FontFace = GUI_Font
+                                FontFace = GUI_Font,
+                                Name = "Execute",
+                                AutoButtonColor = false
                             }, {
                                 Create("UICorner", {
                                     CornerRadius = UDim.new(0,12)
