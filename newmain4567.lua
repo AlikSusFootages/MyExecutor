@@ -635,7 +635,8 @@ function Dozer:Start()
                                 Size = UDim2.new(1,0,0,50),
                                 BackgroundTransparency = 1,
                                 AnchorPoint = Vector2.new(0,1),
-                                Position = UDim2.new(0,0,1,0)
+                                Position = UDim2.new(0,0,1,0),
+                                Name = "BottomFrame"
                             }, {
                                 Create("UIListLayout", {
                                     Padding = UDim.new(0,10),
@@ -933,7 +934,7 @@ function Dozer:Start()
         end)
         
         
-        local ExecutorButtons = Executorr.Parent
+        local ExecutorButtons = Executorr.Parent.BottomFrame
         local buttonCount = 0
         for _, child in ipairs(ExecutorButtons:GetChildren()) do
             if child:IsA("TextButton") then
