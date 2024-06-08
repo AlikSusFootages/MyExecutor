@@ -574,7 +574,7 @@ function Dozer:Start()
                                         PlaceholderText = "print('Enter your script here!')",
                                         Text = "",
                                         TextColor3 = UsingTheme.Text,
-                                        TextSize = 20,
+                                        TextSize = 12,
                                         Font = "Code",
                                         TextXAlignment = "Left",
                                         TextYAlignment = "Top",
