@@ -26,7 +26,7 @@ local Dozer = {
         --     "'.-'", '".-"',     I DONT KNOW   WHY IT DOESNT WORK      AAAAAAAAAHHH HELP
         -- }, 
         [Color3.fromRGB(248, 109, 124)] = {
-            [[local]], [[function]], [[return]], [[error]], [[print]], [[self]], [[if]], [[else]], [[elseif]], [[then]], [[end]], [[do]], [[for]], [[break]], [[repeat]], [[until]], [[not]], [[or]], [[and]]
+            [[local]], [[function]], [[return]], [[error]], [[print]], [[self]], [[if]], [[else]], [[elseif]], [[then]], [[end]], [[do]], [[for]], [[break]], [[repeat]], [[until]], [[not]], [[and]]
         },
         [Color3.fromRGB(255, 198, 0)] = {
             [[true]], [[false]], [[nil]], [[warn]],
