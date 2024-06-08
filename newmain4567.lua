@@ -664,7 +664,7 @@ function Dozer:Start()
                                     Size = UDim2.new(0,110,1,0),
                                     Position = UDim2.new(0,0,1,0),
                                     AnchorPoint = Vector2.new(0,1),
-                                    BackgroundColor3 = UsingTheme.Text,
+                                    BackgroundTransparency = 1,
                                     TextColor3 = UsingTheme.Main,
                                     TextSize = 20,
                                     FontFace = GUI_Font,
@@ -673,6 +673,21 @@ function Dozer:Start()
                                 }, {
                                     Create("UICorner", {
                                         CornerRadius = UDim.new(0,12)
+                                    }),
+                                    Create("Frame", {
+                                        Size = UDim2.new(1, -2, 1, -2),
+                                        Position = UDim2.fromScale(0.5,0.5),
+                                        AnchorPoint = Vector2.new(0.5,0.5),
+                                        BackgroundTransparency = 1,
+                                    }, {
+                                        Create("UICorner", {
+                                            CornerRadius = UDim.new(0, 11),
+                                        }),
+                                        Create("UIStroke", {
+                                            Color = UsingTheme.Stroke,
+                                            Thickness = 2,
+                                            Transparency = GUI_StrokeTransparency,
+                                        })
                                     })
                                 })
                                 
