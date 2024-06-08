@@ -976,7 +976,12 @@ function Dozer:Start()
             end
         end
         
-        
+        ExecutorButtons.Execute.MouseButton1Click:Connect(function()
+            runcode(Executorr.ScrollingFrame.TextBox.Text)
+        end)
+        ExecutorButtons.Close.MouseButton1Click:Connect(function()
+            Executorr.ScrollingFrame.TextBox.Text = ""
+        end)
         
         while wait(0.1) do
             local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
