@@ -25,10 +25,13 @@ local Dozer = {
             "local", "function", "return", "error", "game", "print", "self", "if", "else", "then", "end"
         },
         [Color3.fromRGB(255, 198, 0)] = {
-            "true", "false", "nil", "warn"
+            "true", "false", "nil", "warn", "%d+"
         },
         [Color3.fromRGB(253, 251, 172)] = {
             "function%s+[%w_]+", ":Connect", ":WaitForChild", ":FindFirstChild"
+        },
+        [Color3.fromRGB(131, 241, 132)] = {
+            '".-"', "'.-'"
         },
     }
 }
