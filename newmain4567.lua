@@ -633,7 +633,7 @@ function Dozer:Start()
                             }),
                             Create("TextButton", {
                                 Text = "Execute",
-                                Size = UDim2.new(0,100,0,55),
+                                Size = UDim2.new(0,110,0,55),
                                 Position = UDim2.new(0,0,1,0),
                                 AnchorPoint = Vector2.new(0,1),
                                 BackgroundColor3 = UsingTheme.Text,
