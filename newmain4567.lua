@@ -665,7 +665,7 @@ function Dozer:Start()
                                     Position = UDim2.new(0,0,1,0),
                                     AnchorPoint = Vector2.new(0,1),
                                     BackgroundTransparency = 1,
-                                    TextColor3 = UsingTheme.Main,
+                                    TextColor3 = UsingTheme.Text,
                                     TextSize = 20,
                                     FontFace = GUI_Font,
                                     Name = "Clear",
