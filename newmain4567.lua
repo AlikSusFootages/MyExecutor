@@ -865,7 +865,6 @@ function Dozer:Start()
                     text = string.gsub(text, pattern, function(match)
                         return Colorize(match, color)
                     end)
-                    end
                 end
             end
         
