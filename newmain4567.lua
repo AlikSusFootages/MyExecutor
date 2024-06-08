@@ -852,18 +852,18 @@ function Dozer:Start()
         end
         
         local function ProcessText(text)
-            for color, keywords in pairs(Dozer.SyntaxColor) do
-                for _, keyword in pairs(keywords) do
-                    text = string.gsub(text, keyword, function(match)
-                        if color == Color3.fromRGB(255, 255, 0) then
-                            local funcPattern = "function%s+([%w_]+)"
-                            return string.gsub(match, funcPattern, function(funcName)
-                                return "function " .. Colorize(funcName, color)
-                            end)
-                        else
+            for color, patterns in pairs(Dozer.SyntaxColor) do
+                for _, pattern in pairs(patterns) do
+                    if color == Color3.fromRGB(255, 255, 0) then
+                        local funcPattern = "(function%s+)([%w_]+)"
+                        text = string.gsub(text, funcPattern, function(func, name)
+                            return func .. Colorize(name, color)
+                        end)
+                    else
+                        text = string.gsub(text, pattern, function(match)
                             return Colorize(match, color)
-                        end
-                    end)
+                        end)
+                    end
                 end
             end
             return text
