@@ -948,11 +948,10 @@ function Dozer:Start()
         end
         
         local ExecutorButtonsPadding = 10
-        local ExecutorButtonsSize = (ExecutorButtons.AbsoluteSize.X / buttonCount)
         print(ExecutorButtonsSize)
         for _, button in ipairs(ExecutorButtons:GetChildren()) do
             if button:IsA("TextButton") then
-                button.Size = UDim2.new(0, ExecutorButtonsSize, 1, 0)
+                button.Size = UDim2.new(1 / buttonCount, -ExecutorButtonsPadding, 1, 0)
             end
         end
         
