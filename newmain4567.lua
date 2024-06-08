@@ -34,7 +34,7 @@ local Dozer = {
             "new", "game", "ipairs", "pairs", "script", "wait", "math", "random", "Instance"
         },
         [Color3.fromRGB(106, 153, 85)] = {
-            "%-%-.*"
+            string.char(45) .. string.char(45) .. ".-"
         },
         [Color3.fromRGB(131, 241, 132)] = {
             [['(.-)']]
