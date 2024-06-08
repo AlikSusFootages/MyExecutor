@@ -579,6 +579,7 @@ function Dozer:Start()
                                         TextXAlignment = "Left",
                                         TextYAlignment = "Top",
                                         AutomaticSize = "XY",
+                                        ShowNativeInput = true,
                                     }),
                                 }),
                                 Create("UIStroke", {
