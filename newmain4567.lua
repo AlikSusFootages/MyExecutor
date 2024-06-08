@@ -851,7 +851,7 @@ function Dozer:Start()
         local ColorizePattern = "<font color='rgb(%d, %d, %d)'>%s</font>"
         
         local function Colorize(keyword, color)
-            return string.format(ColorizePattern, color.r*255, color.g*255, color.b*255)
+            return string.format(ColorizePattern, color.r*255, color.g*255, color.b*255, keyword)
         end
         
         local function ProcessText(text)
