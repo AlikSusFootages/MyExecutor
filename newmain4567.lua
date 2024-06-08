@@ -889,7 +889,6 @@ function Dozer:Start()
                 end
             end
             
-            -- Подсветка после "=" синим цветом, за исключением точек
             text = string.gsub(text, "=([^%.]+)", function(match)
                 if not string.find(match, "%.") then
                     return "=<font color='rgb(0, 0, 255)'>" .. match .. "</font>"
