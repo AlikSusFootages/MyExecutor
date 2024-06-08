@@ -880,14 +880,6 @@ function Dozer:Start()
                     end
                 end
             end
-            
-            text = string.gsub(text, "=([^%.]+)", function(match)
-                if not string.find(match, "%.") then
-                    return "=<font color='rgb(0, 0, 255)'>" .. match .. "</font>"
-                else
-                    return "=" .. match
-                end
-            end)
         
             return text
         end
