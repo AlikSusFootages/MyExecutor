@@ -860,7 +860,7 @@ function Dozer:Start()
                     if color == Color3.fromRGB(253, 251, 172) then
                         local funcPattern = "(%a+)%([^%)]*%)"
                         text = string.gsub(text, funcPattern, function()
-                            return Colorize(keyword, color) .. "("
+                            return Colorize(keyword, color) .. "()"
                         end)
                     elseif color == Color3.fromRGB(131, 241, 0) then -- Оранжевый для строк
                         local stringPattern = '(["\'])(.-)%1'
