@@ -568,7 +568,7 @@ function Dozer:Start()
                                 }, {
                                     Create("TextBox", {
                                         BackgroundTransparency = 1,
-                                        Size = UDim2.new(0,0,0,0),
+                                        Size = UDim2.new(1,0,1,0),
                                         ClearTextOnFocus = false,
                                         MultiLine = true,
                                         PlaceholderText = "print('Enter your script here!')",
