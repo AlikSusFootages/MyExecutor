@@ -850,6 +850,8 @@ function Dozer:Start()
         
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
             Executorr.ScrollingFrame.CanvasSize = UDim2.new(0,Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["X"], 0, Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["Y"])
+        end)
+        Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             Executorr.ScrollingFrame.TextLabel.Text = ProcessText(Executorr.ScrollingFrame.TextBox.Text)
         end)
         
