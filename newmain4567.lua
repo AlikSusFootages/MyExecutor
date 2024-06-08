@@ -636,7 +636,8 @@ function Dozer:Start()
                                 BackgroundTransparency = 1,
                             }, {
                                 Create("UIListLayout", {
-                                    Padding = UDim.new(0,5)
+                                    Padding = UDim.new(0,5),
+                                    FillDirection = "Horizontal"
                                 }),
                                 Create("TextButton", {
                                     Text = "Execute",
@@ -938,7 +939,7 @@ function Dozer:Start()
         end
         
         local ExecutorButtonsPadding = 5
-        local ExecutorButtonsSize = ExecutorButtons.Size.Offset.X / buttonCount - ExecutorButtonsPadding * buttonCount
+        local ExecutorButtonsSize = ExecutorButtons.Size.X.Offset / buttonCount - ExecutorButtonsPadding * buttonCount
         for _, button in ipairs(ExecutorButtons:GetChildren()) do
             if button:IsA("TextButton") then
                 button.Size = UDim2.fromOffset(ExecutorButtonsSize, 0)
