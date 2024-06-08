@@ -22,13 +22,16 @@ local Dozer = {
     },
     SyntaxColor = {
         [Color3.fromRGB(248, 109, 124)] = {
-            "local", "function", "return", "error", "game", "print", "self", "if", "else", "then", "end", "do"
+            "local", "function", "return", "error", "print", "self", "if", "else", "then", "end", "do"
         },
         [Color3.fromRGB(255, 198, 0)] = {
             "true", "false", "nil", "warn"
         },
         [Color3.fromRGB(253, 251, 172)] = {
             ":Connect", ":WaitForChild", ":FindFirstChild"
+        },
+        [Color3.fromRGB(132, 214, 247)] = {
+            "new", "game", "pairs", "ipairs"
         },
         --[[ [Color3.fromRGB(106, 153, 85)] = {
             "%-%-.-"
