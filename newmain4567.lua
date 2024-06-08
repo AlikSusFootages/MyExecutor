@@ -920,7 +920,13 @@ function Dozer:Start()
         end)
         
         
-        
+        local ExecutorButtons = Executorr.Parent:GetChildren()
+        local buttonCount = 0
+        for _, child in ipairs(ExecutorButtons) do
+            if child:IsA("TextButton") then
+                buttonCount = buttonCount + 1
+            end
+        end
         
         
         while wait(0.1) do
