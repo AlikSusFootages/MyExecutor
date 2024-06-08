@@ -623,7 +623,7 @@ function Dozer:Start()
                                 }),
                                 Create("Frame", {
                                     BackgroundTransparency = 1,
-                                    Size = UDim2.new(1, -4, 1, -4),
+                                    Size = UDim2.new(1, -4+16+16, 1, -4+12+12),
                                     Position = UDim2.fromScale(0.5,0.5),
                                     AnchorPoint = Vector2.new(0.5,0.5),
                                 }, {
