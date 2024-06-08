@@ -851,7 +851,7 @@ function Dozer:Start()
         local ColorizePattern = "<font color='rgb(%d, %d, %d)'>%s</font>"
         
         local function Colorize(keyword, color)
-            return "<font color='rgb(" .. color.r*255 .. ", " .. color.g*255 .. ", " .. color.b*255 .. ")'>" .. keyword .. "</font>"
+            return "<font color='rgb(" .. math.floor(color.r*255 + 0.5) .. ", " .. math.floor(color.g*255 + 0.5) .. ", " .. math.floor(color.b*255 + 0.5) .. ")'>" .. keyword .. "</font>"
         end
         
         local function ProcessText(text)
