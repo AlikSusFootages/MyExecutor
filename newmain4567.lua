@@ -22,7 +22,13 @@ local Dozer = {
     },
     SyntaxColor = {
         [Color3.fromRGB(248, 109, 124)] = {
-            "local", "function", "return", "error", "game", "print"
+            "local", "function", "return", "error", "game", "print", "self"
+        },
+        [Color3.fromRGB(255, 198, 0)] = {
+            "true", "false", "nil", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+        },
+        [Color3.fromRGB()] = {
+            "true", "false"
         }
     }
 }
