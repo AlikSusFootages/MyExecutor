@@ -31,7 +31,7 @@ local Dozer = {
             ":Connect", ":WaitForChild", ":FindFirstChild", ":GetService"
         },
         [Color3.fromRGB(132, 214, 247)] = {
-            "new", "game", "pairs", "ipairs", "script", "wait", "math", "random", "Instance"
+            "new", "game", "ipairs", "pairs", "script", "wait", "math", "random", "Instance"
         },
         -- [Color3.fromRGB(106, 153, 85)] = {
         --     [[--(.-)]]
