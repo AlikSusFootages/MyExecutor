@@ -25,7 +25,7 @@ local Dozer = {
             "local", "function", "return", "error", "game", "print", "self"
         },
         [Color3.fromRGB(255, 198, 0)] = {
-            "true", "false", "nil", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+            "true", "false", "nil", "warn"
         },
     }
 }
