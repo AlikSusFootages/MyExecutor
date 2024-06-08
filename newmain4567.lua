@@ -931,9 +931,11 @@ function Dozer:Start()
         
         Executorr.ScrollingFrame.TextBox.Focused:Connect(function()
             TweenService:Create(Executorr.UIStroke, TweenInfo.new(0.15), {Color = UsingTheme.Text}):Play()
+            Executorr.ScrollingFrame.TextLabel.Visible = false
         end)
         Executorr.ScrollingFrame.TextBox.FocusLost:Connect(function()
             TweenService:Create(Executorr.UIStroke, TweenInfo.new(0.15), {Color = UsingTheme.Stroke}):Play()
+            Executorr.ScrollingFrame.TextLabel.Visible = true
         end)
         
         
