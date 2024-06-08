@@ -18,6 +18,7 @@ local Dozer = {
             ["Main"] = Color3.fromRGB(16,16,16),
             ["Stroke"] = Color3.fromRGB(174,174,174),
             ["Text"] = Color3.fromRGB(255,255,255),
+            ["EditorText"] = Color3.fromRGB(204,204,204)
         }
     },
     SyntaxColor = {
