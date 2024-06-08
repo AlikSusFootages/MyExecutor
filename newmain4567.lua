@@ -984,10 +984,10 @@ function Dozer:Start()
         ExecutorButtons.Clear.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = ""
         end)
-        ExecutorButtons.Clear.MouseButton1Down:Connect(function()
-            TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 0.5}):Play()
+        ExecutorButtons.Clear.MouseEnter:Connect(function()
+            TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 0.2}):Play()
         end)
-        ExecutorButtons.Clear.MouseButton1Up:Connect(function()
+        ExecutorButtons.Clear.MouseLeave:Connect(function()
             TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
         end)
         
