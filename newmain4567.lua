@@ -864,7 +864,11 @@ function Dozer:Start()
                         end)
                     else
                         text = string.gsub(text, pattern, function(match)
-                            return Colorize(match, color)
+                            if not string.find(match, "<font") then
+                                return Colorize(match, color)
+                            else
+                                return match
+                            end
                         end)
                     end
                 end
