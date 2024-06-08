@@ -639,7 +639,8 @@ function Dozer:Start()
                             }, {
                                 Create("UIListLayout", {
                                     Padding = UDim.new(0,10),
-                                    FillDirection = "Horizontal"
+                                    FillDirection = "Horizontal",
+                                    SortOrder= "LayoutOrder"
                                 }),
                                 Create("TextButton", {
                                     Text = "Execute",
