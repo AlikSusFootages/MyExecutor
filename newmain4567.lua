@@ -838,7 +838,11 @@ function Dozer:Start()
         end)
         
         local function ProcessText(text)
-            
+            for color, keywords in pairs(Dozer.SyntaxColor) do
+                for _, keyword in pairs(keyword) do
+                    text = string.gsub(text, keyword, "aboba")
+                end
+            end
             return text
         end
         
