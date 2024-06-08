@@ -985,7 +985,7 @@ function Dozer:Start()
             Executorr.ScrollingFrame.TextBox.Text = ""
         end)
         ExecutorButtons.Clear.MouseEnter:Connect(function()
-            TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 0.01}):Play()
+            TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = .7}):Play()
         end)
         ExecutorButtons.Clear.MouseLeave:Connect(function()
             TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
