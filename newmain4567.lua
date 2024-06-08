@@ -863,13 +863,7 @@ function Dozer:Start()
                             return func .. Colorize(name, color)
                         end)
                     else
-                        text = string.gsub(text, pattern, function(match)
-                            if not string.find(match, "<font") then
-                                return Colorize(match, color)
-                            else
-                                return match
-                            end
-                        end)
+                        text = string.gsub(text, pattern, Colorize(keyword, color))
                     end
                 end
             end
