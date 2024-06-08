@@ -641,6 +641,10 @@ function Dozer:Start()
                                 TextColor3 = UsingTheme.Main,
                                 TextSize = 22,
                                 
+                            }, {
+                                Create("UICorner", {
+                                    CornerRadius = UDim.new(0,12)
+                                })
                             })
                         })
                     }),
