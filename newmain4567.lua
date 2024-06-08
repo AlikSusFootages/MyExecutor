@@ -848,7 +848,7 @@ function Dozer:Start()
         
         -- syntax highlighting
         
-        local ColorizePattern = "<font color='rgb(%d, %d, %d)'>%s</font>"
+        -- local ColorizePattern = "<font color='rgb(%d, %d, %d)'>%s</font>"
         
         local function Colorize(keyword, color)
             return "<font color='rgb(" .. color.r*255 .. "" .. color.g*255 .. "" .. color.b*255 .. "".. ")'>" .. keyword .."</font>"
