@@ -862,22 +862,9 @@ function Dozer:Start()
         local function ProcessText(text)
             for color, patterns in pairs(Dozer.SyntaxColor) do
                 for _, pattern in pairs(patterns) do
-                    if pattern == [['.-']] then
-                        text = string.gsub(text, pattern, function(str)
-                            return Colorize([[']] .. str .. [[']], color)
-                        end)
-                    elseif pattern == [[".-"]] then
-                        text = string.gsub(text, pattern, function(str)
-                            return Colorize([["]] .. str .. [["]], color)
-                        end)
-                    elseif pattern == "(%a+)()" then
-                        text = string.gsub(text, pattern, function(str)
-                            return Colorize(str .. "()", color)
-                        end)
-                    else
-                        text = string.gsub(text, pattern, function(match)
-                            return Colorize(match, color)
-                        end)
+                    text = string.gsub(text, pattern, function(match)
+                        return Colorize(match, color)
+                    end)
                     end
                 end
             end
