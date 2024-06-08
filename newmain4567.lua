@@ -873,10 +873,6 @@ function Dozer:Start()
                         text = string.gsub(text, pattern, function(str)
                             return Colorize("'" .. str .. "'", color)
                         end)
-                    elseif pattern == "%-%-.-\n" then
-                        text = string.gsub(text, pattern, function(comment)
-                            return Colorize(comment, color)
-                        end)
                     else
                         text = string.gsub(text, pattern, function(match)
                             return Colorize(match, color)
