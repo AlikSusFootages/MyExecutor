@@ -860,6 +860,9 @@ function Dozer:Start()
                 for _, keyword in pairs(keywords) do
                     do
                         text = string.gsub(text, keyword, Colorize(keyword, color))
+                        text = string.gsub(text, "=(.-[^%.])", function(match)
+                            return "<font color='rgb(0, 0, 255)'>" .. match .. "</font>"
+                        end)
                     end
                 end
             end
