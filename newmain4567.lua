@@ -861,7 +861,7 @@ function Dozer:Start()
             for color, patterns in pairs(Dozer.SyntaxColor) do
                 for _, pattern in pairs(patterns) do
                     text = string.gsub(text, pattern, function()
-                        return Colorize(text, color)
+                        return Colorize(pattern, color)
                     end)
                 end
             end
