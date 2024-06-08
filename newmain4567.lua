@@ -866,7 +866,7 @@ function Dozer:Start()
             for color, keywords in pairs(Dozer.SyntaxColor) do
                 for _, keyword in pairs(keywords) do
                     do
-                        text = string.gsub(text, keyword, function() return Colorize(keyword, color) end)
+                        text = string.gsub(text, keyword, function(n) return Colorize(n, color) end)
                     end
                 end
             end
