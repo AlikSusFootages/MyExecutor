@@ -672,6 +672,7 @@ function Dozer:Start()
                                     Position = UDim2.new(0,0,1,0),
                                     AnchorPoint = Vector2.new(0,1),
                                     BackgroundTransparency = 1,
+                                    BackgroundColor3 = UsingTheme.Stroke,
                                     TextColor3 = UsingTheme.Text,
                                     TextSize = 20,
                                     FontFace = GUI_Font,
@@ -979,8 +980,15 @@ function Dozer:Start()
         ExecutorButtons.Execute.MouseButton1Click:Connect(function()
             runcode(Executorr.ScrollingFrame.TextBox.Text)
         end)
+        
         ExecutorButtons.Clear.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = ""
+        end)
+        ExecutorButtons.Clear.MouseButton1Down:Connect(function()
+            TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 0.5}):Play()
+        end)
+        ExecutorButtons.Clear.MouseButton1Up:Connect(function()
+            TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
         end)
         
         while wait(0.1) do
