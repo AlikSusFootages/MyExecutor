@@ -857,7 +857,7 @@ function Dozer:Start()
 
         local function Colorize(keyword, color)
             local color2 = "rgb(" .. math.floor(color.r*255 + 0.5) .. ", " .. math.floor(color.g*255 + 0.5) .. ", " .. math.floor(color.b*255 + 0.5) .. ")"
-            return tostring([[<font color=']] .. color2 .. [['>]] .. keyword .. [[</font>]])
+            return tostring([=[<font color=']=] .. color2 .. [=['>]=] .. keyword .. [=[</font>]=])
         end
         
         local function ProcessText(text)
