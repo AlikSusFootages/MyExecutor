@@ -862,8 +862,8 @@ function Dozer:Start()
         end
         
         local function Colorize(keyword, color)
-            local color = GetColor(color)
-            return "<font color='" .. color .. "'>" .. keyword .. "</font>"
+            local color2 = GetColor(color)
+            return "<font color='" .. color2 .. "'>" .. keyword .. "</font>"
         end
         
         local function ProcessText(text)
