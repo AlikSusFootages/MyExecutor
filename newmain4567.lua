@@ -947,7 +947,7 @@ function Dozer:Start()
         print(ExecutorButtonsSize)
         for _, button in ipairs(ExecutorButtons:GetChildren()) do
             if button:IsA("TextButton") then
-                button.Size = UDim2.fromOffset(ExecutorButtonsSize, 0)
+                button.Size = UDim2.new(0, ExecutorButtonsSize, 1, 0)
             end
         end
         
