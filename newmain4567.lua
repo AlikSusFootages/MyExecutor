@@ -822,7 +822,7 @@ function Dozer:Start()
         
         local Executorr =  RightFrames.Executor.Content.Frame
         
-        Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
+        Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             Executorr.ScrollingFrame.CanvasSize = UDim2.fromOffset(Executorr.ScrollingFrame.TextBox.AbsoluteSize.X +32, Executorr.ScrollingFrame.TextBox.AbsoluteSize.Y +24)
         end)
         
