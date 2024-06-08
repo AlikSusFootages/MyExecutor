@@ -837,6 +837,14 @@ function Dozer:Start()
             RightFramesss.CanvasSize = UDim2.new(0,0,0, RightFramesss.UIListLayout.AbsoluteContentSize.Y)
         end)
         
+        -- syntax highlighting
+        
+        local ColorizePattern = "<font color='rgb(%d, %d, %d)'>%s</font>"
+        
+        local function Colorize(keyword, color)
+            return string.format(ColorizePattern, color.r*255, color.g*255, color.b*255, keyword)
+        end
+        
         local function ProcessText(text)
             for color, keywords in pairs(Dozer.SyntaxColor) do
                 for _, keyword in pairs(keywords) do
