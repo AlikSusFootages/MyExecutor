@@ -581,6 +581,18 @@ function Dozer:Start()
                                         AutomaticSize = "XY",
                                         ShowNativeInput = true,
                                     }),
+                                    Create("TextLabel", {
+                                        Size = UDim2.new(1,0,1,0),
+                                        RichText = true,
+                                        BackgroundTransparency = 1,
+                                        TextSize = 12,
+                                        TextColor3 = UsingTheme.Text,
+                                        Font = "Code",
+                                        Text = "",
+                                        TextXAlignment = "Left",
+                                        TextYAlignment = "Top",
+                                        
+                                    })
                                 }),
                                 Create("UIStroke", {
                                     Color = UsingTheme.Stroke,
