@@ -865,9 +865,9 @@ function Dozer:Start()
             for color, keywords in pairs(Dozer.SyntaxColor) do
                 for _, keyword in pairs(keywords) do
                     if keyword == "'(.-)'" then
-                        text = string.gsub(text, keyword, function(n) return "'" .. Colorize(n, color) .. "'" end)
+                        text = string.gsub(text, keyword, function(n) return Colorize("'" .. n .. "'", color) end)
                     elseif keyword == '"(.-)"' then
-                        text = string.gsub(text, keyword, function(n) return '"' .. Colorize(n, color) .. '"' end)
+                        text = string.gsub(text, keyword, function(n) return Colorize('"' .. n .. '"', color) end)
                     else
                         text = string.gsub(text, keyword, function(n) return Colorize(n, color) end)
                     end
