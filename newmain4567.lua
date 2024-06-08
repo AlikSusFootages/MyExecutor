@@ -865,7 +865,7 @@ function Dozer:Start()
                     elseif color == Color3.fromRGB(131, 241, 0) then -- Оранжевый для строк
                         local stringPattern = '(["\'])(.-)%1'
                         text = string.gsub(text, stringPattern, function()
-                            return Colorize(keyword, color)
+                            return Colorize('"' .. keyword .. '"', color)
                         end)
                     else
                         text = string.gsub(text, keyword, Colorize(keyword, color))
