@@ -21,6 +21,9 @@ local Dozer = {
         }
     },
     SyntaxColor = {
+        [Color3.fromRGB(131, 241, 132)] = {
+            [=['.-']=], [=[".-"]=],
+        }, 
         [Color3.fromRGB(248, 109, 124)] = {
             "local", "function", "return", "error", "print", "self", "if", "else", "then", "end", "do"
         },
@@ -36,9 +39,6 @@ local Dozer = {
         -- [Color3.fromRGB(106, 153, 85)] = {
         --     "%-%-(.-)"
         -- },
-        [Color3.fromRGB(131, 241, 132)] = {
-            [=['.-']=], [=[".-"]=],
-        }, 
     }
 }
 
