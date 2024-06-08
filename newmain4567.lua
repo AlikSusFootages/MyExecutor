@@ -864,9 +864,9 @@ function Dozer:Start()
         local function ProcessText(text)
             for color, keywords in pairs(Dozer.SyntaxColor) do
                 for _, keyword in pairs(keywords) do
-                    if color == Color3.fromRGB(131, 241, 132) and keyword == "'(.-)'" then
+                    if keyword == "'(.-)'" then
                         text = string.gsub(text, keyword, function(n) return "'" .. Colorize(n, color) .. "'" end)
-                    elseif color == Color3.fromRGB(131, 241, 132) and keyword == '"(.-)"' then
+                    elseif keyword == '"(.-)"' then
                         text = string.gsub(text, keyword, function(n) return '"' .. Colorize(n, color) .. '"' end)
                     else
                         text = string.gsub(text, keyword, function(n) return Colorize(n, color) end)
