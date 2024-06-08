@@ -837,13 +837,20 @@ function Dozer:Start()
             RightFramesss.CanvasSize = UDim2.new(0,0,0, RightFramesss.UIListLayout.AbsoluteContentSize.Y)
         end)
         
+        local function ProcessText(text)
+            
+            return text
+        end
         
         local Executorr = RightFrames.Executor.Content.Frame
         
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
             Executorr.ScrollingFrame.CanvasSize = UDim2.new(0,Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["X"], 0, Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["Y"])
-            Executorr.ScrollingFrame.TextLabel.Text = Executorr.ScrollingFrame.TextBox.Text
+            Executorr.ScrollingFrame.TextLabel.Text = ProcessText(Executorr.ScrollingFrame.TextBox.Text)
         end)
+        
+        
+        
         
         
         while wait(0.1) do
