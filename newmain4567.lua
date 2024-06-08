@@ -646,6 +646,22 @@ function Dozer:Start()
                                 Create("UICorner", {
                                     CornerRadius = UDim.new(0,12)
                                 })
+                            }),
+                            Create("TextButton", {
+                                Text = "Clear",
+                                Size = UDim2.new(0,110,0,55),
+                                Position = UDim2.new(0,0,1,0),
+                                AnchorPoint = Vector2.new(0,1),
+                                BackgroundColor3 = UsingTheme.Text,
+                                TextColor3 = UsingTheme.Main,
+                                TextSize = 20,
+                                FontFace = GUI_Font,
+                                Name = "Clear",
+                                AutoButtonColor = false
+                            }, {
+                                Create("UICorner", {
+                                    CornerRadius = UDim.new(0,12)
+                                })
                             })
                         })
                     }),
