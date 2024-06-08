@@ -21,9 +21,9 @@ local Dozer = {
         }
     },
     SyntaxColor = {
-        [Color3.fromRGB(131, 241, 132)] = {
-            "'.-'", '".-"',
-        }, 
+        -- [Color3.fromRGB(131, 241, 132)] = {
+        --     "'.-'", '".-"',     I DONT KNOW   WHY IT DOESNT WORK AAAAAAAAAHHH HELP
+        -- }, 
         [Color3.fromRGB(248, 109, 124)] = {
             [[local]], [[function]], [[return]], [[error]], [[print]], [[self]], [[if]], [[else]], [[then]], [[end]], [[do]]
         },
