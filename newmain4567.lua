@@ -22,13 +22,13 @@ local Dozer = {
     },
     SyntaxColor = {
         [Color3.fromRGB(248, 109, 124)] = {
-            "local", "function", "return", "error", "game", "print", "self"
+            "local", "function", "return", "error", "game", "print", "self", "if", "else", "then"
         },
         [Color3.fromRGB(255, 198, 0)] = {
             "true", "false", "nil", "warn"
         },
         [Color3.fromRGB(253, 251, 172)] = {
-            "function%s+[%w_]+"
+            "function%s+[%w_]+", ":Connect", ":WaitForChild", ":FindFirstChild"
         },
     }
 }
@@ -854,7 +854,7 @@ function Dozer:Start()
         local function ProcessText(text)
             for color, patterns in pairs(Dozer.SyntaxColor) do
                 for _, pattern in pairs(patterns) do
-                    if color == Color3.fromRGB(255, 255, 0) then
+                    if color == Color3.fromRGB(253, 251, 172) and pattern == "function%s+[%w_]+" then
                         local funcPattern = "(function%s+)([%w_]+)"
                         text = string.gsub(text, funcPattern, function(func, name)
                             return func .. Colorize(name, color)
