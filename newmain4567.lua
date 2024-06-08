@@ -895,7 +895,9 @@ function Dozer:Start()
             Executorr.ScrollingFrame.TextLabel.Text = ProcessText(Executorr.ScrollingFrame.TextBox.Text)
         end)
         
-        Executorr.ScrollingFrame.TextBox
+        Executorr.ScrollingFrame.TextBox.Focused:Connect(function()
+            TweenService:Create(Executorr.UIStroke, TweenInfo.new(0.15), {Color = UsingTheme.Text})
+        end)
         
         
         
