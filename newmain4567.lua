@@ -25,13 +25,13 @@ local Dozer = {
             [['.-']], [[".-"]],
         }, 
         [Color3.fromRGB(248, 109, 124)] = {
-            "local", "function", "return", "error", "print", "self", "if", "else", "then", "end", "do"
+            [[local]], [[function]], [[return]], [[error]], [[print]], [[self]], [[if]], [[else]], [[then]], [[end]], [[do]]
         },
         [Color3.fromRGB(255, 198, 0)] = {
-            "true", "false", "nil", "warn"
+            [[true]], [[false]], [[nil]], [[warn]]
         },
         [Color3.fromRGB(253, 251, 172)] = {
-            ":Connect", ":WaitForChild", ":FindFirstChild", ":GetService",
+            [[:Connect]], [[:WaitForChild]], [[:FindFirstChild]], [[:GetService]],
         },
         [Color3.fromRGB(132, 214, 247)] = {
             [[new]], [[game]], [[ipairs]], [[pairs]], [[script]], [[wait]], [[math]], [[random]], [[Instance]]
