@@ -865,11 +865,11 @@ function Dozer:Start()
                 for _, pattern in pairs(patterns) do
                     if pattern == [['.-']] then
                         text = string.gsub(text, pattern, function(str)
-                            return Colorize("'" .. str .. "'", color)
+                            return Colorize([[']] .. str .. [[']], color)
                         end)
                     elseif pattern == [[".-"]] then
                         text = string.gsub(text, pattern, function(str)
-                            return Colorize('"' .. str .. '"', color)
+                            return Colorize([["]] .. str .. [["]], color)
                         end)
                     -- elseif pattern == "(.-)()" then
                     --     text = string.gsub(text, pattern, function(str)
