@@ -668,7 +668,7 @@ function Dozer:Start()
                                 }),
                                 Create("TextButton", {
                                     Text = "Execute Clipboard",
-                                    Size = UDim2.new(0,140,1,0),
+                                    Size = UDim2.new(0,190,1,0),
                                     Position = UDim2.new(0,0,1,0),
                                     AnchorPoint = Vector2.new(0,1),
                                     BackgroundColor3 = UsingTheme.Text,
@@ -684,7 +684,7 @@ function Dozer:Start()
                                 }),
                                 Create("TextButton", {
                                     Text = "Clear",
-                                    Size = UDim2.new(0,100,1,0),
+                                    Size = UDim2.new(0,90,1,0),
                                     Position = UDim2.new(0,0,1,0),
                                     AnchorPoint = Vector2.new(0,1),
                                     BackgroundTransparency = 1,
