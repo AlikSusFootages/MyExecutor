@@ -117,6 +117,35 @@ local function DelScript(Name)
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
 end
 
+local function createRippleEffect(x, y, button)
+    local relativeX = x - button.AbsolutePosition.X
+    local relativeY = y - button.AbsolutePosition.y
+    
+    local ripple = Instance.new("Frame")
+    ripple.Name = "Ripple"
+    ripple.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    ripple.BackgroundTransparency = 0.5
+    ripple.Size = UDim2.new(0, 0, 0, 0)
+    ripple.Position = UDim2.new(0, relativeX, 0, relativeY)
+    ripple.AnchorPoint = Vector2.new(0.5, 0.5)
+    ripple.ClipsDescendants = true
+    ripple.Parent = CanvasGroup
+
+    local rippleCorner = Instance.new("UICorner")
+    rippleCorner.CornerRadius = UDim.new(1, 0)
+    rippleCorner.Parent = ripple
+
+    local targetSize = UDim2.new(0, 300, 0, 300)
+    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+
+    local tween = game:GetService("TweenService"):Create(ripple, tweenInfo, {Size = targetSize, BackgroundTransparency = 1})
+    tween:Play()
+
+    tween.Completed:Connect(function()
+        ripple:Destroy()
+    end)
+end
+
 
 
 --/° Main °/--
@@ -660,38 +689,51 @@ function Dozer:Start()
                                     FillDirection = "Horizontal",
                                     SortOrder= "LayoutOrder"
                                 }),
-                                Create("TextButton", {
-                                    Text = "Execute",
+                                Create("CanvasGroup", {
+                                    BackgroundTransparency = 1,
                                     Size = UDim2.new(0,110,1,0),
-                                    Position = UDim2.new(0,0,1,0),
-                                    AnchorPoint = Vector2.new(0,1),
-                                    BackgroundColor3 = UsingTheme.Text,
-                                    TextColor3 = UsingTheme.Main,
-                                    TextSize = 20,
-                                    FontFace = GUI_Font,
-                                    Name = "Execute",
-                                    AutoButtonColor = false
+                                    Name = "Execute"
                                 }, {
+                                    Create("TextButton", {
+                                        Text = "Execute",
+                                        Size = UDim2.new(0,110,1,0),
+                                        Position = UDim2.new(0,0,1,0),
+                                        AnchorPoint = Vector2.new(0,1),
+                                        BackgroundColor3 = UsingTheme.Text,
+                                        TextColor3 = UsingTheme.Main,
+                                        TextSize = 20,
+                                        FontFace = GUI_Font,
+                                        Name = "Execute",
+                                        AutoButtonColor = false,
+                                        BorderSizePixel = 0
+                                    }),
                                     Create("UICorner", {
                                         CornerRadius = UDim.new(0,12)
                                     })
                                 }),
-                                Create("TextButton", {
-                                    Text = "Execute Clipboard",
+                                Create("CanvasGroup", {
+                                    BackgroundTransparency = 1,
                                     Size = UDim2.new(0,190,1,0),
-                                    Position = UDim2.new(0,0,1,0),
-                                    AnchorPoint = Vector2.new(0,1),
-                                    BackgroundColor3 = UsingTheme.Text,
-                                    TextColor3 = UsingTheme.Main,
-                                    TextSize = 20,
-                                    FontFace = GUI_Font,
-                                    Name = "ExecuteClipboard",
-                                    AutoButtonColor = false
+                                    Name = "ExecuteClipboard"
                                 }, {
+                                    Create("TextButton", {
+                                        Text = "ExecuteClipboard",
+                                        Size = UDim2.new(0,110,1,0),
+                                        Position = UDim2.new(0,0,1,0),
+                                        AnchorPoint = Vector2.new(0,1),
+                                        BackgroundColor3 = UsingTheme.Text,
+                                        TextColor3 = UsingTheme.Main,
+                                        TextSize = 20,
+                                        FontFace = GUI_Font,
+                                        Name = "ExecuteClipboard",
+                                        AutoButtonColor = false,
+                                        BorderSizePixel = 0
+                                    }),
                                     Create("UICorner", {
                                         CornerRadius = UDim.new(0,12)
                                     })
                                 }),
+                                
                                 Create("TextButton", {
                                     Text = "Clear",
                                     Size = UDim2.new(0,90,1,0),
