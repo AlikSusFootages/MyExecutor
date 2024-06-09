@@ -985,7 +985,7 @@ function Dozer:Start()
                 buttonCount = buttonCount + 1
             end
         end
-        print(buttonCoun)
+        print(buttonCount)
         
         local ExecutorButtonsPadding = 10
         for _, button in ipairs(ExecutorButtons:GetChildren()) do
