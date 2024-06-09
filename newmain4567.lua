@@ -32,7 +32,7 @@ local Dozer = {
             [[true]], [[false]], [[nil]], [[warn]],
         },
         [Color3.fromRGB(253, 251, 172)] = {
-            [[Connect]], [[WaitForChild]], [[FindFirstChild]], [[GetService]], [[GetDescendants]], [[GetChildren]], [[GetPropertyChangedSignal]], [[loadstring]], [[HttpGet]], [[Create]]
+            [[Connect]], [[WaitForChild]], [[FindFirstChild]], [[GetService]], [[GetDescendants]], [[GetChildren]], [[GetPropertyChangedSignal]], [[loadstring]], [[HttpGet]], [[Create]], [[SendKeyEvent]]
         },
         [Color3.fromRGB(132, 214, 247)] = {
             [[new]], [[game]], [[ipairs]], [[pairs]], [[script]], [[wait]], [[math]], [[random]], [[Instance]], [[Parent]], [[task]], [[table]], [[remove]], [[Size]], [[Position]], [[BackgroundColor3]], [[TextColor3]], [[AnchorPoint]], [[Vector2]], [[Color3]], [[BorderSizePixel]], [[BorderColor3]], [[Thickness]], [[Color]], [[Transparency]], [[BackgroundTransparency]], [[TextTrasparency]], [[TextTruncate]], [[TextWrapped]], [[TextScaled]], [[Text ]], [[TextSize]], [[Font]]
