@@ -1005,6 +1005,11 @@ function Dozer:Start()
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
             Executorr.ScrollingFrame.CanvasSize = UDim2.new(0,Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["X"], 0, Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["Y"])
             
+        end)
+        
+        Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
+            Executorr.ScrollingFrame.TextLabel.Text = ProcessText(Executorr.ScrollingFrame.TextBox.Text)
+            
             --LineNumbers
             local liness = Executorr.ScrollingFrame.TextBox.Text:split("\n")
             local numberText = ""
@@ -1012,10 +1017,6 @@ function Dozer:Start()
                 numberText = numberText .. i .. "\n"
             end
             Executorr.ScrollingFrame.LineNumbers.Text = numberText
-        end)
-        
-        Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
-            Executorr.ScrollingFrame.TextLabel.Text = ProcessText(Executorr.ScrollingFrame.TextBox.Text)
         end)
         
         Executorr.ScrollingFrame.TextBox.Focused:Connect(function()
