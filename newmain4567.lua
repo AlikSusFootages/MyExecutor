@@ -32,10 +32,10 @@ local Dozer = {
             [[true]], [[false]], [[nil]], [[warn]],
         },
         [Color3.fromRGB(253, 251, 172)] = {
-            [[:Connect]], [[:WaitForChild]], [[:FindFirstChild]], [[:GetService]], [[:GetDescendants]], [[:GetChildren]], [[:GetPropertyChangedSignal]]
+            [[Connect]], [[WaitForChild]], [[FindFirstChild]], [[GetService]], [[GetDescendants]], [[GetChildren]], [[GetPropertyChangedSignal]], [[loadstring]], [[HttpGet]], [[Create]]
         },
         [Color3.fromRGB(132, 214, 247)] = {
-            [[new]], [[game]], [[ipairs]], [[pairs]], [[script]], [[wait]], [[math]], [[random]], [[Instance]], [[Parent]], [[task]], [[table]], [[remove]]
+            [[new]], [[game]], [[ipairs]], [[pairs]], [[script]], [[wait]], [[math]], [[random]], [[Instance]], [[Parent]], [[task]], [[table]], [[remove]], [[Size]], [[Position]], [[BackgroundColor3]], [[TextColor3]], [[AnchorPoint]], [[Vector2]], [[Color3]], [[]]
         },
         --     "%-%-(.-)"
         -- },
