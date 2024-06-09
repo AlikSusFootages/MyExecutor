@@ -1059,6 +1059,7 @@ function Dozer:Start()
         
         ExecutorButtons.Clear.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = ""
+            Executorr.ScrollingFrame.TextBox.CanvasPosition = Vector2.new(0,0)
         end)
         ExecutorButtons.Paste.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = fromclipboard()
