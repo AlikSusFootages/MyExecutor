@@ -1025,10 +1025,10 @@ function Dozer:Start()
         for _, Button in ExecutorButtons do
             if Button.Name == "Clear" or "Paste" then
                 ExecutorButtons[Button.Name].MouseEnter:Connect(function()
-                    TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = .7}):Play()
+                    TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = .7}):Play()
                 end)
                 ExecutorButtons[Button.Name].MouseLeave:Connect(function()
-                    TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
+                    TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
                 end)
             end
         end
