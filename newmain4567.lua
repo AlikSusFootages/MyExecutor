@@ -667,6 +667,22 @@ function Dozer:Start()
                                     })
                                 }),
                                 Create("TextButton", {
+                                    Text = "Execute Clipboard",
+                                    Size = UDim2.new(0,110,1,0),
+                                    Position = UDim2.new(0,0,1,0),
+                                    AnchorPoint = Vector2.new(0,1),
+                                    BackgroundColor3 = UsingTheme.Text,
+                                    TextColor3 = UsingTheme.Main,
+                                    TextSize = 20,
+                                    FontFace = GUI_Font,
+                                    Name = "ExecuteClipboard",
+                                    AutoButtonColor = false
+                                }, {
+                                    Create("UICorner", {
+                                        CornerRadius = UDim.new(0,12)
+                                    })
+                                }),
+                                Create("TextButton", {
                                     Text = "Clear",
                                     Size = UDim2.new(0,110,1,0),
                                     Position = UDim2.new(0,0,1,0),
@@ -979,6 +995,9 @@ function Dozer:Start()
         
         ExecutorButtons.Execute.MouseButton1Click:Connect(function()
             runcode(Executorr.ScrollingFrame.TextBox.Text)
+        end)
+        ExecutorButtons.ExecuteClipboard.MouseButton1Click:Connect(function()
+            executeclipboard()
         end)
         
         ExecutorButtons.Clear.MouseButton1Click:Connect(function()
