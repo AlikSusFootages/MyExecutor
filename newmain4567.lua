@@ -614,7 +614,16 @@ function Dozer:Start()
                                         Text = "",
                                         TextXAlignment = "Left",
                                         TextYAlignment = "Top",
-                                        
+                                    }),
+                                    Create("TextLabel", {
+                                        Size = UDim2.new(0,20,1,0),
+                                        BackgroundTransparency = 1,
+                                        TextSize = 15,
+                                        TextColor3 = UsingTheme.Stroke,
+                                        Font = "Code",
+                                        Text = "1",
+                                        TextXAlignment = "Right",
+                                        TextYAlignment = "Top"
                                     })
                                 }),
                                 Create("UIPadding", {
