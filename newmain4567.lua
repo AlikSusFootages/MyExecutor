@@ -1022,12 +1022,16 @@ function Dozer:Start()
         ExecutorButtons.Clear.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = ""
         end)
-        ExecutorButtons.Clear.MouseEnter:Connect(function()
-            TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = .7}):Play()
-        end)
-        ExecutorButtons.Clear.MouseLeave:Connect(function()
-            TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
-        end)
+        for _, Button in ExecutorButtons do
+            if Button.Name == "Clear" or "Paste" then
+                ExecutorButtons[Button.Name].MouseEnter:Connect(function()
+                    TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = .7}):Play()
+                end)
+                ExecutorButtons[Button.Name].MouseLeave:Connect(function()
+                    TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
+                end)
+            end
+        end
         
         
         ExecutorButtons.Paste.MouseButton1Click:Connect(function()
