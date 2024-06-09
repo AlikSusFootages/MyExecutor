@@ -1017,22 +1017,22 @@ function Dozer:Start()
                 numberText = numberText .. i .. "\n"
                 if i > 100 or i < 1000 then
                     Executorr.ScrollingFrame.LineNumbers.Size = UDim2.new(0,25,1,0)
-                    Executorr.ScrollingFrame.TextLabel.Size = UDim2.new(1,-45,1,0)
-                    Executorr.ScrollingFrame.TextLabel.Position = UDim2.new(0,45,0,0)
-                    Executorr.ScrollingFrame.TextBox.Size = UDim2.new(1,-45,1,0)
-                    Executorr.ScrollingFrame.TextBox.Position = UDim2.new(0,45,0,0)
+                    Executorr.ScrollingFrame.TextLabel.Size = UDim2.new(1,-40,1,0)
+                    Executorr.ScrollingFrame.TextLabel.Position = UDim2.new(0,40,0,0)
+                    Executorr.ScrollingFrame.TextBox.Size = UDim2.new(1,-40,1,0)
+                    Executorr.ScrollingFrame.TextBox.Position = UDim2.new(0,40,0,0)
                 elseif i > 1000 then
                     Executorr.ScrollingFrame.LineNumbers.Size = UDim2.new(0,35,1,0)
-                    Executorr.ScrollingFrame.TextLabel.Size = UDim2.new(1,-55,1,0)
-                    Executorr.ScrollingFrame.TextLabel.Position = UDim2.new(0,55,0,0)
-                    Executorr.ScrollingFrame.TextBox.Size = UDim2.new(1,-55,1,0)
-                    Executorr.ScrollingFrame.TextBox.Position = UDim2.new(0,55,0,0)
+                    Executorr.ScrollingFrame.TextLabel.Size = UDim2.new(1,-50,1,0)
+                    Executorr.ScrollingFrame.TextLabel.Position = UDim2.new(0,50,0,0)
+                    Executorr.ScrollingFrame.TextBox.Size = UDim2.new(1,-50,1,0)
+                    Executorr.ScrollingFrame.TextBox.Position = UDim2.new(0,50,0,0)
                 elseif i < 100 then
                     Executorr.ScrollingFrame.LineNumbers.Size = UDim2.new(0,15,1,0)
-                    Executorr.ScrollingFrame.TextLabel.Size = UDim2.new(1,-35,1,0)
+                    Executorr.ScrollingFrame.TextLabel.Size = UDim2.new(1,-30,1,0)
                     Executorr.ScrollingFrame.TextLabel.Position = UDim2.new(0,15,0,0)
-                    Executorr.ScrollingFrame.TextBox.Size = UDim2.new(1,-35,1,0)
-                    Executorr.ScrollingFrame.TextBox.Position = UDim2.new(0,35,0,0)
+                    Executorr.ScrollingFrame.TextBox.Size = UDim2.new(1,-30,1,0)
+                    Executorr.ScrollingFrame.TextBox.Position = UDim2.new(0,30,0,0)
                 end
             end
             Executorr.ScrollingFrame.LineNumbers.Text = numberText
