@@ -117,13 +117,13 @@ local function DelScript(Name)
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
 end
 
-local function CreateRipple(x, y, button)
+local function CreateRipple(x, y, button, color)
     local relativeX = x - button.AbsolutePosition.X
     local relativeY = y - button.AbsolutePosition.y
     
     local ripple = Instance.new("Frame")
     ripple.Name = "Ripple"
-    ripple.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    ripple.BackgroundColor3 = color
     ripple.BackgroundTransparency = 0.5
     ripple.Size = UDim2.new(0, 0, 0, 0)
     ripple.Position = UDim2.new(0, relativeX, 0, relativeY)
