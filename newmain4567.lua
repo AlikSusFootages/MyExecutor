@@ -1035,7 +1035,7 @@ function Dozer:Start()
                     TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(Button.Color3.r*255 -55, Button.Color3.g*255 -55, Button.Color3.b*255 -55)}):Play()
                 end)
                 ExecutorButtons[Button.Name].MouseLeave:Connect(function()
-                    TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
+                    TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = UsingTheme.Text}):Play()
                 end)
             end
         end
