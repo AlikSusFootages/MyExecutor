@@ -692,7 +692,7 @@ function Dozer:Start()
                                 }),
                                 Create("CanvasGroup", {
                                     BackgroundTransparency = 1,
-                                    Size = UDim2.new(0.23,-10,1,0),
+                                    Size = UDim2.new(0.23,-5,1,0),
                                     Name = "Execute"
                                 }, {
                                     Create("TextButton", {
@@ -714,7 +714,7 @@ function Dozer:Start()
                                 }),
                                 Create("CanvasGroup", {
                                     BackgroundTransparency = 1,
-                                    Size = UDim2.new(0.3,-10,1,0),
+                                    Size = UDim2.new(0.3,-5,1,0),
                                     Name = "ExecuteClipboard"
                                 }, {
                                     Create("TextButton", {
@@ -736,7 +736,7 @@ function Dozer:Start()
                                 }),
                                 Create("CanvasGroup", {
                                     BackgroundTransparency = 1,
-                                    Size = UDim2.new(0.23,-10,1,0),
+                                    Size = UDim2.new(0.23,-5,1,0),
                                     Name = "Clear"
                                 }, {
                                     Create("TextButton", {
@@ -775,7 +775,7 @@ function Dozer:Start()
                                 }),
                                 Create("CanvasGroup", {
                                     BackgroundTransparency = 1,
-                                    Size = UDim2.new(0.23,-10,1,0),
+                                    Size = UDim2.new(0.23,-5,1,0),
                                     Name = "Paste"
                                 }, {
                                     Create("TextButton", {
