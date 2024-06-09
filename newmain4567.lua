@@ -623,7 +623,8 @@ function Dozer:Start()
                                         Font = "Code",
                                         Text = "1",
                                         TextXAlignment = "Right",
-                                        TextYAlignment = "Top"
+                                        TextYAlignment = "Top",
+                                        Name = "LineNumbers"
                                     })
                                 }),
                                 Create("UIPadding", {
