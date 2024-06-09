@@ -1029,6 +1029,13 @@ function Dozer:Start()
             TweenService:Create(ExecutorButtons.Clear, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
         end)
         
+        
+        ExecutorButtons.Paste.MouseButton1Click:Connect(function()
+            Executorr.ScrollingFrame.TextBox.Text = fromclipboard()
+        end)
+        
+        
+        
         while wait(0.1) do
             local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
             LeftFramess.PingText.Text = math.floor(ping + 0.5) .. "ms"
