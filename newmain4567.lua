@@ -1107,35 +1107,35 @@ function Dozer:Start()
         
         local ExecutorButtons = Executorr.Parent.BottomFrame
         
-        ExecutorButtons.Execute.MouseButton1Click:Connect(function()
+        ExecutorButtons.Execute.Execute.MouseButton1Click:Connect(function()
             runcode(Executorr.ScrollingFrame.TextBox.Text)
         end)
-        ExecutorButtons.ExecuteClipboard.MouseButton1Click:Connect(function()
+        ExecutorButtons.ExecuteClipboard.ExecuteClipboard.MouseButton1Click:Connect(function()
             executeclipboard()
         end)
         
-        ExecutorButtons.Clear.MouseButton1Click:Connect(function()
+        ExecutorButtons.Clear.Clear.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = ""
             Executorr.ScrollingFrame.CanvasPosition = Vector2.new(0,0)
         end)
-        ExecutorButtons.Paste.MouseButton1Click:Connect(function()
+        ExecutorButtons.Paste.Paste.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = fromclipboard()
         end)
         
         for _, Button in pairs(ExecutorButtons:GetChildren()) do
             if Button.Name == "Clear" or Button.Name == "Paste" then
-                ExecutorButtons[Button.Name].MouseEnter:Connect(function()
-                    TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = .7}):Play()
+                ExecutorButtons[Button.Name][Button.Name].MouseEnter:Connect(function()
+                    TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = .7}):Play()
                 end)
-                ExecutorButtons[Button.Name].MouseLeave:Connect(function()
-                    TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
+                ExecutorButtons[Button.Name][Button.Name].MouseLeave:Connect(function()
+                    TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
                 end)
             elseif Button.Name == "Execute" or Button.Name == "ExecuteClipboard" then
-                ExecutorButtons[Button.Name].MouseEnter:Connect(function()
-                    TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(Button.BackgroundColor3.r*255 -55, Button.BackgroundColor3.g*255 -55, Button.BackgroundColor3.b*255 -55)}):Play()
+                ExecutorButtons[Button.Name][Button.Name].MouseEnter:Connect(function()
+                    TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(Button.BackgroundColor3.r*255 -55, Button.BackgroundColor3.g*255 -55, Button.BackgroundColor3.b*255 -55)}):Play()
                 end)
-                ExecutorButtons[Button.Name].MouseLeave:Connect(function()
-                    TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = UsingTheme.Text}):Play()
+                ExecutorButtons[Button.Name][Button.Name].MouseLeave:Connect(function()
+                    TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = UsingTheme.Text}):Play()
                 end)
             end
         end
