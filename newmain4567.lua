@@ -135,7 +135,7 @@ local function CreateRipple(x, y, button)
     rippleCorner.CornerRadius = UDim.new(1, 0)
     rippleCorner.Parent = ripple
 
-    local targetSize = UDim2.new(0, 300, 0, 300)
+    local TargetSize = UDim2.new(0, 300, 0, 300)
 
     local Tween = game:GetService("TweenService"):Create(ripple, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = targetSize, BackgroundTransparency = 1}):Play()
 
