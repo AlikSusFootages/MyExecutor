@@ -9,6 +9,7 @@ local Players = game:GetService("Players")
 local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
 local Changelogs = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/MyExecutor/main/changelog.lua"))()
 
+
 --/° Variables °/--
 
 local Dozer = {
@@ -52,6 +53,7 @@ local GUI_Font = Font.new("rbxassetid://12187365364")
 local Player = Players.LocalPlayer
 local PlayerGui = game.CoreGui
 
+local Mouse = Player:GetMouse()
 
 
 --/° Other °/--
