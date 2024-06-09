@@ -718,7 +718,7 @@ function Dozer:Start()
                                 }, {
                                     Create("TextButton", {
                                         Text = "ExecuteClipboard",
-                                        Size = UDim2.new(0,110,1,0),
+                                        Size = UDim2.new(1,0,1,0),
                                         Position = UDim2.new(0,0,1,0),
                                         AnchorPoint = Vector2.new(0,1),
                                         BackgroundColor3 = UsingTheme.Text,
