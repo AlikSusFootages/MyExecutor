@@ -1003,7 +1003,9 @@ function Dozer:Start()
         local Executorr = RightFrames.Executor.Content.Frame
         
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
-            Executorr.ScrollingFrame.CanvasSize = UDim2.new(0,Executorr.ScrollingFrame.LineNumbers.AbsoluteSize.X + Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["X"], 0, Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["Y"])
+            local LineNumbersXSize = Executorr.ScrollingFrame.LineNumbers.AbsoluteSize.XY
+            local TextBoxXSize = Executorr.ScrollingFrame.TextBox.AbsoluteSize.X
+            Executorr.ScrollingFrame.CanvasSize = UDim2.new(0,LineNumbersXSize + TextBoxXSize, 0, Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["Y"])
             
         end)
         
