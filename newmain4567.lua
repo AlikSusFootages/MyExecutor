@@ -979,20 +979,6 @@ function Dozer:Start()
         
         
         local ExecutorButtons = Executorr.Parent.BottomFrame
-        local buttonCount = 0
-        for _, child in ipairs(ExecutorButtons:GetChildren()) do
-            if child:IsA("TextButton") then
-                buttonCount = buttonCount + 1
-            end
-        end
-        print(buttonCount)
-        
-        local ExecutorButtonsPadding = 10
-        for _, button in ipairs(ExecutorButtons:GetChildren()) do
-            if button:IsA("TextButton") then
-                button.Size = UDim2.new(1 / buttonCount, -(ExecutorButtonsPadding/buttonCount), 1, 0)
-            end
-        end
         
         ExecutorButtons.Execute.MouseButton1Click:Connect(function()
             runcode(Executorr.ScrollingFrame.TextBox.Text)
