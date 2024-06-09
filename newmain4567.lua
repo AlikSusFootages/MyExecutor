@@ -1060,6 +1060,10 @@ function Dozer:Start()
         ExecutorButtons.Clear.MouseButton1Click:Connect(function()
             Executorr.ScrollingFrame.TextBox.Text = ""
         end)
+        ExecutorButtons.Paste.MouseButton1Click:Connect(function()
+            Executorr.ScrollingFrame.TextBox.Text = fromclipboard()
+        end)
+        
         for _, Button in pairs(ExecutorButtons:GetChildren()) do
             if Button.Name == "Clear" or Button.Name == "Paste" then
                 ExecutorButtons[Button.Name].MouseEnter:Connect(function()
@@ -1079,9 +1083,6 @@ function Dozer:Start()
         end
         
         
-        ExecutorButtons.Paste.MouseButton1Click:Connect(function()
-            Executorr.ScrollingFrame.TextBox.Text = fromclipboard()
-        end)
         
         
         
