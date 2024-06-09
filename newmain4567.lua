@@ -1131,7 +1131,7 @@ function Dozer:Start()
                     TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
                 end)
                 ExecutorButtons[Button.Name][Button.Name].MouseButton1Click:Connect(function()
-                    CreateRipple(Mouse.X, Mouse.Y, ExecutorButtons[Button.Name])
+                    CreateRipple(Mouse.X, Mouse.Y, ExecutorButtons[Button.Name], UsingTheme.Text)
                 end)
             elseif Button.Name == "Execute" or Button.Name == "ExecuteClipboard" then
                 ExecutorButtons[Button.Name][Button.Name].MouseEnter:Connect(function()
@@ -1139,6 +1139,9 @@ function Dozer:Start()
                 end)
                 ExecutorButtons[Button.Name][Button.Name].MouseLeave:Connect(function()
                     TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = UsingTheme.Text}):Play()
+                end)
+                ExecutorButtons[Button.Name][Button.Name].MouseButton1Click:Connect(function()
+                    CreateRipple(Mouse.X, Mouse.Y, ExecutorButtons[Button.Name], UsingTheme.Stroke)
                 end)
             end
         end
