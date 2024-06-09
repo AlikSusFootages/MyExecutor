@@ -614,7 +614,7 @@ function Dozer:Start()
                                         TextYAlignment = "Top",
                                     }),
                                     Create("TextLabel", {
-                                        Size = UDim2.new(0,20,1,0),
+                                        Size = UDim2.new(0,15,1,0),
                                         BackgroundTransparency = 1,
                                         TextSize = 15,
                                         TextColor3 = UsingTheme.Stroke,
