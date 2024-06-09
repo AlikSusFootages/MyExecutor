@@ -117,7 +117,7 @@ local function DelScript(Name)
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
 end
 
-local function createRippleEffect(x, y, button)
+local function CreateRipple(x, y, button)
     local relativeX = x - button.AbsolutePosition.X
     local relativeY = y - button.AbsolutePosition.y
     
