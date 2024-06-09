@@ -1015,6 +1015,13 @@ function Dozer:Start()
             local numberText = ""
             for i=1, #liness do
                 numberText = numberText .. i .. "\n"
+                if i > 100 then
+                    Executorr.ScrollingFrame.LineNumbers.Size = UDim2.new(0,25,1,0)
+                    Executorr.ScrollingFrame.TextLabel.Size = UDim2.new(1,-45,1,0)
+                    Executorr.ScrollingFrame.TextLabel.Position = UDim2.new(0,45,0,0)
+                    Executorr.ScrollingFrame.TextBox.Size = UDim2.new(1,-45,1,0)
+                    Executorr.ScrollingFrame.TextBox.Position = UDim2.new(0,45,0,0)
+                end
             end
             Executorr.ScrollingFrame.LineNumbers.Text = numberText
         end)
