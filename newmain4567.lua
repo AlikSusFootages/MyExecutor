@@ -1135,7 +1135,7 @@ function Dozer:Start()
                 end)
             elseif Button.Name == "Execute" or Button.Name == "ExecuteClipboard" then
                 ExecutorButtons[Button.Name][Button.Name].MouseEnter:Connect(function()
-                    TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(Button.BackgroundColor3.r*255 -55, Button.BackgroundColor3.g*255 -55, Button.BackgroundColor3.b*255 -55)}):Play()
+                    TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(Button[Button.Name].BackgroundColor3.r*255 -55, Button[Button.Name].BackgroundColor3.g*255 -55, Button[Button.Name].BackgroundColor3.b*255 -55)}):Play()
                 end)
                 ExecutorButtons[Button.Name][Button.Name].MouseLeave:Connect(function()
                     TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = UsingTheme.Text}):Play()
