@@ -1023,7 +1023,7 @@ function Dozer:Start()
             Executorr.ScrollingFrame.TextBox.Text = ""
         end)
         for _, Button in pairs(ExecutorButtons:GetChildren()) do
-            if Button.Name == "Clear" or "Paste" then
+            if Button.Name == "Clear" or Button.Name == "Paste" then
                 ExecutorButtons[Button.Name].MouseEnter:Connect(function()
                     TweenService:Create(ExecutorButtons[Button.Name], TweenInfo.new(0.15), {BackgroundTransparency = .7}):Play()
                 end)
