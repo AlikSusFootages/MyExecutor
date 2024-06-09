@@ -713,7 +713,39 @@ function Dozer:Start()
                                             Transparency = GUI_StrokeTransparency,
                                         })
                                     })
-                                })
+                                }),
+                                Create("TextButton", {
+                                    Text = "Paste",
+                                    Size = UDim2.new(0,90,1,0),
+                                    Position = UDim2.new(0,0,1,0),
+                                    AnchorPoint = Vector2.new(0,1),
+                                    BackgroundTransparency = 1,
+                                    BackgroundColor3 = UsingTheme.Stroke,
+                                    TextColor3 = UsingTheme.Text,
+                                    TextSize = 20,
+                                    FontFace = GUI_Font,
+                                    Name = "Paste",
+                                    AutoButtonColor = false
+                                }, {
+                                    Create("UICorner", {
+                                        CornerRadius = UDim.new(0,12)
+                                    }),
+                                    Create("Frame", {
+                                        Size = UDim2.new(1, -4, 1, -4),
+                                        Position = UDim2.fromScale(0.5,0.5),
+                                        AnchorPoint = Vector2.new(0.5,0.5),
+                                        BackgroundTransparency = 1,
+                                    }, {
+                                        Create("UICorner", {
+                                            CornerRadius = UDim.new(0, 11),
+                                        }),
+                                        Create("UIStroke", {
+                                            Color = UsingTheme.Stroke,
+                                            Thickness = 2,
+                                            Transparency = GUI_StrokeTransparency,
+                                        })
+                                    })
+                                }),
                                 
                             })
                         })
