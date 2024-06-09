@@ -1008,7 +1008,7 @@ function Dozer:Start()
             Executorr.ScrollingFrame.CanvasSize = UDim2.new(0,Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["X"], 0, Executorr.ScrollingFrame.TextBox["AbsoluteSize"]["Y"])
             
             --LineNumbers
-            local liness = Executorr.ScrollingFrame.TextBox:split("\n")
+            local liness = Executorr.ScrollingFrame.TextBox.Text:split("\n")
             local numberText = ""
             for i=1, #liness do
                 numberText = numberText .. i .. "\n"
