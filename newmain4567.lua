@@ -136,12 +136,10 @@ local function CreateRipple(x, y, button)
     rippleCorner.Parent = ripple
 
     local targetSize = UDim2.new(0, 300, 0, 300)
-    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 
-    local tween = game:GetService("TweenService"):Create(ripple, tweenInfo, {Size = targetSize, BackgroundTransparency = 1})
-    tween:Play()
+    local Tween = game:GetService("TweenService"):Create(ripple, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = targetSize, BackgroundTransparency = 1}):Play()
 
-    tween.Completed:Connect(function()
+    Tween.Completed:Connect(function()
         ripple:Destroy()
     end)
 end
