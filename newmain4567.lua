@@ -1142,7 +1142,7 @@ function Dozer:Start()
                     TweenService:Create(ExecutorButtons[Button.Name][Button.Name], TweenInfo.new(0.15), {BackgroundColor3 = UsingTheme.Text}):Play()
                 end)
                 ExecutorButtons[Button.Name][Button.Name].MouseButton1Click:Connect(function()
-                    CreateRipple(Mouse.X, Mouse.Y, ExecutorButtons[Button.Name], UsingTheme.Stroke)
+                    CreateRipple(Mouse.X, Mouse.Y, ExecutorButtons[Button.Name], UsingTheme.Main)
                 end)
             end
         end
