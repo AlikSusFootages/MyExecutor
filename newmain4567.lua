@@ -1073,7 +1073,14 @@ function Dozer:Start()
         end)
         
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
-            Executorr.ScrollingFrame.TextLabel.Text = Lexer.lua(Executorr.ScrollingFrame.TextBox.Text, {}, {})
+            local formatedText = ""
+            for token, src in Lexer.lua(Executorr.ScrollingFrame.TextBox.Text) do
+                if Dozer.SyntaxColor[token] then
+                    formatedText = formatedText .. Colorize(src, Dozer.SyntaxColor[token])
+                end
+            end
+            
+            Executorr.ScrollingFrame.TextLabel.Text = formatedText
             
             --LineNumbers
             local liness = Executorr.ScrollingFrame.TextBox.Text:split("\n")
