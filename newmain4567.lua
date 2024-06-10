@@ -926,6 +926,7 @@ function Dozer:Start()
                                 AnchorPoint = Vector2.new(0,1),
                                 BackgroundTransparency = 1,
                                 BorderSizePixel = 0,
+                                Name = "Content"
                             }, {
                                 Create("ScrollingFrame", {
                                     Size = UDim2.new(1,0,1,0),
@@ -1243,6 +1244,11 @@ function Dozer:Start()
         end
         
         
+        local SavedScriptss = RightFrames.SavedScripts.Content
+        
+        SavedScriptss.Content.ScrollingFrame.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+            SavedScriptss.Content.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, SavedScriptss.Content.ScrollingFrame.UIListLayout.AbsoluteContentSize.Y)
+        end)
         
         
         
