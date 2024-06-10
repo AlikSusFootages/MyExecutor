@@ -927,6 +927,14 @@ function Dozer:Start()
                                 BackgroundTransparency = 1,
                                 BorderSizePixel = 0,
                             }, {
+                                Create("ScrollingFrame", {
+                                    Size = UDim2.new(1,0,1,0),
+                                    CanvasSize = UDim2.new(0,0,0,0),
+                                    BackgroundTransparency = 1,
+                                    ElasticBehavior = "Never",
+                                    ScrollBarThickness = 0,
+                                    ScrollingDirection = "Y"
+                                }),
                                 Create("UIListLayout", {
                                     FillDirection = "Vertical",
                                     Padding = UDim.new(0, 8)
