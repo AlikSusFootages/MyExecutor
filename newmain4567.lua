@@ -874,7 +874,9 @@ function Dozer:Start()
                                 PlaceholderText = "Enter your script name",
                                 TextColor3 = UsingTheme.Text,
                                 TextSize = 20,
-                                FontFace = GUI_Font
+                                FontFace = GUI_Font,
+                                TextXAlignment = "Left",
+                                ClearTextOnFocus = false
                             }, {
                                 Create("UICorner", {
                                     CornerRadius = UDim.new(0,12)
@@ -892,6 +894,10 @@ function Dozer:Start()
                                     Create("UICorner", {
                                         CornerRadius = UDim.new(0,10)
                                     })
+                                }),
+                                Create("UIPadding", {
+                                    PaddingLeft = UDim.new(0,16),
+                                    PaddingRight = UDim.new(0,16),
                                 })
                             })
                         })
