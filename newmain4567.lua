@@ -1280,7 +1280,7 @@ function Dozer:Start()
             for name, script in pairs(GUI_Settings.Scripts) do
                 local ScriptCard = Create("TextLabel", {
                     Size = UDim2.new(1,0,0,50),
-                    BackgroundColor3 = UsingTheme.Stroke,
+                    BackgroundColor3 = UsingTheme.Main,
                     BackgroundTransparency = GUI_StrokeTransparency,
                     Text = name,
                     TextSize = 20,
@@ -1312,6 +1312,10 @@ function Dozer:Start()
                         }),
                     })
                 })
+                
+                ScriptCard.CanvasGroup.ImageButton.MouseButton1Click:Connect(function()
+                    CreateRipple(Mouse.X, Mouse.Y, ScriptCard.CanvasGroup, UsingTheme.Main)
+                end)
             end
         end
         
