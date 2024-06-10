@@ -89,6 +89,9 @@ else
     GUI_Settings = HttpService:JSONDecode(readfile("Dozer/Settings.json"))
 end
 
+if GUI_Settings.UISettings.Transparency ~= GUI_Transparency then
+    GUI_Transparency = GUI_Settings.UISettings.Transparency
+end
 
 --/° Functions °/--
 
