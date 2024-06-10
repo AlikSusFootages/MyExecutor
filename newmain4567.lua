@@ -1307,7 +1307,10 @@ function Dozer:Start()
                             Image = GetIcon("play"),
                             BackgroundColor3 = UsingTheme.Text,
                             AutoButtonColor = false,
-                            ImageColor3 = UsingTheme.Main
+                            ImageColor3 = UsingTheme.Main,
+                            ScaleType = "Slice",
+                            ImageRectOffset = Vector2.new(395,395),
+                            ImageRectSizs = Vector2.new(-70,-70),
                         }),
                         Create("UICorner", {
                             CornerRadius = UDim.new(0, 6)
@@ -1324,7 +1327,10 @@ function Dozer:Start()
                             Image = GetIcon("trash-2"),
                             BackgroundColor3 = UsingTheme.Text,
                             AutoButtonColor = false,
-                            ImageColor3 = UsingTheme.Main
+                            ImageColor3 = UsingTheme.Main,
+                            ScaleType = "Slice",
+                            ImageRectOffset = Vector2.new(395,395),
+                            ImageRectSizs = Vector2.new(-70,-70),
                         }),
                         Create("UICorner", {
                             CornerRadius = UDim.new(0, 6)
