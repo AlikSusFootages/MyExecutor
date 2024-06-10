@@ -1281,7 +1281,8 @@ function Dozer:Start()
             })
         else
             local currentScript = 0
-            for name, script in ipairs(UpdateScripts) do
+            for name, script in pairs(UpdateScripts) do
+                print(name)
                 local ScriptCard = Create("TextLabel", {
                     Size = UDim2.new(1,0,0,50),
                     BackgroundColor3 = UsingTheme.Stroke,
