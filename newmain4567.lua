@@ -1280,6 +1280,7 @@ function Dozer:Start()
                 Parent = SavedScriptss.Content.ScrollingFrame
             })
         else
+            local currentScript = 0
             for name, script in pairs(UpdateScripts) do
                 local ScriptCard = Create("TextLabel", {
                     Size = UDim2.new(1,0,0,50),
@@ -1287,6 +1288,7 @@ function Dozer:Start()
                     BackgroundTransparency = GUI_StrokeTransparency + 0.2,
                     Text = name,
                     TextSize = 20,
+                    LayoutOrder = currentScript,
                     FontFace = GUI_Font,
                     TextColor3 = UsingTheme.Text,
                     TextXAlignment = "Left",
@@ -1356,6 +1358,7 @@ function Dozer:Start()
                         end)
                     end
                 end
+                currentScript = currentScript+1
             end
         end
         
