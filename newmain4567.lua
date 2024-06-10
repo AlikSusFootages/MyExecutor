@@ -1305,7 +1305,8 @@ function Dozer:Start()
                         Create("ImageButton", {
                             Size = UDim2.new(1,0,1,0),
                             Image = "",
-                            BackgroundColor3 = UsingTheme.Text
+                            BackgroundColor3 = UsingTheme.Text,
+                            AutoButtonColor = false
                         }),
                         Create("UICorner", {
                             CornerRadius = UDim.new(0, 6)
