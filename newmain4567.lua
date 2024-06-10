@@ -40,7 +40,7 @@ local Dozer = {
         -- new ↓
         
         keyword = Color3.fromRGB(248, 109, 124),
-        comment = Color3.fromRGB(131, 241, 132),
+        comment = Color3.fromRGB(104,104,104),
         string = Color3.fromRGB(173, 241, 149),
         
         functionCall = Color3.fromRGB(253, 251, 172)
