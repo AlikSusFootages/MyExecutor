@@ -1279,9 +1279,9 @@ function Dozer:Start()
         else
             for name, script in pairs(GUI_Settings.Scripts) do
                 local ScriptCard = Create("TextLabel", {
-                    Size = UDim2.new(1,0,0,50),
+                    Size = UDim2.new(1,0,0,60),
                     BackgroundColor3 = UsingTheme.Stroke,
-                    BackgroundTransparency = GUI_StrokeTransparency + 0.1,
+                    BackgroundTransparency = GUI_StrokeTransparency + 0.2,
                     Text = name,
                     TextSize = 20,
                     FontFace = GUI_Font,
@@ -1297,7 +1297,7 @@ function Dozer:Start()
                         CornerRadius = UDim.new(0,12)
                     }),
                     Create("CanvasGroup", {
-                        Size = UDim2.new(0,30,0,30),
+                        Size = UDim2.new(0,40,0,40),
                         Position = UDim2.new(1,0,0.5,0),
                         AnchorPoint = Vector2.new(1,0.5),
                         BackgroundTransparency = 1
