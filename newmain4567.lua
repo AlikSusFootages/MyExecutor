@@ -867,7 +867,7 @@ function Dozer:Start()
                             BackgroundTransparency = 1,
                         }, {
                             Create("Frame", {
-                                Size = UDim2.new(1,0,0,50),
+                                Size = UDim2.new(1,-60,0,50),
                                 BackgroundTransparency = 1,
                                 BorderSizePixel = 0,
                             }, {
@@ -901,6 +901,18 @@ function Dozer:Start()
                                     Create("UICorner", {
                                         CornerRadius = UDim.new(0,10)
                                     })
+                                })
+                            }),
+                            Create("ImageButton", {
+                                Image = GetIcon("plus"),
+                                BackgroundColor3 = UsingTheme.Text,
+                                BorderSizePixel = 0,
+                                Size = UDim2.new(0,50,0,50),
+                                Position = UDim2.new(1,0,0,0),
+                                AnchorPoint = Vector2.new(1,0)
+                            }, {
+                                Create("UICorner", {
+                                    CornerRadius = UDim2.new(0,12)
                                 })
                             })
                         })
