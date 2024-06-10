@@ -1054,18 +1054,6 @@ function Dozer:Start()
             return tostring([=[<font color=']=] .. color2 .. [=['>]=] .. keyword .. [=[</font>]=])
         end
         
-        local function ProcessText(text)
-            for color, patterns in pairs(Dozer.SyntaxColor) do
-                for _, pattern in pairs(patterns) do
-                    text = string.gsub(text, pattern, function(match)
-                        return Colorize(match, color)
-                    end)
-                    
-                end
-            end
-        
-            return text
-        end
         
         local Executorr = RightFrames.Executor.Content.Frame
         
@@ -1085,10 +1073,6 @@ function Dozer:Start()
                 elseif string.match(formatedText, "^%w+%s*%(.-%)$") then
                     formatedText = string.gsub(formatedText, src, function()
                         return Colorize(src, Dozer.SyntaxColor["functionCall"])
-                    end)
-                elseif string.match(formatedText, "^%-%-.*$") then
-                    formatedText = string.gsub(formatedText, src, function()
-                        return Colorize(src, Dozer.SyntaxColor["comment"])
                     end)
                 end
             end
