@@ -1279,6 +1279,10 @@ function Dozer:Start()
             end
         end
         
+        SavedScriptss.Content.ImageButton.MouseButton1Click:Connect(function()
+            CreateRipple(Mouse.X, Mouse.Y, SavedScriptss.Content.ImageButton)
+        end)
+        
         
         
         while wait(0.1) do
