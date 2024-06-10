@@ -867,12 +867,12 @@ function Dozer:Start()
                             BackgroundTransparency = 1,
                         }, {
                             Create("Frame", {
-                                Size = UDim2.new(1,0,0,40),
+                                Size = UDim2.new(1,0,0,50),
                                 BackgroundTransparency = 1,
                                 BorderSizePixel = 0,
                             }, {
                                 Create("TextBox", {
-                                    Size = UDim2.new(1,-32,1,0),
+                                    Size = UDim2.new(1,-40,1,0),
                                     BackgroundTransparency = 1,
                                     BorderSizePixel = 0,
                                     Text = "",
