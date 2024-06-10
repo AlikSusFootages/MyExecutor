@@ -1297,7 +1297,7 @@ function Dozer:Start()
                         CornerRadius = UDim.new(0,12)
                     }),
                     Create("CanvasGroup", {
-                        Size = UDim2.new(0,40,0,40),
+                        Size = UDim2.new(0,30,0,30),
                         Position = UDim2.new(1,0,0.5,0),
                         AnchorPoint = Vector2.new(1,0.5),
                         BackgroundTransparency = 1
@@ -1308,7 +1308,7 @@ function Dozer:Start()
                             BackgroundColor3 = UsingTheme.Text
                         }),
                         Create("UICorner", {
-                            CornerRadius = UDim.new(0, 8)
+                            CornerRadius = UDim.new(0, 6)
                         }),
                     })
                 })
