@@ -1076,8 +1076,8 @@ function Dozer:Start()
             local formatedText = ""
             for token, src in Lexer.lua(Executorr.ScrollingFrame.TextBox.Text) do
                 if Dozer.SyntaxColor[token] then
-                    formatedText = string.gsub(Executorr.ScrollingFrame.TextBox.Text, src, function(match)
-                        return Colorize(match, Dozer.SyntaxColor[token])
+                    formatedText = string.gsub(Executorr.ScrollingFrame.TextBox.Text, src, function()
+                        return Colorize(src, Dozer.SyntaxColor[token])
                     end)
                 end
             end
