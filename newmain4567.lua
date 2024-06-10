@@ -909,7 +909,11 @@ function Dozer:Start()
                                 BorderSizePixel = 0,
                                 Size = UDim2.new(0,50,0,50),
                                 Position = UDim2.new(1,0,0,0),
-                                AnchorPoint = Vector2.new(1,0)
+                                AnchorPoint = Vector2.new(1,0),
+                                ImageColor3 = UsingTheme.Main,
+                                ImageRectOffset = Vector2.new(-70,-70),
+                                ImageRectSize = Vector2.new(395,395),
+                                AutoButtonColor = false
                             }, {
                                 Create("UICorner", {
                                     CornerRadius = UDim.new(0,12)
