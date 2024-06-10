@@ -1279,7 +1279,7 @@ function Dozer:Start()
         else
             for name, script in pairs(GUI_Settings.Scripts) do
                 local ScriptCard = Create("TextLabel", {
-                    Size = UDim2.new(1,0,0,60),
+                    Size = UDim2.new(1,0,0,50),
                     BackgroundColor3 = UsingTheme.Stroke,
                     BackgroundTransparency = GUI_StrokeTransparency,
                     Text = name,
@@ -1298,8 +1298,8 @@ function Dozer:Start()
                     }),
                     Create("CanvasGroup", {
                         Size = UDim2.new(0,40,0,40),
-                        Position = UDim2.new(1,0,0,0),
-                        AnchorPoint = Vector2.new(1,0),
+                        Position = UDim2.new(1,0,0.5,0),
+                        AnchorPoint = Vector2.new(1,0.5),
                         BackgroundTransparency = 1
                     }, {
                         Create("ImageButton", {
@@ -1309,7 +1309,7 @@ function Dozer:Start()
                         }),
                         Create("UICorner", {
                             CornerRadius = UDim.new(0, 8)
-                        })
+                        }),
                     })
                 })
             end
