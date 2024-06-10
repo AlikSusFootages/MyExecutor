@@ -1067,7 +1067,7 @@ function Dozer:Start()
         end)
         
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
-            Executorr.ScrollingFrame.TextLabel.Text = ProcessText(Executorr.ScrollingFrame.TextBox.Text)
+            Executorr.ScrollingFrame.TextLabel.Text = Lexer.lua(Executorr.ScrollingFrame.TextBox.Text, {}, {})
             
             --LineNumbers
             local liness = Executorr.ScrollingFrame.TextBox.Text:split("\n")
