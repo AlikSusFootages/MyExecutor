@@ -132,7 +132,7 @@ local function DelScript(Name)
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
 end
 local function GetScripts()
-    return HttpService:JSONDecode(readfile("Dozer/Settings.json")).Settings
+    return HttpService:JSONDecode(readfile("Dozer/Settings.json")).Scripts
 end
 
 local function CreateRipple(x, y, button, color)
