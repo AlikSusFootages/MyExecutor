@@ -1266,7 +1266,7 @@ function Dozer:Start()
                 Size = UDim2.new(1,0,1,0),
                 BackgroundTransparency = 1,
                 FontFace = GUI_Font,
-                Text = "No scripts founded. Add a new script",
+                Text = "No scripts founded. Add a new script.",
                 TextColor3 = UsingTheme.Stroke,
                 TextSize = 20,
                 Parent = SavedScriptss.Content.ScrollingFrame
