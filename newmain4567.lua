@@ -872,7 +872,7 @@ function Dozer:Start()
                                 BorderSizePixel = 0,
                             }, {
                                 Create("TextBox", {
-                                    Size = UDim2.new(1,0,1,0),
+                                    Size = UDim2.new(1,-32,1,0),
                                     BackgroundTransparency = 1,
                                     BorderSizePixel = 0,
                                     Text = "",
@@ -881,12 +881,9 @@ function Dozer:Start()
                                     TextSize = 20,
                                     FontFace = GUI_Font,
                                     TextXAlignment = "Left",
-                                    ClearTextOnFocus = false
-                                }, {
-                                }),
-                                Create("UIPadding", {
-                                    PaddingLeft = UDim.new(0,16),
-                                    PaddingRight = UDim.new(0,16),
+                                    ClearTextOnFocus = false,
+                                    Position = UDim2.fromScale(0.5,0),
+                                    AnchorPoint = Vector2.new(0.5,0)
                                 }),
                                 Create("UICorner", {
                                     CornerRadius = UDim.new(0,12)
