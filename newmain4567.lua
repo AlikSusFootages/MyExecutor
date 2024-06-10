@@ -131,6 +131,9 @@ local function DelScript(Name)
     GUI_Settings.Scripts[Name] = nil
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
 end
+local function GetScripts()
+    return HttpService:JSONDecode(readfile("Dozer/Settings.json"))
+end
 
 local function CreateRipple(x, y, button, color)
     local relativeX = x - button.AbsolutePosition.X
