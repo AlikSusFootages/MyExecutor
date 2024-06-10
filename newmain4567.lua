@@ -55,6 +55,7 @@ local Mouse = Player:GetMouse()
 
 local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
 local Changelogs = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/MyExecutor/main/changelog.lua"))()
+local Lexer = loadstring(game:HttpGet("https://raw.githubusercontent.com/lunarmodules/Penlight/master/lua/pl/lexer.lua"))()
 
 --/° Other °/--
 
