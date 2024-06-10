@@ -1063,18 +1063,6 @@ function Dozer:Start()
             
         end)
         
-        local function isFunctionCall(text)
-            local tokens = {}
-            for token in string.gmatch(text, "%S+") do
-                table.insert(tokens, token)
-            end
-            if #tokens > 1 and tokens[2] == "(" then
-                return true
-            else
-                return false
-            end
-        end
-
         
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             local formatedText = Executorr.ScrollingFrame.TextBox.Text
@@ -1083,7 +1071,7 @@ function Dozer:Start()
                     formatedText = string.gsub(formatedText, src, function()
                         return Colorize(src, Dozer.SyntaxColor[token])
                     end)
-                elseif isFunctionCall(formatedText) then
+                elseif string.match(formatedText, "^%w+%s*%(.-%)$") then
                     formatedText = string.gsub(formatedText, src, function()
                         return Colorize(src, Dozer.SyntaxColor["functionCall"])
                     end)
