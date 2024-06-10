@@ -919,6 +919,18 @@ function Dozer:Start()
                                 Create("UICorner", {
                                     CornerRadius = UDim.new(0,12)
                                 })
+                            }),
+                            Create("Frame", {
+                                Size = UDim2.new(1,0,1,-110),
+                                Position = UDim2.new(0,0,1,0),
+                                AnchorPoint = Vector2.new(0,1),
+                                BackgroundTransparency = 1,
+                                BorderSizePixel = 0,
+                            }, {
+                                Create("UIListLayout", {
+                                    FillDirection = "Vertical",
+                                    Padding = UDim.new(0, 8)
+                                })
                             })
                         })
                     }),
