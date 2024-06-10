@@ -42,6 +42,7 @@ local Dozer = {
         keyword = Color3.fromRGB(248, 109, 124),
         comment = Color3.fromRGB(104,104,104),
         string = Color3.fromRGB(173, 241, 149),
+        number = Color3.fromRGB(255, 198, 0),
         
         functionCall = Color3.fromRGB(253, 251, 172)
     }
