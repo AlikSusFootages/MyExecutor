@@ -1350,6 +1350,7 @@ function Dozer:Start()
                                 runcode(script)
                             elseif button.Name == "TrashIcon" then
                                 DelScript(name)
+                                UpdateScripts()
                             end
                         end)
                     end
