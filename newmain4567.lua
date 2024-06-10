@@ -1081,7 +1081,7 @@ function Dozer:Start()
                     formatedText = string.gsub(formatedText, src, function()
                         return Colorize(src, Dozer.SyntaxColor[token])
                     end)
-                elseif string.match(formatedText, "^%w+%(.*%)$") then
+                elseif string.match(formatedText, "^%w+%s*%(.-%)$") then
                     formatedText = string.gsub(formatedText, src, function()
                         return Colorize(src, Dozer.SyntaxColor["functionCall"])
                     end)
