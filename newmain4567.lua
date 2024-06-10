@@ -24,18 +24,24 @@ local Dozer = {
         -- [Color3.fromRGB(131, 241, 132)] = {
         --     "'.-'", '".-"',     I DONT KNOW   WHY IT DOESNT WORK      AAAAAAAAAHHH HELP
         -- }, 
-        [Color3.fromRGB(248, 109, 124)] = {
-            [[local]], [[function]], [[return]], [[error]], [[print]], [[self]], [[if]], [[else]], [[elseif]], [[then]], [[end]], [[do]], [[for]], [[break]], [[repeat]], [[until]], [[not]], [[and]]
-        },
-        [Color3.fromRGB(255, 198, 0)] = {
-            [[true]], [[false]], [[nil]], [[warn]],
-        },
-        [Color3.fromRGB(253, 251, 172)] = {
-            [[Connect]], [[WaitForChild]], [[FindFirstChild]], [[GetService]], [[GetDescendants]], [[GetChildren]], [[GetPropertyChangedSignal]], [[loadstring]], [[HttpGet]], [[Create]], [[SendKeyEvent]]
-        },
-        [Color3.fromRGB(132, 214, 247)] = {
-            [[new]], [[game]], [[ipairs]], [[pairs]], [[script]], [[wait]], [[math]], [[random]], [[Instance]], [[Parent]], [[task]], [[table]], [[remove]], [[Size]], [[Position]], [[BackgroundColor3]], [[TextColor3]], [[AnchorPoint]], [[Vector2]], [[Color3]], [[BorderSizePixel]], [[BorderColor3]], [[Thickness]], [[Color]], [[Transparency]], [[BackgroundTransparency]], [[TextTrasparency]], [[TextTruncate]], [[TextWrapped]], [[TextScaled]], [[Text ]], [[TextSize]], [[Font]], [[Active]], [[Name]], [[UDim2]], [[UDim]], [[CanvasSize]], [[CanvasPosition]]
-        },
+        -- [Color3.fromRGB(248, 109, 124)] = {
+        --     [[local]], [[function]], [[return]], [[error]], [[print]], [[self]], [[if]], [[else]], [[elseif]], [[then]], [[end]], [[do]], [[for]], [[break]], [[repeat]], [[until]], [[not]], [[and]]
+        -- },
+        -- [Color3.fromRGB(255, 198, 0)] = {
+        --     [[true]], [[false]], [[nil]], [[warn]],
+        -- },
+        -- [Color3.fromRGB(253, 251, 172)] = {
+        --     [[Connect]], [[WaitForChild]], [[FindFirstChild]], [[GetService]], [[GetDescendants]], [[GetChildren]], [[GetPropertyChangedSignal]], [[loadstring]], [[HttpGet]], [[Create]], [[SendKeyEvent]]
+        -- },
+        -- [Color3.fromRGB(132, 214, 247)] = {
+        --     [[new]], [[game]], [[ipairs]], [[pairs]], [[script]], [[wait]], [[math]], [[random]], [[Instance]], [[Parent]], [[task]], [[table]], [[remove]], [[Size]], [[Position]], [[BackgroundColor3]], [[TextColor3]], [[AnchorPoint]], [[Vector2]], [[Color3]], [[BorderSizePixel]], [[BorderColor3]], [[Thickness]], [[Color]], [[Transparency]], [[BackgroundTransparency]], [[TextTrasparency]], [[TextTruncate]], [[TextWrapped]], [[TextScaled]], [[Text ]], [[TextSize]], [[Font]], [[Active]], [[Name]], [[UDim2]], [[UDim]], [[CanvasSize]], [[CanvasPosition]]
+        -- },
+        
+        -- new ↓
+        
+        keyword = Color3.fromRGB(248, 109, 124),
+        comment = Color3.fromRGB(131, 241, 132),
+        string = Color3.fromRGB(173, 241, 149),
     }
 }
 
