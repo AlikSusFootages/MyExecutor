@@ -55,7 +55,7 @@ local Mouse = Player:GetMouse()
 
 local Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/src/Icons.lua"))().assets
 local Changelogs = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlikSusFootages/MyExecutor/main/changelog.lua"))()
-local Highlighter = loadstring(game:HttpGet("https://raw.githubusercontent.com/boatbomber/Highlighter/main/src/init.lua"))()
+local Lexer = loadstring(game:HttpGet("https://raw.githubusercontent.com/lunarmodules/Penlight/master/lua/pl/lexer.lua"))()
 
 --/° Other °/--
 
@@ -1067,7 +1067,7 @@ function Dozer:Start()
         end)
         
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
-            Executorr.ScrollingFrame.TextLabel.Text = Highlighter.Highlight({TextObject = Executorr.ScrollingFrame.TextLabel, src = Executorr.ScrollingFrame.TextBox.Text})
+            Executorr.ScrollingFrame.TextLabel.Text = Lexer.lua(Executorr.ScrollingFrame.TextBox.Text, {}, {})
             
             --LineNumbers
             local liness = Executorr.ScrollingFrame.TextBox.Text:split("\n")
