@@ -1073,10 +1073,10 @@ function Dozer:Start()
         end)
         
         Executorr.ScrollingFrame.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
-            local formatedText = ""
+            local formatedText = Executorr.ScrollingFrame.TextBox.Text
             for token, src in Lexer.lua(Executorr.ScrollingFrame.TextBox.Text) do
                 if Dozer.SyntaxColor[token] then
-                    formatedText = string.gsub(Executorr.ScrollingFrame.TextBox.Text, src, function()
+                    formatedText = string.gsub(formatedText, src, function()
                         return Colorize(src, Dozer.SyntaxColor[token])
                     end)
                 end
