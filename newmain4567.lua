@@ -1268,7 +1268,7 @@ function Dozer:Start()
         
         local UpdateScripts = GetScripts()
         
-        if UpdateScripts then
+        if next(UpdateScripts) == nil then
             local NoScriptMessage = Create("TextLabel", {
                 Size = UDim2.new(1,0,1,0),
                 BackgroundTransparency = 1,
