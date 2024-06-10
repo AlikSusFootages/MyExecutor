@@ -908,7 +908,7 @@ function Dozer:Start()
                             }),
                             Create("CanvasGroup", {
                                 BackgroundTransparency = 1,
-                                Size = UDim2.nea(0,50,0,50)
+                                Size = UDim2.new(0,50,0,50)
                             }, {
                                 Create("ImageButton", {
                                     Image = GetIcon("plus"),
