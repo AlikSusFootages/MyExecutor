@@ -1306,7 +1306,8 @@ function Dozer:Start()
                             Size = UDim2.new(1,0,1,0),
                             Image = GetIcon("play"),
                             BackgroundColor3 = UsingTheme.Text,
-                            AutoButtonColor = false
+                            AutoButtonColor = false,
+                            ImageColor3 = UsingTheme.Main
                         }),
                         Create("UICorner", {
                             CornerRadius = UDim.new(0, 6)
@@ -1322,7 +1323,7 @@ function Dozer:Start()
                             Size = UDim2.new(1,0,1,0),
                             Image = GetIcon("trash-2"),
                             BackgroundColor3 = UsingTheme.Text,
-                            AutoButtonColor = false
+                            AutoButtonColor = false,
                         }),
                         Create("UICorner", {
                             CornerRadius = UDim.new(0, 6)
