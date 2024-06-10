@@ -1272,7 +1272,7 @@ function Dozer:Start()
             UpdateScripts()
         end
         
-        if GetScripts() == {} then
+        if UpdateScripts == {} then
             local NoScriptMessage = Create("TextLabel", {
                 Size = UDim2.new(1,0,1,0),
                 BackgroundTransparency = 1,
@@ -1283,7 +1283,7 @@ function Dozer:Start()
                 Parent = SavedScriptss.Content.ScrollingFrame
             })
         else
-            for name, script in pairs(GetScripts) do
+            for name, script in pairs(UpdateScripts) do
                 local ScriptCard = Create("TextLabel", {
                     Size = UDim2.new(1,0,0,50),
                     BackgroundColor3 = UsingTheme.Stroke,
