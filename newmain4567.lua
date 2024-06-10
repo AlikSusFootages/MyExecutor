@@ -913,7 +913,8 @@ function Dozer:Start()
                                 ImageColor3 = UsingTheme.Main,
                                 ImageRectOffset = Vector2.new(-70,-70),
                                 ImageRectSize = Vector2.new(395,395),
-                                AutoButtonColor = false
+                                AutoButtonColor = false,
+                                ScaleType = "Slice"
                             }, {
                                 Create("UICorner", {
                                     CornerRadius = UDim.new(0,12)
