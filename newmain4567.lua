@@ -1261,7 +1261,7 @@ function Dozer:Start()
             SavedScriptss.Content.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, SavedScriptss.Content.ScrollingFrame.UIListLayout.AbsoluteContentSize.Y)
         end)
         
-        if #GUI_Settings.Scripts < 1 then
+        if GUI_Settings.Scripts then
             local NoScriptMessage = Create("TextLabel", {
                 Size = UDim2.new(1,0,1,0),
                 BackgroundTransparency = 1,
