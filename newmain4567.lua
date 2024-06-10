@@ -132,7 +132,7 @@ local function DelScript(Name)
     writefile("Dozer/Settings.json", tostring(HttpService:JSONEncode(GUI_Settings)))
 end
 local function GetScripts()
-    return HttpService:JSONDecode(readfile("Dozer/Settings.json"))
+    return HttpService:JSONDecode(readfile("Dozer/Settings.json")).Settings
 end
 
 local function CreateRipple(x, y, button, color)
@@ -1267,10 +1267,6 @@ function Dozer:Start()
         end)
         
         local UpdateScripts = GetScripts()
-        
-        local function UpdateScript()
-            UpdateScripts()
-        end
         
         if UpdateScripts == {} then
             local NoScriptMessage = Create("TextLabel", {
