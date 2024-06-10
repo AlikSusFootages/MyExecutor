@@ -912,7 +912,7 @@ function Dozer:Start()
                                 AnchorPoint = Vector2.new(1,0)
                             }, {
                                 Create("UICorner", {
-                                    CornerRadius = UDim2.new(0,12)
+                                    CornerRadius = UDim.new(0,12)
                                 })
                             })
                         })
