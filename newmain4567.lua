@@ -1344,6 +1344,7 @@ function Dozer:Start()
                     if button:IsA("CanvasGroup") then
                         ScriptCard[button.Name].ImageButton.MouseButton1Click:Connect(function()
                             CreateRipple(Mouse.X, Mouse.Y, ScriptCard[button.Name], UsingTheme.Main)
+                            if button.Name == "RunIcon"
                         end)
                     end
                 end
