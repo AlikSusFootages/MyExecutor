@@ -1266,6 +1266,12 @@ function Dozer:Start()
             SavedScriptss.Content.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, SavedScriptss.Content.ScrollingFrame.UIListLayout.AbsoluteContentSize.Y)
         end)
         
+        local UpdateScripts = GetScripts()
+        
+        local function UpdateScript()
+            UpdateScripts()
+        end
+        
         if GetScripts() == {} then
             local NoScriptMessage = Create("TextLabel", {
                 Size = UDim2.new(1,0,1,0),
@@ -1277,7 +1283,7 @@ function Dozer:Start()
                 Parent = SavedScriptss.Content.ScrollingFrame
             })
         else
-            for name, script in pairs(GUI_Settings.Scripts) do
+            for name, script in pairs(GetScripts) do
                 local ScriptCard = Create("TextLabel", {
                     Size = UDim2.new(1,0,0,50),
                     BackgroundColor3 = UsingTheme.Stroke,
