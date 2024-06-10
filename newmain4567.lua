@@ -934,10 +934,11 @@ function Dozer:Start()
                                     ElasticBehavior = "Never",
                                     ScrollBarThickness = 0,
                                     ScrollingDirection = "Y"
-                                }),
-                                Create("UIListLayout", {
-                                    FillDirection = "Vertical",
-                                    Padding = UDim.new(0, 8)
+                                }, {
+                                    Create("UIListLayout", {
+                                        FillDirection = "Vertical",
+                                        Padding = UDim.new(0, 8)
+                                    })
                                 })
                             })
                         })
