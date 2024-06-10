@@ -866,34 +866,39 @@ function Dozer:Start()
                             AnchorPoint = Vector2.new(0,1),
                             BackgroundTransparency = 1,
                         }, {
-                            Create("TextBox", {
+                            Create("Frame", {
                                 Size = UDim2.new(1,0,0,40),
                                 BackgroundTransparency = 1,
-                                BorderSizePixel = 0,
-                                Text = "",
-                                PlaceholderText = "Enter your script name",
-                                TextColor3 = UsingTheme.Text,
-                                TextSize = 20,
-                                FontFace = GUI_Font,
-                                TextXAlignment = "Left",
-                                ClearTextOnFocus = false
                             }, {
-                                Create("UICorner", {
-                                    CornerRadius = UDim.new(0,12)
-                                }),
-                                Create("Frame", {
-                                    Size = UDim2.new(1,-4,1,-4),
-                                    Position = UDim2.new(0,-2,0,-2),
+                                Create("TextBox", {
+                                    Size = UDim2.new(1,0,1,0),
                                     BackgroundTransparency = 1,
+                                    BorderSizePixel = 0,
+                                    Text = "",
+                                    PlaceholderText = "Enter your script name",
+                                    TextColor3 = UsingTheme.Text,
+                                    TextSize = 20,
+                                    FontFace = GUI_Font,
+                                    TextXAlignment = "Left",
+                                    ClearTextOnFocus = false
                                 }, {
-                                    Create("UIStroke", {
-                                        Thickness = 2,
-                                        Color = UsingTheme.Stroke,
-                                        Transparency = GUI_StrokeTransparency
-                                    }),
                                     Create("UICorner", {
-                                        CornerRadius = UDim.new(0,10)
-                                    })
+                                        CornerRadius = UDim.new(0,12)
+                                    }),
+                                    Create("Frame", {
+                                        Size = UDim2.new(1,-4,1,-4),
+                                        Position = UDim2.new(0,2,0,2),
+                                        BackgroundTransparency = 1,
+                                    }, {
+                                        Create("UIStroke", {
+                                            Thickness = 2,
+                                            Color = UsingTheme.Stroke,
+                                            Transparency = GUI_StrokeTransparency
+                                        }),
+                                        Create("UICorner", {
+                                            CornerRadius = UDim.new(0,10)
+                                        })
+                                    }),
                                 }),
                                 Create("UIPadding", {
                                     PaddingLeft = UDim.new(0,16),
