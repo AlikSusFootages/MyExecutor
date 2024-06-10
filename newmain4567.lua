@@ -1280,8 +1280,8 @@ function Dozer:Start()
             for name, script in pairs(GUI_Settings.Scripts) do
                 local ScriptCard = Create("TextLabel", {
                     Size = UDim2.new(1,0,0,50),
-                    BackgroundColor3 = UsingTheme.Main,
-                    BackgroundTransparency = GUI_StrokeTransparency,
+                    BackgroundColor3 = UsingTheme.Stroke,
+                    BackgroundTransparency = GUI_StrokeTransparency + 0.1,
                     Text = name,
                     TextSize = 20,
                     FontFace = GUI_Font,
