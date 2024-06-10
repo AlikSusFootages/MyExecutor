@@ -1280,9 +1280,11 @@ function Dozer:Start()
             for name, script in pairs(GUI_Settings.Scripts) do
                 local ScriptCard = Create("TextLabel", {
                     Size = UDim2.new(1,0,0,60),
-                    BackgroundTransparency = 1,
+                    BackgroundColor3 = UsingTheme.Stroke,
+                    BackgroundTransparency = GUI_StrokeTransparency,
                     Text = name,
                     TextSize = 20,
+                    FontFace = GUI_Font,
                     TextColor3 = UsingTheme.Text,
                     TextXAlignment = "Left",
                     Parent = SavedScriptss.Content.ScrollingFrame
@@ -1290,6 +1292,9 @@ function Dozer:Start()
                     Create("UIPadding", {
                         PaddingLeft = UDim.new(0, 16),
                         PaddingRight = UDim.new(0, 16),
+                    }),
+                    Create("UICorner", {
+                        CornerRadius = UDim.new(0,12)
                     })
                 })
             end
