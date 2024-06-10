@@ -1256,10 +1256,27 @@ function Dozer:Start()
                 BackgroundTransparency = 1,
                 FontFace = GUI_Font,
                 Text = "No scripts founded. Add a new script",
-                TextColor3 = UsingTheme.Text,
+                TextColor3 = UsingTheme.Stroke,
                 TextSize = 20,
                 Parent = SavedScriptss.Content.ScrollingFrame
             })
+        else
+            for name, script in pairs(GUI_Settings.Scripts) do
+                local ScriptCard = Create("TextLabel", {
+                    Size = UDim2.new(1,0,0,60),
+                    BackgroundTransparency = 1,
+                    Text = name,
+                    TextSize = 20,
+                    TextColor3 = UsingTheme.Text,
+                    TextXAlignment = "Left",
+                    Parent = SavedScriptss.Content.ScrollingFrame
+                }, {
+                    Create("UIPadding", {
+                        PaddingLeft = UDim.new(0, 16),
+                        PaddingRight = UDim.new(0, 16),
+                    })
+                })
+            end
         end
         
         
