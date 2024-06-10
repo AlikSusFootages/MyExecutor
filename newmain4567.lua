@@ -1257,7 +1257,8 @@ function Dozer:Start()
                 FontFace = GUI_Font,
                 Text = "",
                 TextColor3 = UsingTheme.Text,
-                TextSize = 20
+                TextSize = 20,
+                Parent = SavedScriptss.Content.ScrollingFrame
             })
         end
         
