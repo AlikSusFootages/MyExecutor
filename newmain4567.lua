@@ -858,6 +858,37 @@ function Dozer:Start()
                             PaddingLeft = UDim.new(0, 30),
                             PaddingRight = UDim.new(0, 30),
                             PaddingBottom = UDim.new(0, 25),
+                        }),
+                        Create("Frame", {
+                            Name = "Content",
+                            Size = UDim2.new(1,0,1,-50),
+                            Position = UDim2.new(0,0,1,0),
+                            AnchorPoint = Vector2.new(0,1),
+                            BackgroundTransparency = 1,
+                        }, {
+                            Create("TextBox", {
+                                Size = UDim2.new(1,0,0,40),
+                                BackgroundTransparency = 1,
+                                BorderSizePixel = 0,
+                                Text = "",
+                                PlaceholderText = "Enter your script name",
+                                TextColor3 = UsingTheme.Text,
+                                TextSize = 20,
+                                FontFace = GUI_Font
+                            }, {
+                                Create("UICorner", {
+                                    CornerRadius = UDim.new(0,12)
+                                }),
+                                Create("Frame", {
+                                    
+                                }, {
+                                    Create("UIStroke", {
+                                        Thickness = 2,
+                                        Color = UsingTheme.Stroke,
+                                        Transparency = GUI_StrokeTransparency
+                                    })
+                                })
+                            })
                         })
                     }),
                     -- Script Search
