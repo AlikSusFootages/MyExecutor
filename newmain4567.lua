@@ -1304,7 +1304,23 @@ function Dozer:Start()
                     }, {
                         Create("ImageButton", {
                             Size = UDim2.new(1,0,1,0),
-                            Image = "",
+                            Image = GetIcon("play"),
+                            BackgroundColor3 = UsingTheme.Text,
+                            AutoButtonColor = false
+                        }),
+                        Create("UICorner", {
+                            CornerRadius = UDim.new(0, 6)
+                        }),
+                    }),
+                    Create("CanvasGroup", {
+                        Size = UDim2.new(0,30,0,30),
+                        Position = UDim2.new(1,-40,0.5,0),
+                        AnchorPoint = Vector2.new(1,0.5),
+                        BackgroundTransparency = 1
+                    }, {
+                        Create("ImageButton", {
+                            Size = UDim2.new(1,0,1,0),
+                            Image = GetIcon("trash-2"),
                             BackgroundColor3 = UsingTheme.Text,
                             AutoButtonColor = false
                         }),
