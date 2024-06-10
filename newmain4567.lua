@@ -1290,8 +1290,8 @@ function Dozer:Start()
             end
         end
         
-        SavedScriptss.ImageButton.MouseButton1Click:Connect(function()
-            CreateRipple(Mouse.X, Mouse.Y, SavedScriptss.ImageButton, UsingTheme.Main)
+        SavedScriptss.CanvasGroup.ImageButton.MouseButton1Click:Connect(function()
+            CreateRipple(Mouse.X, Mouse.Y, SavedScriptss.CanvasGroup.ImageButton, UsingTheme.Main)
         end)
         
         
