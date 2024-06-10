@@ -1339,7 +1339,7 @@ function Dozer:Start()
                 })
                 
                 for _, button in ScriptCard:GetChildren() do
-                    if IsA("CanvasGroup") then
+                    if button:IsA("CanvasGroup") then
                         ScriptCard[button.Name].ImageButton.MouseButton1Click:Connect(function()
                             CreateRipple(Mouse.X, Mouse.Y, ScriptCard[button.Name], UsingTheme.Main)
                         end)
